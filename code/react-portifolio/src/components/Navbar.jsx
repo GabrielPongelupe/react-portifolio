@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mb-20 m-3  flex items-center justify-between py-2">
+    <nav className="mb-10 mx-3  flex items-center justify-between py-2">
       <div className="flex flex-shrink-0 items-center hover:cursor-pointer">
         <img 
         className="mx-2 w-40 pt-1 transition-transform  duration-300  hover:scale-105" 

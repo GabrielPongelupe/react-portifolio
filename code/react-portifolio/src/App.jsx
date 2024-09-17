@@ -7,6 +7,7 @@ import Technologies from "./components/Technologies"
 import Contact from "./components/Contact.jsx"
 
 import { LanguageProvider } from "./contexts/LanguageContext.jsx"
+import DownloadButton from "./components/DownloadButton.jsx"
 // bg-cyan-300
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
       <div className="container mx-auto px-0">
           <Navbar/>
           <Hero/>
-          
+          <DownloadButton/>
           <Projects/>
           <Technologies/>
           <Contact/>

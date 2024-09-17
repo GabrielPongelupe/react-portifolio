@@ -3,6 +3,9 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import { useContext } from "react";
 import { IoLink } from "react-icons/io5";
 import { useState } from "react";
+import { MdDownload } from "react-icons/md";
+import { motion } from "framer-motion";
+
 
 const Projects = () => {
 
@@ -11,11 +14,16 @@ const Projects = () => {
   const { portuguese } = useContext(LanguageContext);
 
   return (
+
     <div className="m-4 border-b border-neutral-900 pb-4">
-      <h1 className="my-24 text-center text-4xl">
+      <motion.h1 
+      whileInView={{opacity: 1, y: 0}}
+      initial= {{y: -100, opacity: 0}}
+      transition={{duration: 1.5}}
+      className="my-24 text-center text-4xl">
         {portuguese ? "Meus" : "My"}
         <span className="text-green-400"> {portuguese ? "Projetos" : "Projects"}</span>
-      </h1>
+      </motion.h1>
 
       {PROJECTS.map((project, index) => (
         <a href={project.link} target="blank" key={index}>
@@ -25,7 +33,11 @@ const Projects = () => {
             onMouseEnter={() => setHoveredProjectIndex(index)}
             onMouseLeave={() => setHoveredProjectIndex(null)}
           >
-            <div className="w-full lg:w-1/4 flex justify-center">
+            <motion.div 
+            whileInView={{opacity: 1, x: 0}}
+            initial={{opacity: 0, x: -100}}
+            transition={{duration: 1}}
+            className="w-full lg:w-1/4 flex justify-center">
               <img 
                 src={project.image} 
                 width={150} 
@@ -33,8 +45,13 @@ const Projects = () => {
                 alt={project.title}
                 className="mb-6 rounded-xl"
               />
-            </div>
-            <div className="w-full max-w-xl lg:w-3/4">
+            </motion.div>
+
+            <motion.div 
+            whileInView={{opacity: 1, x: 0}}
+            initial={{opacity: 0, x: +100}}
+            transition={{duration: 1}}
+            className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">
                 {project.title} 
                 <span className="ml-2 absolute transition-opacity duration-[3000ms] lg:hover:opacity-100">
@@ -54,10 +71,12 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </a>
       ))}
+    
+      
     </div>
   );
 };
