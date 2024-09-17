@@ -13,3 +13,6 @@
   font-family: "Poppins", sans-serif;
 }
 
+.scale-101:hover {
+  transform: scale(1.01);
+}

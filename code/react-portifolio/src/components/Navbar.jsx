@@ -1,6 +1,6 @@
 import logo from "../assets/PongelupeLogo.png"
 import { FaLinkedin, FaGithub, FaInstagram, FaChevronDown } from "react-icons/fa"
-import { SiGmail } from "react-icons/si";
+import { SiGmail, SiLeetcode } from "react-icons/si";
 
 import { useContext, useState } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <div className="m-8 flex items-center justify-center gap-5 text-3xl">
         {/* Redes Sociais */}
-        <ul className="flex gap-4">
+        <ul className="flex gap-6">
           <li>
             <a
               href="https://www.linkedin.com/in/gabriel-pongelupe-de-carvalho-2b2b372b4/"
@@ -43,7 +43,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               title="Linkedin"
               >
-              <FaLinkedin className=" hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:text-white  hover:brightness-200" />
+              <FaLinkedin className=" hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:scale-110 hover:text-white  hover:brightness-200" />
             </a>
           </li>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               title="GitHub"
             >
-              <FaGithub className="hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:text-white  hover:brightness-200" />
+              <FaGithub className="hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:scale-110 hover:text-white  hover:brightness-200" />
             </a>
           </li>
 
@@ -65,7 +65,17 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 title="Gmail"
               >
-                <SiGmail className="hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:text-white  hover:brightness-200" />
+                <SiGmail className="hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:text-white hover:scale-110 hover:brightness-200" />
+              </a>
+          </li>
+          <li>
+              <a
+                href="https://leetcode.com/u/gabrielpongelupe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LeetCode"
+              >
+                <SiLeetcode className="hover:cursor-pointer text-gray-300 transition-transform duration-300 hover:text-white hover:scale-110 hover:brightness-200" />
               </a>
           </li>
         </ul>

@@ -2,7 +2,7 @@ import { RiReactjsLine } from "react-icons/ri"
 import { FaJava } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiJavascript } from "react-icons/si";
-import { SiMysql } from "react-icons/si"; // Ícone do MySQL
+import { SiMysql  } from "react-icons/si"; // Ícone do MySQL
 import { SiSpring } from "react-icons/si";
 import { SiPython } from "react-icons/si";
 
@@ -32,25 +32,25 @@ const Technologies = () => {
         }
         
         <div className="flex flex-wrap items-center justify-center gap-4">
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="React.js">
-                <RiReactjsLine className="text-7xl text-cyan-400" />
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="React.js">
+                <RiReactjsLine className="text-7xl text-cyan-400 scale-101" />
             </div>
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="Java">
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="Java">
                 <FaJava className="text-7xl text-orange-500" />
             </div>
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="Postgresql">
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="Postgresql">
                 <BiLogoPostgresql className="text-7xl text-sky-700" />
             </div>
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="JavaScript">
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="JavaScript">
                 <SiJavascript className="text-7xl text-yellow-400" />
             </div>
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="MySql">
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="MySql">
                 <SiMysql className="text-7xl text-blue-400" />
             </div>
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="Spring">
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="Spring Framework">
                 <SiSpring className="text-7xl text-green-400" />
             </div>
-            <div className="rounded-2xl border-4 border-neutral-800 p-4" title="Python">
+            <div className="rounded-2xl border-4 border-neutral-800 p-4 transition-transform duration-300 hover:scale-110 " title="Python">
                 <SiPython className="text-7xl text-sky-700" />
             </div>
             
