@@ -15,7 +15,7 @@ const DownloadButton = () => {
       opacity: 0.8,
       transition:{duration: 0.5, delay: 1.5}
     }}
-    className="mx-5 flex justify-start items-start border-b border-neutral-900 pb-10">
+    className="mx-5 flex justify-center items-center mt-10  lg:mt-0 lg:justify-start lg:items-start border-b border-neutral-900 pb-10">
       <a
         href="/Curriculo_Gabriel.pdf" // Caminho do PDF dentro da pasta "public"
         download="Curriculo_GabrielPongelupe.pdf" // Nome sugerido para o download
