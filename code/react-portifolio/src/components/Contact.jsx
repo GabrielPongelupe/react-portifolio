@@ -15,20 +15,20 @@ const Contact = () => {
       whileInView={{opacity: 1, y: 0}}
       initial= {{y: -100, opacity: 0}}
       transition={{duration: 0.5}}
-      className="my-12 text-center text-4xl">{portuguese ? "Entre em contato" : "Get in Touch"}</motion.h1>
+      className="my-6 text-center text-4xl">{portuguese ? "Entre em contato" : "Get in Touch"}</motion.h1>
 
       <div className="text-center tracking-tighter">
         <motion.p 
         whileInView={{opacity: 1, x: 0}}
-        initial= {{x: 100, opacity: 0}}
-        transition={{duration: 1}}
+        initial= {{x: 200, opacity: 0}}
+        transition={{duration: 1.3}}
         className="my-4">{CONTACT.phoneNo}</motion.p>
 
         <a href="#" className="my-4 underline ">
           <motion.p
            whileInView={{opacity: 1, x: 0}}
-           initial= {{x: -100, opacity: 0}}
-           transition={{duration: 1}}
+           initial= {{x: -200, opacity: 0}}
+           transition={{duration: 1.5}}
           >
             {CONTACT.email}
             

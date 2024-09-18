@@ -23,14 +23,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mb-10 mx-3  flex items-center justify-between py-2">
+    <nav className="mb-20 mx-3  flex items-center justify-between mt-5">
       <div className="flex flex-shrink-0 items-center hover:cursor-pointer">
-        <img 
+        <p className="mx-2 w-40 pt-1 transition-transform  duration-300  hover:scale-105 anton-regular text-3xl text-white">GABRIEL<span className="text-orange-400">PONGELUPE</span> </p>
+        
+        {/*<img 
         className="mx-2 w-40 pt-1 transition-transform  duration-300  hover:scale-105" 
         src={logo} 
         alt="logo"
         
-        />
+        />*/}
       </div>
 
       <div className="m-8 flex items-center justify-center gap-5 text-3xl">

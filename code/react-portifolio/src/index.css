@@ -1,18 +1,33 @@
+/* Importando fontes adicionais */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+/* Tailwind base components and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
+/* Classe CSS para usar a fonte Anton */
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Definindo fontes padrão */
+:root {
   font-family: "Inter", sans-serif;
 }
 
+/* Classe para aplicar a fonte Poppins */
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
 
+/* Classe para aplicar a fonte Fascinate Inline */
+
+
+/* Classe de escala ao passar o mouse */
 .scale-101:hover {
   transform: scale(1.01);
 }
