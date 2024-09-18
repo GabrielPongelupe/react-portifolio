@@ -5,6 +5,7 @@ import PongelupePic from "../assets/ReminiPicPongelupe.jpg"
 import {motion} from "framer-motion"
 import { LanguageContext } from "../contexts/LanguageContext";
 import { useContext } from "react";
+import DownloadButton from "./DownloadButton";
 
 const Hero = () => {
 
@@ -55,6 +56,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                     className="my-0 max-w-2xl text-xl py-6 font-light tracking-tighter">{portuguese ? HERO_CONTENT_2023.br : HERO_CONTENT_2023.eng} </motion.p>
+                    
                 </div>
             </div>
 

@@ -16,6 +16,9 @@ const Projects = () => {
   return (
 
     <div className="m-4 border-b border-neutral-900 pb-4">
+      <div className="flex flex-wrap mb-5">
+        
+      </div>
       <motion.h1 
       whileInView={{opacity: 1, y: 0}}
       initial= {{y: -100, opacity: 0}}
