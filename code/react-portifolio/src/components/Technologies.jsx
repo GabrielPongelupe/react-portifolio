@@ -9,6 +9,7 @@ import { SiPython, SiSwagger  } from "react-icons/si";
 import { LanguageContext } from "../contexts/LanguageContext";
 import { useContext } from "react";
 import { animate, motion } from "framer-motion";
+import Skills from "../common/Skills";
 
 
 const iconVariants = (duration) => ({
@@ -189,7 +190,7 @@ const Technologies = () => {
             </motion.div>
              
         </motion.div>
-        
+        <Skills/>
     </div>
   )
 }

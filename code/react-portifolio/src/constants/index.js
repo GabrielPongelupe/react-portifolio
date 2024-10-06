@@ -40,15 +40,21 @@ export const PROJECTS = [
     description:
       "Projeto dePinhoMultimídias é uma plataforma digital para a venda de conteúdo multimídia automotivo desenvolvida para o YouTuber Gabriel De Pinho. Foi feita utilizando tecnologias como Java Spring Boot e integrada à API do MercadoPago. O trabalho incluiu planejamento, desenvolvimento ágil e foco na satisfação do cliente.",
     description_eng: "DePinhoMultimídias Project is a digital platform for selling automotive multimedia content developed for YouTuber Gabriel De Pinho. It was built using technologies like Java Spring Boot and integrated with the MercadoPago API. The project included planning, agile development, and a focus on client satisfaction.",
+    short_description: "E-commerce",
+    short_description_eng: "E-commerce",
+    color: "bg-blue-600", // Azul como o do Zé Delivery
     technologies: ["Spring Boot", "Java", "JavaScript", "HTML5", "CSS"],
   },
   {
     title: "Portfolio Website",
-    link: "",
+    link: "https://pongelupee.vercel.app/",
     image: project3,
     description_eng: "This is my personal portfolio website, where you can find information about me and the projects I have developed. Explore to learn more about my work and career journey.",
     description:
       "Este site é o meu portfólio pessoal, onde você encontra informações sobre mim e os projetos que desenvolvi. Explore para conhecer meu trabalho e trajetória.",
+    short_description: "Portfólio Pessoal",
+    short_description_eng: "Personal Portfolio",
+    color: "bg-black", // Preto
     technologies: ["React.js", "Tailwind css", "HTML5", "Frame Motion"],
   },
   {
@@ -58,6 +64,9 @@ export const PROJECTS = [
     description_eng: "API for Ticket Purchase and Resale Platform is an interface that enables integration with an online system for buying and reselling tickets for shows, events, and lectures. It streamlines the management of reservations, sales, and access to event information, providing a smooth and efficient experience for both users and administrators.",
     description:
       "API para Plataforma de Compra e Revenda de Ingressos é uma interface que permite a integração com um sistema online para adquirir e revender ingressos de shows, eventos e palestras. Facilita a gestão de reservas, vendas e acesso a informações sobre eventos, proporcionando uma experiência fluida e eficiente para usuários e administradores.",
+    short_description: "Sistema de Gestão",
+    short_description_eng: "Management System",
+    color: "bg-green-500", // Verde de tom médio
     technologies: ["Spring Boot", "Java", "JavaScript", "HTML5", "CSS"],
   },
   {
@@ -67,11 +76,14 @@ export const PROJECTS = [
     description_eng: "Time Management Web Project is a platform that combines timers, interactive calendars, and practical tips to optimize your productivity and organization. Ideal for those who want to manage their time better and achieve more with less effort.",
     description:
       "Projeto Web para Gestão de Tempo é uma plataforma que combina timers, calendários interativos e dicas práticas para otimizar sua produtividade e organização. Ideal para quem quer gerenciar melhor o tempo e alcançar mais com menos esforço.",
+    short_description: "Gestão de Tempo",
+    short_description_eng: "Time Management",
+    color: "bg-blue-400", // Azul claro
     technologies: ["HTML5", "CSS", "JavaScript", "Firebase"],
   },
-  
-  
 ];
+
+
 
 export const CONTACT = {
   phoneNo: "+55 (31) 99903-6093",
