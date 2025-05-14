@@ -36,6 +36,7 @@ export const PROJECTS = [
   {
     title: "DePinho Multimidias",
     link: "https://github.com/bragap/de-pinho-multimidias",
+    liveDemoUrl: "https://plf-es-2024-1-ti3-8966100-de-pinho-multimidias.vercel.app/",
     image: dePinhoImage,
     description:
       "Projeto dePinhoMultimídias é uma plataforma digital para a venda de conteúdo multimídia automotivo desenvolvida para o YouTuber Gabriel De Pinho. Foi feita utilizando tecnologias como Java Spring Boot e integrada à API do MercadoPago. O trabalho incluiu planejamento, desenvolvimento ágil e foco na satisfação do cliente.",
@@ -48,6 +49,7 @@ export const PROJECTS = [
   {
     title: "Portfolio Website",
     link: "https://pongelupee.vercel.app/",
+    liveDemoUrl: "https://pongelupee.vercel.app/",
     image: portifolioImage,
     description_eng: "This is my personal portfolio website, where you can find information about me and the projects I have developed. Explore to learn more about my work and career journey.",
     description:
