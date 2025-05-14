@@ -6,7 +6,7 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaJava, FaNodeJs, FaDocker, FaAws } from "react-icons/fa";
-import { SiJavascript, SiSpring, SiPython, SiFirebase, SiSupabase, SiElasticsearch, SiFlutter, SiRabbitmq } from "react-icons/si";
+import { SiJavascript, SiSpring, SiPython, SiFastapi, SiFirebase, SiSupabase, SiElasticsearch, SiFlutter, SiRabbitmq } from "react-icons/si";
 
 // Categorias disponíveis
 const CATEGORIES = {
@@ -28,7 +28,8 @@ const TECH_STACK = [
     description: {
       en: "Frontend library for building user interfaces",
       pt: "Biblioteca para construção de interfaces de usuário"
-    }
+    },
+    link: "https://react.dev/"
   },
   {
     name: "Java",
@@ -39,7 +40,8 @@ const TECH_STACK = [
     description: {
       en: "General-purpose programming language",
       pt: "Linguagem de programação de propósito geral"
-    }
+    },
+    link: "https://www.java.com/"
   },
   {
     name: "JavaScript",
@@ -50,7 +52,8 @@ const TECH_STACK = [
     description: {
       en: "Programming language of the web",
       pt: "Linguagem de programação da web"
-    }
+    },
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
   {
     name: "Spring",
@@ -61,7 +64,8 @@ const TECH_STACK = [
     description: {
       en: "Java framework for enterprise applications",
       pt: "Framework Java para aplicações empresariais"
-    }
+    },
+    link: "https://spring.io/"
   },
   {
     name: "Python",
@@ -72,7 +76,20 @@ const TECH_STACK = [
     description: {
       en: "General-purpose programming language",
       pt: "Linguagem de programação de propósito geral"
-    }
+    },
+    link: "https://www.python.org/"
+  },
+  {
+    name: "FastAPI",
+    icon: SiFastapi,
+    color: "text-teal-500",
+    duration: 2.5,
+    category: CATEGORIES.FRAMEWORK,
+    description: {
+      en: "High-performance web framework for building APIs with Python",
+      pt: "Framework web de alto desempenho para criar APIs com Python"
+    },
+    link: "https://fastapi.tiangolo.com/"
   },
   {
     name: "Node.js",
@@ -83,7 +100,8 @@ const TECH_STACK = [
     description: {
       en: "JavaScript runtime for server-side applications",
       pt: "Ambiente de execução JavaScript para aplicações server-side"
-    }
+    },
+    link: "https://nodejs.org/"
   },
   {
     name: "Firebase",
@@ -94,7 +112,8 @@ const TECH_STACK = [
     description: {
       en: "Platform for mobile and web applications",
       pt: "Plataforma para aplicações móveis e web"
-    }
+    },
+    link: "https://firebase.google.com/"
   },
   {
     name: "Supabase",
@@ -105,7 +124,8 @@ const TECH_STACK = [
     description: {
       en: "Open source Firebase alternative",
       pt: "Alternativa open source ao Firebase"
-    }
+    },
+    link: "https://supabase.com/"
   },
   {
     name: "Amazon Web Services",
@@ -116,7 +136,8 @@ const TECH_STACK = [
     description: {
       en: "Cloud services plataform",
       pt: "Plataforma de serviços de computação em nuvem"
-    }
+    },
+    link: "https://aws.amazon.com/"
   },
   {
     name: "ElasticSearch",
@@ -127,7 +148,8 @@ const TECH_STACK = [
     description: {
       en: "Search and analytics engine",
       pt: "Motor de busca e análise"
-    }
+    },
+    link: "https://www.elastic.co/"
   },
   {
     name: "React Native",
@@ -138,7 +160,8 @@ const TECH_STACK = [
     description: {
       en: "Framework for building native mobile apps",
       pt: "Framework para construção de aplicativos mobile nativos"
-    }
+    },
+    link: "https://reactnative.dev/"
   },
   {
     name: "Flutter",
@@ -149,7 +172,8 @@ const TECH_STACK = [
     description: {
       en: "UI toolkit for building natively compiled applications",
       pt: "Kit de UI para construção de aplicações compiladas nativamente"
-    }
+    },
+    link: "https://flutter.dev/"
   },
   {
     name: "Docker",
@@ -160,7 +184,8 @@ const TECH_STACK = [
     description: {
       en: "Containerization platform",
       pt: "Plataforma de containerização"
-    }
+    },
+    link: "https://www.docker.com/"
   },
   {
     name: "RabbitMQ",
@@ -171,7 +196,8 @@ const TECH_STACK = [
     description: {
       en: "Message broker software",
       pt: "Software de mensageria"
-    }
+    },
+    link: "https://www.rabbitmq.com/"
   }
 ];
 
@@ -228,7 +254,7 @@ const Technologies = () => {
   };
 
   return (
-    <section className="py-16 border-b border-neutral-800">
+    <section className="py-16 border-b border-neutral-800 ">
       <div className="container mx-auto px-4">
         {/* Título animado */}
         <motion.div
@@ -290,46 +316,50 @@ const Technologies = () => {
         >
           {filteredTechStack.map((tech, index) => (
             <motion.div 
-              key={tech.name}
-              variants={itemVariants}
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 0 20px rgba(34, 197, 94, 0.2)" 
-              }}
-              className="flex flex-col items-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-green-500/30 transition-all duration-300 w-full max-w-xs"
-            >
-              <div className="relative group">
-                <motion.div
-                  animate={{ 
-                    y: [0, -3, 4],
-                    scale: [1, 1.05, 1]
-                  }}
-                  transition={{ 
-                    repeat: Infinity, 
-                    duration: tech.duration,
-                    repeatType: "reverse",
-                    ease: "easeInOut"
-                  }}
-                  className="flex items-center justify-center h-16 w-16 rounded-full bg-neutral-800 mb-3"
-                >
-                  <tech.icon className={`text-4xl ${tech.color}`} />
-                </motion.div>
-                
-                {/* Tooltip */}
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-4 transition-all duration-300 bg-neutral-800 px-3 py-1 rounded text-xs whitespace-nowrap z-10">
-                  {portuguese ? tech.description.pt : tech.description.en}
-                </div>
-              </div>
-              
-              <h3 className="text-sm font-medium text-center mt-2">
-                {tech.name}
-              </h3>
-              
-              {/* Pequeno indicador de categoria */}
-              <span className="mt-1 text-xs text-neutral-500 bg-neutral-800 px-2 py-0.5 rounded-full">
-                {categoryText[tech.category]}
-              </span>
-            </motion.div>
+  key={tech.name}
+  variants={itemVariants}
+  whileHover={{ 
+    scale: 1.05, 
+    boxShadow: "0 0 20px rgba(34, 197, 94, 0.2)" 
+  }}
+  className="flex flex-col items-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-green-500/30 transition-all duration-300 w-full max-w-xs cursor-pointer"
+  onClick={() => window.open(tech.link, '_blank', 'noopener,noreferrer')}
+  role="link"
+  tabIndex={0}
+  aria-label={`${tech.name} - ${portuguese ? 'Abrir documentação' : 'Open documentation'}`}
+>
+  {/* Restante do conteúdo permanece o mesmo */}
+  <div className="relative group">
+    <motion.div
+      animate={{ 
+        y: [0, -3, 4],
+        scale: [1, 1.05, 1]
+      }}
+      transition={{ 
+        repeat: Infinity, 
+        duration: tech.duration,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }}
+      className="flex items-center justify-center h-16 w-16 rounded-full bg-neutral-800 mb-3"
+    >
+      <tech.icon className={`text-4xl ${tech.color}`} />
+    </motion.div>
+    
+    {/* Tooltip */}
+    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-4 transition-all duration-300 bg-neutral-800 px-3 py-1 rounded text-xs whitespace-nowrap z-10">
+      {portuguese ? tech.description.pt : tech.description.en}
+    </div>
+  </div>
+  
+  <h3 className="text-sm font-medium text-center mt-2">
+    {tech.name}
+  </h3>
+  
+  <span className="mt-1 text-xs text-neutral-500 bg-neutral-800 px-2 py-0.5 rounded-full">
+    {categoryText[tech.category]}
+  </span>
+</motion.div>
           ))}
         </motion.div>
       </div>

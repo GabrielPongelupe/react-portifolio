@@ -44,7 +44,7 @@ export const PROJECTS = [
     short_description: "E-commerce",
     short_description_eng: "E-commerce",
     color: "bg-blue-600", // Azul como o do Zé Delivery
-    technologies: ["Spring Boot", "Java", "JavaScript", "HTML5", "CSS"],
+    technologies: ["Spring Boot", "Java", "JavaScript", "Payment Gateway API"],
   },
   {
     title: "Portfolio Website",
@@ -57,7 +57,7 @@ export const PROJECTS = [
     short_description: "Portfólio Pessoal",
     short_description_eng: "Personal Portfolio",
     color: "bg-black", // Preto
-    technologies: ["React.js", "Tailwind css", "HTML5", "Frame Motion"],
+    technologies: ["React.js", "Tailwind css", "Frame Motion"],
   },
   {
     title: "TicketTrade",
