@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import caronaImage from "../assets/projects/caronaImage.png";
+import ticketTradeImage from "../assets/projects/ticketTradeImage.png";
+import dePinhoImage from "../assets/projects/dePinhoImage.png"
+import portifolioImage from "../assets/projects/portifolioImage.png"
 
 export const HERO_CONTENT = {
   br: `Sou Gabriel Pongelupe, tenho 20 anos e sou desenvolvedor FullStack. Meu interesse por tecnologia começou em 2017, quando, fascinado por videogames, comecei a explorar o desenvolvimento dos jogos e o universo por trás deles. Esse desejo de aprender me levou, em 2019, a ingressar na SuperGeek, uma escola de programação onde tive meu primeiro contato com o desenvolvimento de software. A imersão em projetos desafiadores despertou uma paixão intensa pela programação, me motivando a seguir essa carreira com grande entusiasmo.
@@ -36,7 +36,7 @@ export const PROJECTS = [
   {
     title: "DePinho Multimidias",
     link: "https://github.com/bragap/de-pinho-multimidias",
-    image: project1,
+    image: dePinhoImage,
     description:
       "Projeto dePinhoMultimídias é uma plataforma digital para a venda de conteúdo multimídia automotivo desenvolvida para o YouTuber Gabriel De Pinho. Foi feita utilizando tecnologias como Java Spring Boot e integrada à API do MercadoPago. O trabalho incluiu planejamento, desenvolvimento ágil e foco na satisfação do cliente.",
     description_eng: "DePinhoMultimídias Project is a digital platform for selling automotive multimedia content developed for YouTuber Gabriel De Pinho. It was built using technologies like Java Spring Boot and integrated with the MercadoPago API. The project included planning, agile development, and a focus on client satisfaction.",
@@ -48,7 +48,7 @@ export const PROJECTS = [
   {
     title: "Portfolio Website",
     link: "https://pongelupee.vercel.app/",
-    image: project3,
+    image: portifolioImage,
     description_eng: "This is my personal portfolio website, where you can find information about me and the projects I have developed. Explore to learn more about my work and career journey.",
     description:
       "Este site é o meu portfólio pessoal, onde você encontra informações sobre mim e os projetos que desenvolvi. Explore para conhecer meu trabalho e trajetória.",
@@ -60,7 +60,7 @@ export const PROJECTS = [
   {
     title: "TicketTrade",
     link: "https://github.com/GabrielPongelupe/Ticket-Trade",
-    image: project4,
+    image: ticketTradeImage,
     description_eng: "API for Ticket Purchase and Resale Platform is an interface that enables integration with an online system for buying and reselling tickets for shows, events, and lectures. It streamlines the management of reservations, sales, and access to event information, providing a smooth and efficient experience for both users and administrators.",
     description:
       "API para Plataforma de Compra e Revenda de Ingressos é uma interface que permite a integração com um sistema online para adquirir e revender ingressos de shows, eventos e palestras. Facilita a gestão de reservas, vendas e acesso a informações sobre eventos, proporcionando uma experiência fluida e eficiente para usuários e administradores.",
@@ -70,16 +70,16 @@ export const PROJECTS = [
     technologies: ["Spring Boot", "Java", "JavaScript", "HTML5", "CSS"],
   },
   {
-    title: "TimeWise",
+    title: "Carona",
     link: "https://github.com/GabrielPongelupe/TimeWise",
-    image: project2,
+    image: caronaImage,
     description_eng: "Time Management Web Project is a platform that combines timers, interactive calendars, and practical tips to optimize your productivity and organization. Ideal for those who want to manage their time better and achieve more with less effort.",
     description:
       "Projeto Web para Gestão de Tempo é uma plataforma que combina timers, calendários interativos e dicas práticas para otimizar sua produtividade e organização. Ideal para quem quer gerenciar melhor o tempo e alcançar mais com menos esforço.",
     short_description: "Gestão de Tempo",
     short_description_eng: "Time Management",
     color: "bg-blue-400", // Azul claro
-    technologies: ["HTML5", "CSS", "JavaScript", "Firebase"],
+    technologies: ["React.js", "React Native", "Java", "Spring Framework", "RabbitMQ", "Supabase", "Firebase"],
   },
 ];
 

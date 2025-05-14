@@ -44,7 +44,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-56 sm:w-56 md:w-56 lg:w-56 rounded-xl object-cover" // Ajustes nos tamanhos
+                className="w-48 h-48 sm:w-56 md:w-56 lg:w-56 rounded-md object-cover" // Ajustes nos tamanhos
               />
             </motion.div>
 
