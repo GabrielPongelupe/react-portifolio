@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { LanguageContext } from "../contexts/LanguageContext";
 
@@ -201,43 +201,82 @@ const TECH_STACK = [
   }
 ];
 
-// Animações
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.3
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  show: { y: 0, opacity: 1 }
-};
-
-const titleVariants = {
-  hidden: { y: -50, opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
-};
-
-const filterVariants = {
-  hidden: { y: 20, opacity: 0 },
-  show: { 
-    y: 0, 
-    opacity: 1, 
-    transition: { 
-      duration: 0.5, 
-      ease: "easeOut" 
-    } 
+// Animações reutilizáveis com viewport once = false para permitir repetição
+const animations = {
+  title: {
+    whileInView: { opacity: 1, y: 0 },
+    initial: { y: -100, opacity: 0 },
+    transition: { duration: 1, ease: "easeOut" },
+    viewport: { once: false, amount: 0.2 }
+  },
+  fadeInUp: {
+    whileInView: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 50 },
+    transition: { duration: 0.8, ease: "easeOut" },
+    viewport: { once: false, amount: 0.1 }
+  },
+  fadeInLeft: {
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: -100 },
+    transition: { duration: 0.8, ease: "easeOut" },
+    viewport: { once: false, amount: 0.1 }
+  },
+  fadeInRight: {
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: 100 },
+    transition: { duration: 0.8, ease: "easeOut" },
+    viewport: { once: false, amount: 0.1 }
+  },
+  staggerContainer: {
+    whileInView: { 
+      opacity: 1,
+      transition: { 
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    },
+    initial: { opacity: 0 },
+    viewport: { once: false, amount: 0.1 }
+  },
+  staggerItem: {
+    whileInView: { 
+      opacity: 1, 
+      y: 0,
+      transition: { type: "spring", stiffness: 100 }
+    },
+    initial: { opacity: 0, y: 20 }
   }
 };
 
 const Technologies = () => {
   const { portuguese } = useContext(LanguageContext);
   const [activeCategory, setActiveCategory] = useState(CATEGORIES.ALL);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+  const [forceRender, setForceRender] = useState(0);
+
+  // Hook para verificar quando a seção entra e sai da visualização
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      // Quando a seção sai do view
+      if (!entries[0].isIntersecting && shouldAnimate) {
+        // Force render para reiniciar animações quando voltar à visualização
+        setShouldAnimate(false);
+      }
+      
+      // Quando a seção entra na view novamente
+      if (entries[0].isIntersecting && !shouldAnimate) {
+        setShouldAnimate(true);
+        setForceRender(prev => prev + 1);
+      }
+    }, { threshold: 0.1 });
+
+    const section = document.getElementById("technologies");
+    if (section) observer.observe(section);
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, [shouldAnimate]);
 
   // Filtrar as tecnologias de acordo com a categoria selecionada
   const filteredTechStack = TECH_STACK.filter(tech => 
@@ -247,119 +286,126 @@ const Technologies = () => {
   // Texto das categorias traduzido
   const categoryText = {
     [CATEGORIES.ALL]: portuguese ? "Todas" : "All",
-    [CATEGORIES.FRONTEND]: "Frontend",
     [CATEGORIES.BACKEND]: "Backend",
+    [CATEGORIES.FRONTEND]: "Frontend",
     [CATEGORIES.FRAMEWORK]: portuguese ? "Frameworks" : "Frameworks",
     [CATEGORIES.DATABASE]: portuguese ? "Banco de Dados" : "Database"
   };
 
   return (
-    <section className="py-16 border-b border-neutral-800 ">
+    <section id="technologies" className="pb-16 pt-24 border-b border-neutral-800">
       <div className="container mx-auto px-4">
-        {/* Título animado */}
+        {/* Título com animação de entrada de cima para baixo */}
         <motion.div
-          variants={titleVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          key={`title-${forceRender}`}
+          {...animations.title}
           className="mb-12 text-center"
         >
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
-            {portuguese ? "Minhas Tecnologias" : "My Tech Stack"}
+          <h2 className="text-4xl font-bold">
+            {portuguese ? "Minhas" : "My"} 
+            <span className="text-green-400"> {portuguese ? "Tecnologias" : "Tech Stack"}</span>
           </h2>
-          <p className="mt-4 text-neutral-400 max-w-2xl mx-auto">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            viewport={{ once: false }}
+            className="mt-4 text-neutral-400 max-w-2xl mx-auto"
+          >
             {portuguese 
               ? "Ferramentas e tecnologias que utilizo no meu desenvolvimento"
               : "Tools and technologies I use in my development process"}
-          </p>
+          </motion.p>
         </motion.div>
 
-        {/* Filtros de categoria */}
+        {/* Filtros de categoria - Animação de entrada da esquerda */}
         <motion.div 
-          variants={filterVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          key={`filter-${forceRender}`}
+          {...animations.fadeInLeft}
           className="flex flex-wrap justify-center gap-3 mb-10"
         >
-          <button 
-            onClick={() => setActiveCategory(CATEGORIES.ALL)} 
-            className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium
-              ${activeCategory === CATEGORIES.ALL 
-                ? 'bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg' 
-                : 'bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 hover:border-green-500/30'}`}
-          >
-            {categoryText[CATEGORIES.ALL]}
-          </button>
-          {Object.entries(categoryText).filter(([key]) => key !== CATEGORIES.ALL).map(([key, value]) => (
-            <button 
-              key={key}
+          {Object.entries(categoryText).map(([key, value], index) => (
+            <motion.button 
+              key={`${key}-${forceRender}`}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 * index, duration: 0.5 }}
+              viewport={{ once: false }}
               onClick={() => setActiveCategory(key)} 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium
                 ${activeCategory === key 
-                  ? 'bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg' 
+                  ? 'bg-gradient-to-r from-green-500 to-green-700 text-white shadow-lg shadow-green-500/20' 
                   : 'bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 hover:border-green-500/30'}`}
             >
               {value}
-            </button>
+            </motion.button>
           ))}
         </motion.div>
 
-        {/* Grid de tecnologias com animação de stagger */}
+        {/* Grid de tecnologias com animação de entrada staggered */}
         <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
+          key={`grid-${activeCategory}-${forceRender}`}
+          {...animations.staggerContainer}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center"
-          key={activeCategory} // Força a remontagem quando a categoria muda
         >
           {filteredTechStack.map((tech, index) => (
             <motion.div 
-  key={tech.name}
-  variants={itemVariants}
-  whileHover={{ 
-    scale: 1.05, 
-    boxShadow: "0 0 20px rgba(34, 197, 94, 0.2)" 
-  }}
-  className="flex flex-col items-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-green-500/30 transition-all duration-300 w-full max-w-xs cursor-pointer"
-  onClick={() => window.open(tech.link, '_blank', 'noopener,noreferrer')}
-  role="link"
-  tabIndex={0}
-  aria-label={`${tech.name} - ${portuguese ? 'Abrir documentação' : 'Open documentation'}`}
->
-  {/* Restante do conteúdo permanece o mesmo */}
-  <div className="relative group">
-    <motion.div
-      animate={{ 
-        y: [0, -3, 4],
-        scale: [1, 1.05, 1]
-      }}
-      transition={{ 
-        repeat: Infinity, 
-        duration: tech.duration,
-        repeatType: "reverse",
-        ease: "easeInOut"
-      }}
-      className="flex items-center justify-center h-16 w-16 rounded-full bg-neutral-800 mb-3"
-    >
-      <tech.icon className={`text-4xl ${tech.color}`} />
-    </motion.div>
-    
-    {/* Tooltip */}
-    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-4 transition-all duration-300 bg-neutral-800 px-3 py-1 rounded text-xs whitespace-nowrap z-10">
-      {portuguese ? tech.description.pt : tech.description.en}
-    </div>
-  </div>
-  
-  <h3 className="text-sm font-medium text-center mt-2">
-    {tech.name}
-  </h3>
-  
-  <span className="mt-1 text-xs text-neutral-500 bg-neutral-800 px-2 py-0.5 rounded-full">
-    {categoryText[tech.category]}
-  </span>
-</motion.div>
+              key={`${tech.name}-${forceRender}`}
+              custom={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ 
+                opacity: 1, 
+                y: 0,
+                transition: { 
+                  delay: index * 0.05,
+                  duration: 0.5,
+                  ease: "easeOut"
+                }
+              }}
+              viewport={{ once: false }}
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0 0 20px rgba(34, 197, 94, 0.2)" 
+              }}
+              className="flex flex-col items-center p-4 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-green-500/30 transition-all duration-300 w-full max-w-xs cursor-pointer"
+              onClick={() => window.open(tech.link, '_blank', 'noopener,noreferrer')}
+              role="link"
+              tabIndex={0}
+              aria-label={`${tech.name} - ${portuguese ? 'Abrir documentação' : 'Open documentation'}`}
+            >
+              <div className="relative group">
+                <motion.div
+                  animate={{ 
+                    y: [0, -3, 4],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{ 
+                    repeat: Infinity, 
+                    duration: tech.duration,
+                    repeatType: "reverse",
+                    ease: "easeInOut"
+                  }}
+                  className="flex items-center justify-center h-16 w-16 rounded-full bg-neutral-800 mb-3"
+                >
+                  <tech.icon className={`text-4xl ${tech.color}`} />
+                </motion.div>
+                
+                {/* Tooltip */}
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-4 transition-all duration-300 bg-neutral-800 px-3 py-1 rounded text-xs whitespace-nowrap z-10">
+                  {portuguese ? tech.description.pt : tech.description.en}
+                </div>
+              </div>
+              
+              <h3 className="text-sm font-medium text-center mt-2">
+                {tech.name}
+              </h3>
+              
+              <span className="mt-1 text-xs text-neutral-500 bg-neutral-800 px-2 py-0.5 rounded-full">
+                {categoryText[tech.category]}
+              </span>
+            </motion.div>
           ))}
         </motion.div>
       </div>

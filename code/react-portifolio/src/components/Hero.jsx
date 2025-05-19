@@ -19,7 +19,7 @@ const Hero = () => {
     const { portuguese } = useContext(LanguageContext);
 
     return (
-        <div className="px-4 lg:mb-35 w-full"> {/* Alteração de margens */}
+        <div id="hero" className="px-4 py-28 lg:mb-35 w-full"> {/* Alteração de margens */}
             <div className="flex flex-col lg:flex-row mb-5">
                 <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
                     <motion.h1

@@ -42,7 +42,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-4 py-16 border-b border-neutral-900">
+    <section id="projects" className="mx-auto max-w-6xl px-4 pt-24 pb-16 border-b border-neutral-900">
       <motion.h1
         {...animations.title}
         className="mb-16 text-center text-4xl font-bold"
