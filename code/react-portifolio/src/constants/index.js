@@ -91,3 +91,62 @@ export const CONTACT = {
   phoneNo: "+55 (31) 99903-6093",
   email: "gabrielpongelupee@gmail.com",
 };
+
+
+export const EXPERIENCES = [
+  {
+    company: "LEVTY",
+    role: {
+      br: "Desenvolvedor Trainee",
+      eng: "Trainee Developer"
+    },
+    period: "Nov 2024 - Present",
+    location: "Belo Horizonte, MG · Hybrid",
+    description: {
+      br: `Desenvolvimento de soluções de software escaláveis na plataforma SYDLE ONE, trabalhando em projetos de modernização de sistemas e migração de dados para empresas de telecomunicações. Contribuindo para retenção de clientes e crescimento de receita através de propostas de automação e melhorias no sistema. Adquirindo experiência prática com práticas de desenvolvimento empresarial e tecnologias avançadas.`,
+      eng: `Developing scalable software solutions on the SYDLE ONE platform, working on system modernization and data migration projects for telecommunications companies. Contributing to client retention and revenue growth through automation proposals and system improvements. Gaining hands-on experience with enterprise-level development practices and technologies.`
+    },
+    technologies: ["JavaScript", "React", "Elasticsearch", "REST API", "SYDLE ONE", "AWS"],
+    highlights: {
+  br: [
+    "Participação em projetos de migração de dados para telecomunicações, movimentando mais de 40.000 contratos de clientes",
+    "Contribuição com propostas de automação que resultaram em uma redução de 20% no tempo de processamento interno",
+    "Experiência adquirida com desenvolvimento de software empresarial, colaborando em projetos que impactaram mais de 4.2 milhões de usuários finais"
+  ],
+  eng: [
+    "Participated in data migration projects for telecommunications, involving over 40,000 client contracts",
+    "Contributed automation proposals that reduced internal processing time by 20%",
+    "Gained experience with enterprise software development, contributing to projects impacting over 4.2 million end users"
+  ]
+}
+
+
+  },
+  {
+    company: "Agência Experimental de Software - PUC Minas",
+    role: {
+      br: "Desenvolvedor Backend",
+      eng: "Backend Developer"
+    },
+    period: "Jul 2024 - Jan 2025",
+    location: "Belo Horizonte, MG · Hybrid",
+    description: {
+      br: `Desenvolvimento de API RESTful para landing page interativa utilizando Node.js, Express.js e Prisma. Realizei a integração com bancos de dados MySQL e PostgreSQL, o que resultou em uma redução de 35% no tempo de resposta da aplicação e melhorou a escalabilidade em 60%. Trabalhei em colaboração com equipes multifuncionais para entregar soluções técnicas alinhadas aos requisitos do cliente, garantindo uma taxa de satisfação adequada.`,
+      eng: `Developed a RESTful API for an interactive landing page using Node.js, Express.js, and Prisma. Integrated MySQL and PostgreSQL databases while optimizing application scalability and performance. Collaborated with cross-functional teams to deliver technical solutions aligned with client requirements and performance metrics.`
+    },
+    technologies: ["Node.js", "Express.js", "Prisma", "PostgreSQL", "MySQL", "JavaScript", "Git"],
+    highlights: {
+      br: [
+        "Construção de API RESTful integrada com múltiplos sistemas de banco de dados.",
+        "Otimização de performance e escalabilidade, reduzindo o tempo de resposta da aplicação em 35%",
+        "Entrega de soluções técnicas que aumentaram a taxa de conversão da landing page e elevaram em o tempo médio de permanência dos usuários"
+      ],
+      eng: [
+        "Built RESTful API integrated with multiple database systems.",
+        "Optimized performance and scalability, reducing application response time by 35%",
+        "Delivered technical solutions that increased landing page conversion rate by 22% and boosted average user session time by 15%"
+      ]
+    }
+
+  }
+];

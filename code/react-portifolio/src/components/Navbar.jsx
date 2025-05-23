@@ -43,6 +43,7 @@ const Navbar = () => {
 
   const navLinks = [
     { id: "hero", label: portuguese ? "Início" : "Home" },
+    {id: "experience", label: portuguese ? "Experiências": "Experiences"},
     { id: "projects", label: portuguese ? "Projetos" : "Projects" },
     { id: "technologies", label: portuguese ? "Tecnologias" : "Technologies" },
     { id: "contact", label: portuguese ? "Contato" : "Contact" },
