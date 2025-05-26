@@ -127,18 +127,18 @@ const TECH_STACK = [
     },
     link: "https://supabase.com/"
   },
-  {
-    name: "Amazon Web Services",
-    icon: FaAws,
-    color: "text-white",
-    duration: 3.3,
-    category: CATEGORIES.BACKEND,
-    description: {
-      en: "Cloud services plataform",
-      pt: "Plataforma de serviços de computação em nuvem"
-    },
-    link: "https://aws.amazon.com/"
-  },
+  // {
+    // name: "Amazon Web Services",
+    // icon: FaAws,
+    // color: "text-white",
+    // duration: 3.3,
+    // category: CATEGORIES.BACKEND,
+    // description: {
+      // en: "Cloud services plataform",
+      // pt: "Plataforma de serviços de computação em nuvem"
+    // },
+    // link: "https://aws.amazon.com/"
+  // },
   {
     name: "ElasticSearch",
     icon: SiElasticsearch,
