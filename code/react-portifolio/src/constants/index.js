@@ -4,14 +4,22 @@ import dePinhoImage from "../assets/projects/dePinhoImage.png"
 import portifolioImage from "../assets/projects/portifolioImage.png"
 
 export const HERO_CONTENT = {
-  br: `Sou Gabriel Pongelupe, tenho 20 anos e sou desenvolvedor FullStack. Meu interesse por tecnologia começou em 2017, quando, fascinado por videogames, comecei a explorar o desenvolvimento dos jogos e o universo por trás deles. Esse desejo de aprender me levou, em 2019, a ingressar na SuperGeek, uma escola de programação onde tive meu primeiro contato com o desenvolvimento de software. A imersão em projetos desafiadores despertou uma paixão intensa pela programação, me motivando a seguir essa carreira com grande entusiasmo.
+  br: `Sou Gabriel Pongelupe, tenho 20 anos e sou um desenvolvedor apaixonado por resolver problemas de forma criativa e eficiente. Meu interesse por tecnologia começou em 2017, quando os videogames despertaram minha curiosidade sobre o que havia por trás das telas. Esse fascínio logo se transformou em ação: em 2019, iniciei meus estudos na escola de programação SuperGeek, onde mergulhei de cabeça em projetos desafiadores. Desde então, a programação se tornou mais do que uma habilidade — tornou-se minha vocação.
+
+
 `,
-  eng: `I am Gabriel Pongelupe, 20 years old, and I am a FullStack developer. My interest in technology began in 2017 when, fascinated by video games, I started exploring game development and the world behind them. This desire to learn led me to join SuperGeek in 2019, a programming school where I had my first experience with software development. Immersing myself in challenging projects ignited a deep passion for programming, motivating me to pursue this career with great enthusiasm.` 
+  eng: `I’m Gabriel Pongelupe, a 20-year-old developer passionate about solving problems creatively and efficiently. My journey in technology began in 2017 when video games sparked a deep curiosity about what happens behind the scenes. In 2019, I joined SuperGeek, a programming school that introduced me to the world of software development through hands-on, challenging projects. Since then, programming has become more than just a skill — it’s my calling.
+
+` 
 }
 
 export const HERO_CONTENT_2023 = {
-    br: `Em 2023, iniciei Engenharia de Software na PUC Minas, participando de projetos que me deram experiência com Java Spring Boot, React.js, Node.js, MySQL e MongoDB. Atualmente, atuo como desenvolvedor back-end no projeto extensionista "Agência Experimental de Software". `,
-    eng : `In 2023, I began studying Software Engineering at PUC Minas, participating in projects that gave me experience with Java Spring Boot, React.js, Node.js, MySQL, and MongoDB. Currently, I work as a back-end developer in the extension project "Agência Experimental de Software". `
+    br: `Em 2023, comecei o curso de Engenharia de Software na PUC Minas. Em 2024, iniciei meu programa de trainee na Levty, onde aplico na prática o que venho aprendendo. Estou sempre em busca de evolução, guiado pela curiosidade, colaboração e vontade de causar impacto positivo.
+
+`,
+    eng : `In 2023, I started my Software Engineering degree at PUC Minas. By 2024, I joined Levty as a Software Engineer Trainee, putting my skills into practice. I'm driven by curiosity, collaboration, and the desire to grow and make a positive impact.
+
+`
 }
 
 
@@ -48,7 +56,7 @@ export const PROJECTS = [
   },
   {
     title: "Portfolio Website",
-    link: "https://pongelupee.vercel.app/",
+    link: "https://github.com/GabrielPongelupe/react-portifolio",
     liveDemoUrl: "https://pongelupee.vercel.app/",
     image: portifolioImage,
     description_eng: "This is my personal portfolio website, where you can find information about me and the projects I have developed. Explore to learn more about my work and career journey.",
@@ -58,6 +66,17 @@ export const PROJECTS = [
     short_description_eng: "Personal Portfolio",
     color: "bg-black", // Preto
     technologies: ["React.js", "Tailwind css", "Frame Motion"],
+  },
+  {
+    title: "Carona",
+    link: "https://github.com/GabrielPongelupe/TimeWise",
+    image: caronaImage,
+    description_eng: "Carpool app similar to Uber, designed for students and staff at PUC Minas to connect and share rides. Offers a safer, cost-free alternative to public transportation by allowing drivers and passengers within the university to coordinate trips. Focused on backend architecture and real-time interaction, without automatic payments or live tracking.",
+    description: "Aplicativo de caronas similar ao Uber, feito para conectar alunos e funcionários da PUC Minas e facilitar o compartilhamento de viagens. Oferece uma alternativa segura e gratuita ao transporte público e aos altos preços de apps convencionais de viagem, permitindo que motoristas e passageiros da universidade combinem caronas de forma prática. Foco na arquitetura backend e na interação em tempo real, sem pagamentos automáticos ou rastreamento ao vivo.",
+    short_description: "App de Carona Universitária",
+    short_description_eng: "University Carpool App",
+    color: "bg-blue-400", // Azul claro
+    technologies: ["React.js", "React Native", "Java", "Spring Framework", "RabbitMQ", "Supabase", "Firebase"],
   },
   {
     title: "TicketTrade",
@@ -71,18 +90,9 @@ export const PROJECTS = [
     color: "bg-green-500", // Verde de tom médio
     technologies: ["Spring Boot", "Java", "JavaScript", "HTML5", "CSS"],
   },
-  {
-    title: "Carona",
-    link: "https://github.com/GabrielPongelupe/TimeWise",
-    image: caronaImage,
-    description_eng: "Time Management Web Project is a platform that combines timers, interactive calendars, and practical tips to optimize your productivity and organization. Ideal for those who want to manage their time better and achieve more with less effort.",
-    description:
-      "Projeto Web para Gestão de Tempo é uma plataforma que combina timers, calendários interativos e dicas práticas para otimizar sua produtividade e organização. Ideal para quem quer gerenciar melhor o tempo e alcançar mais com menos esforço.",
-    short_description: "Gestão de Tempo",
-    short_description_eng: "Time Management",
-    color: "bg-blue-400", // Azul claro
-    technologies: ["React.js", "React Native", "Java", "Spring Framework", "RabbitMQ", "Supabase", "Firebase"],
-  },
+  
+
+
 ];
 
 
@@ -97,26 +107,27 @@ export const EXPERIENCES = [
   {
     company: "LEVTY",
     role: {
-      br: "Desenvolvedor Trainee",
-      eng: "Trainee Developer"
+      br: "Engenheiro de Software Trainee",
+      eng: "Software Engineer Trainee"
     },
     period: "Nov 2024 - Present",
     location: "Belo Horizonte, MG · Hybrid",
     description: {
-      br: `Desenvolvimento de soluções de software escaláveis na plataforma SYDLE ONE, trabalhando em projetos de modernização de sistemas e migração de dados para empresas de telecomunicações. Contribuindo para retenção de clientes e crescimento de receita através de propostas de automação e melhorias no sistema. Adquirindo experiência prática com práticas de desenvolvimento empresarial e tecnologias avançadas.`,
-      eng: `Developing scalable software solutions on the SYDLE ONE platform, working on system modernization and data migration projects for telecommunications companies. Contributing to client retention and revenue growth through automation proposals and system improvements. Gaining hands-on experience with enterprise-level development practices and technologies.`
+      br: `Desenvolvedor Backend na plataforma SYDLE ONE, atuando na modernização de sistemas legados e migração de dados para grandes empresas do setor de telecomunicações. Responsável pelo desenvolvimento de soluções escaláveis e robustas, com foco em automação de processos, integração entre sistemas e sustentação de backends críticos. Destaque na criação e liderança de novos projetos, contribuindo para retenção de clientes, aumento da eficiência operacional e geração de receita. Experiência sólida com práticas de desenvolvimento ágil e tecnologias voltadas ao ambiente corporativo.`,
+      
+      eng: `Backend Developer on the SYDLE ONE platform, working on legacy system modernization and data migration for major telecommunications companies. Responsible for developing scalable and robust solutions focused on process automation, system integration, and maintaining critical backends. Recognized for leading new projects that contributed to client retention, increased operational efficiency, and revenue growth. Solid experience with agile development practices and enterprise-oriented technologies.`
     },
     technologies: ["JavaScript", "React", "Elasticsearch", "REST API", "SYDLE ONE", "AWS"],
     highlights: {
   br: [
+    "Experiência adquirida com desenvolvimento de software empresarial, colaborando em projetos que impactaram mais de 4.2 milhões de usuários finais",
     "Participação em projetos de migração de dados para telecomunicações, movimentando mais de 40.000 contratos de clientes",
-    "Contribuição com propostas de automação que resultaram em uma redução de 20% no tempo de processamento interno",
-    "Experiência adquirida com desenvolvimento de software empresarial, colaborando em projetos que impactaram mais de 4.2 milhões de usuários finais"
+    "Contribuição com propostas de automação que resultaram em uma redução no tempo de processamento interno",
   ],
   eng: [
+    "Gained experience with enterprise software development, contributing to projects impacting over 4.2 million end users",
     "Participated in data migration projects for telecommunications, involving over 40,000 client contracts",
-    "Contributed automation proposals that reduced internal processing time by 20%",
-    "Gained experience with enterprise software development, contributing to projects impacting over 4.2 million end users"
+    "Contributed automation proposals that reduced internal processing time"
   ]
 }
 
@@ -131,7 +142,7 @@ export const EXPERIENCES = [
     period: "Jul 2024 - Jan 2025",
     location: "Belo Horizonte, MG · Hybrid",
     description: {
-      br: `Desenvolvimento de API RESTful para landing page interativa utilizando Node.js, Express.js e Prisma. Realizei a integração com bancos de dados MySQL e PostgreSQL, o que resultou em uma redução de 35% no tempo de resposta da aplicação e melhorou a escalabilidade em 60%. Trabalhei em colaboração com equipes multifuncionais para entregar soluções técnicas alinhadas aos requisitos do cliente, garantindo uma taxa de satisfação adequada.`,
+      br: `Desenvolvimento de API RESTful para landing page interativa utilizando Node.js, Express.js e Prisma. Realizei a integração com bancos de dados MySQL e PostgreSQL, o que resultou em uma redução no tempo de resposta da aplicação e melhorou a escalabilidade. Trabalhei em colaboração com equipes multifuncionais para entregar soluções técnicas alinhadas aos requisitos do cliente, garantindo uma taxa de satisfação adequada.`,
       eng: `Developed a RESTful API for an interactive landing page using Node.js, Express.js, and Prisma. Integrated MySQL and PostgreSQL databases while optimizing application scalability and performance. Collaborated with cross-functional teams to deliver technical solutions aligned with client requirements and performance metrics.`
     },
     technologies: ["Node.js", "Express.js", "Prisma", "PostgreSQL", "MySQL", "JavaScript", "Git"],

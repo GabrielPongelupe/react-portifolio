@@ -22,6 +22,18 @@ const Navbar = () => {
     };
   }, []);
 
+
+    const scrollToSection = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+      handleNavClick(); // Fecha o menu mobile se estiver aberto
+  };
+
   const handleToggleLanguage = (language) => {
     if ((language === 'portuguese' && !portuguese) || (language === 'english' && portuguese)) {
       toggleLanguage();
@@ -98,7 +110,11 @@ const Navbar = () => {
               <li key={link.id} className="relative group">
                 <a
                   href={`#${link.id}`}
-                  className="block py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(link.id);
+                  }}
+                  className="block pt-2 text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
@@ -115,7 +131,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Linkedin"
-            className="text-gray-300 hover:text-white transition-transform hover:scale-110 duration-300"
+            className="text-gray-300 hover:text-orange-400 transition-transform hover:scale-110 duration-300"
           >
             <FaLinkedin />
           </a>
@@ -124,7 +140,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub"
-            className="text-gray-300 hover:text-white transition-transform hover:scale-110 duration-300"
+            className="text-gray-300 hover:text-orange-400 transition-transform hover:scale-110 duration-300"
           >
             <FaGithub />
           </a>
@@ -133,7 +149,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Gmail"
-            className="text-gray-300 hover:text-white transition-transform hover:scale-110 duration-300"
+            className="text-gray-300 hover:text-orange-400 transition-transform hover:scale-110 duration-300"
           >
             <SiGmail />
           </a>
@@ -142,7 +158,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="LeetCode"
-            className="text-gray-300 hover:text-white transition-transform hover:scale-110 duration-300"
+            className="text-gray-300 hover:text-orange-400 transition-transform hover:scale-110 duration-300"
           >
             <SiLeetcode />
           </a>
@@ -196,8 +212,11 @@ const Navbar = () => {
             <a
               key={link.id}
               href={`#${link.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(link.id);
+              }}
               className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-neutral-800 rounded-md transition-colors duration-200"
-              onClick={handleNavClick}
             >
               {link.label}
             </a>

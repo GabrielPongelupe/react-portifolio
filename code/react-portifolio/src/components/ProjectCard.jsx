@@ -10,7 +10,16 @@ const ProjectCard = ({ project, onClick, portuguese, animations, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.1 }} // Efeito cascata
-      className="group relative rounded-xl bg-neutral-900/30 hover:bg-gradient-to-br from-neutral-800/50 to-neutral-900/80 transition-all duration-300 shadow-lg hover:shadow-xl"
+      className="
+        group relative rounded-xl border border-transparent 
+        p-6 transition-all duration-300 shadow-lg 
+        hover:scale-[101%] 
+        hover:border-t hover:border-t-white/20 
+        hover:border-b hover:border-b-black/50 
+        hover:bg-white/5 hover:bg-gradient-to-br
+      "
+
+
     >
       <div 
         onClick={onClick}
