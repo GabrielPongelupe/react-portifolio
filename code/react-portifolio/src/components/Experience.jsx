@@ -1,51 +1,40 @@
 import { useContext } from "react";
-import { motion } from "framer-motion";
+import { IoBriefcaseOutline } from "react-icons/io5";
 import { EXPERIENCES } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
+import SectionHeading from "../common/SectionHeading";
 import ExperienceCard from "./ExperienceCard";
-
-// Animações reutilizáveis
-const animations = {
-  title: {
-    whileInView: { opacity: 1, y: 0 },
-    initial: { y: -100, opacity: 0 },
-    transition: { duration: 1, ease: "easeOut" },
-  },
-  fadeInLeft: {
-    whileInView: { opacity: 1, x: 0 },
-    initial: { opacity: 0, x: -100 },
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-  fadeInRight: {
-    whileInView: { opacity: 1, x: 0 },
-    initial: { opacity: 0, x: 100 },
-    transition: { duration: 0.8, ease: "easeOut" },
-  },
-};
 
 const Experience = () => {
   const { portuguese } = useContext(LanguageContext);
 
   return (
-    <section id="experience" className="mx-auto max-w-6xl px-4 pt-24 pb-16 border-b border-neutral-900">
-      <motion.h1
-        {...animations.title}
-        className="mb-16 text-center text-4xl font-bold"
-      >
-        {portuguese ? "Minhas" : "My"}
-        <span className="text-green-400"> {portuguese ? "Experiências" : "Experiences"}</span>
-      </motion.h1>
+    <section id="experience" className="mx-auto max-w-4xl px-4 pt-24 pb-16">
+      <SectionHeading
+        icon={IoBriefcaseOutline}
+        kicker={portuguese ? "Trajetória Profissional" : "Professional Journey"}
+        title={
+          <>
+            {portuguese ? "Minhas" : "My"}
+            <span className="text-emerald-600"> {portuguese ? "Experiências" : "Experiences"}</span>
+          </>
+        }
+      />
 
-      <div className="grid gap-8 md:gap-12">
-        {EXPERIENCES.map((experience, index) => (
-          <ExperienceCard 
-            key={`${experience.company}-${index}`}
-            experience={experience}
-            index={index}
-            portuguese={portuguese}
-            animations={animations}
-          />
-        ))}
+      <div className="relative">
+        {/* Linha vertical da timeline */}
+        <div className="absolute left-[7px] top-2 bottom-2 w-1 rounded-full bg-gradient-to-b from-emerald-200 via-neutral-300 to-transparent" />
+
+        <div className="space-y-14">
+          {EXPERIENCES.map((experience, index) => (
+            <ExperienceCard
+              key={`${experience.company}-${index}`}
+              experience={experience}
+              index={index}
+              portuguese={portuguese}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

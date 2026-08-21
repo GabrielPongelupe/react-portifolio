@@ -3,23 +3,14 @@ import ticketTradeImage from "../assets/projects/ticketTradeImage.png";
 import dePinhoImage from "../assets/projects/dePinhoImage.png"
 import portifolioImage from "../assets/projects/portifolioImage.png"
 
+import aesExperienceImage from "../assets/experiences/aes_1.png";
+import levtyExperienceImage1 from "../assets/experiences/levty_1.jpeg";
+import levtyExperienceImage2 from "../assets/experiences/levty_2.png";
+import parfinExperienceImage from "../assets/experiences/parfin_1.webp";
+
 export const HERO_CONTENT = {
-  br: `Sou Gabriel Pongelupe, tenho 20 anos e sou um desenvolvedor apaixonado por resolver problemas de forma criativa e eficiente. Meu interesse por tecnologia começou em 2017, quando os videogames despertaram minha curiosidade sobre o que havia por trás das telas. Esse fascínio logo se transformou em ação: em 2019, iniciei meus estudos na escola de programação SuperGeek, onde mergulhei de cabeça em projetos desafiadores. Desde então, a programação se tornou mais do que uma habilidade — tornou-se minha vocação.
-
-
-`,
-  eng: `I’m Gabriel Pongelupe, a 20-year-old developer passionate about solving problems creatively and efficiently. My journey in technology began in 2017 when video games sparked a deep curiosity about what happens behind the scenes. In 2019, I joined SuperGeek, a programming school that introduced me to the world of software development through hands-on, challenging projects. Since then, programming has become more than just a skill — it’s my calling.
-
-` 
-}
-
-export const HERO_CONTENT_2023 = {
-    br: `Em 2023, comecei o curso de Engenharia de Software na PUC Minas. Em 2024, iniciei meu programa de trainee na Levty, onde aplico na prática o que venho aprendendo. Estou sempre em busca de evolução, guiado pela curiosidade, colaboração e vontade de causar impacto positivo.
-
-`,
-    eng : `In 2023, I started my Software Engineering degree at PUC Minas. By 2024, I joined Levty as a Software Engineer Trainee, putting my skills into practice. I'm driven by curiosity, collaboration, and the desire to grow and make a positive impact.
-
-`
+  br: `Desenvolvedor apaixonado por resolver problemas com código desde 2017. Hoje curso Engenharia de Software na PUC Minas e atuo na Parfin, construindo soluções para o mercado financeiro e blockchain.`,
+  eng: `Developer passionate about solving problems with code since 2017. Currently studying Software Engineering at PUC Minas and working at Parfin, building solutions for the financial and blockchain markets.`
 }
 
 
@@ -105,17 +96,49 @@ export const CONTACT = {
 
 export const EXPERIENCES = [
   {
+    company: "PARFIN",
+    role: {
+      br: "Engenheiro de Software",
+      eng: "Software Engineer"
+    },
+    period: "Aug 2025 - Present",
+    duration: { br: "1 ano 1 mês", eng: "1 yr 1 mo" },
+    current: true,
+    location: "Belo Horizonte, MG · Remote",
+    images: [parfinExperienceImage],
+    description: {
+      br: `Engenheiro de Software na Parfin, plataforma de custódia digital (CaaS) que conecta mais de 20 exchanges, custodians e bancos a múltiplas blockchains como Ethereum, Bitcoin, Solana e Polygon. Desenvolvo e sustento os microsserviços da plataforma em .NET, Node.js e Angular, com infraestrutura AWS e pipelines de CI/CD no Azure DevOps.`,
+      eng: `Software Engineer at Parfin, a digital asset custody (CaaS) platform connecting 20+ exchanges, custodians, and banks across multiple blockchains such as Ethereum, Bitcoin, Solana, and Polygon. I build and maintain the platform's microservices in .NET, Node.js, and Angular, with AWS infrastructure and Azure DevOps CI/CD pipelines.`
+    },
+    technologies: [".NET", "Node.js", "Angular", "AWS", "Azure DevOps", "Blockchain", "Microservices", "System Design"],
+    highlights: {
+      br: [
+        "Atuação em uma plataforma que conecta mais de 20 exchanges, custodians e bancos a múltiplas blockchains, incluindo trilhos fiat como Pix e SWIFT",
+        "Desenvolvimento e suporte de microsserviços críticos de custódia digital e execução de operações (RFQ) em ambiente de produção",
+        "Atuação em todo o ciclo de entrega — do desenvolvimento ao deploy — utilizando .NET, Node.js e Angular, com infraestrutura AWS e pipelines Azure DevOps"
+      ],
+      eng: [
+        "Worked on a platform connecting 20+ exchanges, custodians, and banks across multiple blockchains, including fiat rails like Pix and SWIFT",
+        "Developed and supported critical digital custody and trade execution (RFQ) microservices in a production environment",
+        "Contributed across the full delivery cycle — from development to deploy — using .NET, Node.js, and Angular, with AWS infrastructure and Azure DevOps pipelines"
+      ]
+    }
+  },
+  {
     company: "LEVTY",
     role: {
       br: "Engenheiro de Software Trainee",
       eng: "Software Engineer Trainee"
     },
-    period: "Nov 2024 - Present",
+    period: "Nov 2024 - Aug 2025",
+    duration: { br: "10 meses", eng: "10 months" },
+    current: false,
     location: "Belo Horizonte, MG · Hybrid",
+    images: [levtyExperienceImage1, levtyExperienceImage2],
     description: {
-      br: `Desenvolvedor Backend na plataforma SYDLE ONE, atuando na modernização de sistemas legados e migração de dados para grandes empresas do setor de telecomunicações. Responsável pelo desenvolvimento de soluções escaláveis e robustas, com foco em automação de processos, integração entre sistemas e sustentação de backends críticos. Destaque na criação e liderança de novos projetos, contribuindo para retenção de clientes, aumento da eficiência operacional e geração de receita. Experiência sólida com práticas de desenvolvimento ágil e tecnologias voltadas ao ambiente corporativo.`,
-      
-      eng: `Backend Developer on the SYDLE ONE platform, working on legacy system modernization and data migration for major telecommunications companies. Responsible for developing scalable and robust solutions focused on process automation, system integration, and maintaining critical backends. Recognized for leading new projects that contributed to client retention, increased operational efficiency, and revenue growth. Solid experience with agile development practices and enterprise-oriented technologies.`
+      br: `Backend na plataforma SYDLE ONE, modernizando sistemas legados e migrando dados para grandes empresas de telecomunicações. Foco em automação de processos, integração entre sistemas e sustentação de backends críticos, liderando novos projetos com práticas ágeis.`,
+
+      eng: `Backend developer on the SYDLE ONE platform, modernizing legacy systems and migrating data for major telecommunications companies. Focused on process automation, system integration, and maintaining critical backends, leading new projects with agile practices.`
     },
     technologies: ["JavaScript", "React", "Elasticsearch", "REST API", "SYDLE ONE", "AWS"],
     highlights: {
@@ -139,25 +162,27 @@ export const EXPERIENCES = [
       br: "Desenvolvedor Backend",
       eng: "Backend Developer"
     },
-    period: "Jul 2024 - Jan 2025",
+    period: "Jan 2024 - Jan 2025",
+    duration: { br: "1 ano 1 mês", eng: "1 yr 1 mo" },
+    current: false,
     location: "Belo Horizonte, MG · Hybrid",
+    images: [aesExperienceImage],
     description: {
-      br: `Desenvolvimento de API RESTful para landing page interativa utilizando Node.js, Express.js e Prisma. Realizei a integração com bancos de dados MySQL e PostgreSQL, o que resultou em uma redução no tempo de resposta da aplicação e melhorou a escalabilidade. Trabalhei em colaboração com equipes multifuncionais para entregar soluções técnicas alinhadas aos requisitos do cliente, garantindo uma taxa de satisfação adequada.`,
-      eng: `Developed a RESTful API for an interactive landing page using Node.js, Express.js, and Prisma. Integrated MySQL and PostgreSQL databases while optimizing application scalability and performance. Collaborated with cross-functional teams to deliver technical solutions aligned with client requirements and performance metrics.`
+      br: `Backend na AES, agência de projetos da PUC Minas com mais de 7 projetos publicados. Construí uma API RESTful com Node.js, Express e Prisma, integrada a MySQL e PostgreSQL, para uma landing page interativa.`,
+      eng: `Backend developer at AES, PUC Minas' student-run software agency with 7+ published projects. Built a RESTful API with Node.js, Express, and Prisma, integrated with MySQL and PostgreSQL, for an interactive landing page.`
     },
     technologies: ["Node.js", "Express.js", "Prisma", "PostgreSQL", "MySQL", "JavaScript", "Git"],
     highlights: {
       br: [
-        "Construção de API RESTful integrada com múltiplos sistemas de banco de dados.",
+        "Parte de uma agência com mais de 7 projetos publicados, incluindo soluções adotadas em toda a PUC Minas",
         "Otimização de performance e escalabilidade, reduzindo o tempo de resposta da aplicação em 35%",
-        "Entrega de soluções técnicas que aumentaram a taxa de conversão da landing page e elevaram em o tempo médio de permanência dos usuários"
+        "Entrega de soluções técnicas que aumentaram em 22% a taxa de conversão da landing page e elevaram em 15% o tempo médio de permanência dos usuários"
       ],
       eng: [
-        "Built RESTful API integrated with multiple database systems.",
+        "Part of a software agency with 7+ published projects, including solutions adopted across all of PUC Minas",
         "Optimized performance and scalability, reducing application response time by 35%",
         "Delivered technical solutions that increased landing page conversion rate by 22% and boosted average user session time by 15%"
       ]
     }
-
   }
 ];
