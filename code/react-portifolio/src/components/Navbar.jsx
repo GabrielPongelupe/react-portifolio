@@ -77,12 +77,12 @@ const Navbar = () => {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between py-4">
         {/* Logo */}
-        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection("hero"); }} className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500 anton-regular text-lg text-neutral-950">
+        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection("hero"); }} className="flex items-center gap-2">
+          <span className="flex h-9 w-9 -rotate-6 items-center justify-center rounded-xl border-2 border-black bg-emerald-500 anton-regular text-lg text-neutral-950 transition-transform duration-300 hover:rotate-0">
             G
           </span>
           <span className="anton-regular hidden text-xl text-neutral-950 sm:block">
-            GABRIEL<span className="text-emerald-600">PONGELUPE</span>
+            PONGELUPE<span className="text-emerald-600"></span>
           </span>
         </a>
 
@@ -111,34 +111,34 @@ const Navbar = () => {
         <div className="hidden md:block relative">
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-neutral-100/80 py-1.5 pl-1.5 pr-2.5 text-neutral-500 transition-colors duration-300 hover:text-neutral-950"
+            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-100/80 py-2 pl-2 pr-3 text-neutral-500 transition-colors duration-300 hover:text-neutral-950"
           >
             <img
               src={portuguese ? brasilFlag : usaFlag}
               alt={portuguese ? "Bandeira do Brasil" : "USA Flag"}
-              className="h-6 w-6 rounded-full"
+              className="h-7 w-7 rounded-full"
             />
-            <IoChevronDown className={`text-xs transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
+            <IoChevronDown className={`text-sm transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
           </button>
 
           <div
-            className={`absolute right-0 mt-2 w-36 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-xl transition-all duration-300 ${
+            className={`absolute right-0 mt-2 w-40 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-xl transition-all duration-300 ${
               dropdownOpen ? "max-h-40 opacity-100" : "pointer-events-none max-h-0 opacity-0"
             }`}
           >
             <ul className="text-neutral-950">
               <li
                 onClick={() => handleToggleLanguage("portuguese")}
-                className="flex items-center gap-2 px-3 py-2.5 cursor-pointer text-sm hover:bg-neutral-100"
+                className="flex items-center gap-2.5 px-3.5 py-3 cursor-pointer text-sm hover:bg-neutral-100"
               >
-                <img src={brasilFlag} alt="Bandeira do Brasil" className="h-5 w-5 rounded-full" />
+                <img src={brasilFlag} alt="Bandeira do Brasil" className="h-6 w-6 rounded-full" />
                 Português
               </li>
               <li
                 onClick={() => handleToggleLanguage("english")}
-                className="flex items-center gap-2 px-3 py-2.5 cursor-pointer text-sm hover:bg-neutral-100"
+                className="flex items-center gap-2.5 px-3.5 py-3 cursor-pointer text-sm hover:bg-neutral-100"
               >
-                <img src={usaFlag} alt="USA Flag" className="h-5 w-5 rounded-full" />
+                <img src={usaFlag} alt="USA Flag" className="h-6 w-6 rounded-full" />
                 English
               </li>
             </ul>
