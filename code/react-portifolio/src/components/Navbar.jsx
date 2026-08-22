@@ -1,10 +1,12 @@
 import { useContext, useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   IoHomeOutline,
   IoBriefcaseOutline,
   IoFolderOpenOutline,
   IoHardwareChipOutline,
   IoMailOutline,
+  IoFilmOutline,
   IoChevronDown,
   IoMenu,
   IoClose,
@@ -15,6 +17,8 @@ import usaFlag from "../assets/usa.png";
 
 const Navbar = () => {
   const { portuguese, toggleLanguage } = useContext(LanguageContext);
+  const navigate = useNavigate();
+  const location = useLocation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,24 +29,28 @@ const Navbar = () => {
     { id: "experience", label: portuguese ? "Experiências" : "Experience", icon: IoBriefcaseOutline },
     { id: "projects", label: portuguese ? "Projetos" : "Projects", icon: IoFolderOpenOutline },
     { id: "technologies", label: portuguese ? "Tecnologias" : "Tech Stack", icon: IoHardwareChipOutline },
+    { id: "movies-books", label: portuguese ? "Filmes/Livros" : "Movies/Books", icon: IoFilmOutline, path: "/filmes-livros" },
     { id: "contact", label: portuguese ? "Contato" : "Contact", icon: IoMailOutline },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
+      if (location.pathname !== "/") return;
+
       setIsScrolled(window.scrollY > 20);
 
       const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
       if (atBottom) {
-        setActiveSection(navLinks[navLinks.length - 1].id);
+        setActiveSection("contact");
         return;
       }
 
       const scrollPosition = window.scrollY + window.innerHeight / 3;
-      for (let i = navLinks.length - 1; i >= 0; i--) {
-        const section = document.getElementById(navLinks[i].id);
+      const scrollLinks = navLinks.filter((link) => !link.path);
+      for (let i = scrollLinks.length - 1; i >= 0; i--) {
+        const section = document.getElementById(scrollLinks[i].id);
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navLinks[i].id);
+          setActiveSection(scrollLinks[i].id);
           break;
         }
       }
@@ -51,16 +59,47 @@ const Navbar = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [portuguese]);
+  }, [portuguese, location.pathname]);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      setActiveSection(id);
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+  // Se acabamos de navegar para a home vindos de outra página com um alvo de scroll pendente, rola até ele
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const targetId = location.state.scrollTo;
+      requestAnimationFrame(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          setActiveSection(targetId);
+        }
+      });
+      navigate(location.pathname, { replace: true, state: {} });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
+
+  useEffect(() => {
+    setIsScrolled(window.scrollY > 20);
+  }, [location.pathname]);
+
+  const handleNavClick = (link) => {
+    if (link.path) {
+      navigate(link.path);
+      window.scrollTo(0, 0);
+      setActiveSection(link.id);
+    } else if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: link.id } });
+    } else {
+      const element = document.getElementById(link.id);
+      if (element) {
+        setActiveSection(link.id);
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
     setMobileMenuOpen(false);
   };
+
+  const isLinkActive = (link) =>
+    link.path ? location.pathname === link.path : location.pathname === "/" && activeSection === link.id;
 
   const handleToggleLanguage = (language) => {
     if ((language === "portuguese" && !portuguese) || (language === "english" && portuguese)) {
@@ -77,7 +116,14 @@ const Navbar = () => {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between py-4">
         {/* Logo */}
-        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection("hero"); }} className="flex items-center gap-2">
+        <a
+          href="#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick({ id: "hero" });
+          }}
+          className="flex items-center gap-2"
+        >
           <span className="flex h-9 w-9 -rotate-6 items-center justify-center rounded-xl border-2 border-black bg-emerald-500 anton-regular text-lg text-neutral-950 transition-transform duration-300 hover:rotate-0">
             G
           </span>
@@ -89,20 +135,27 @@ const Navbar = () => {
         {/* Nav pill - desktop */}
         <div className="hidden items-center gap-1 rounded-full border border-neutral-200 bg-neutral-100/80 p-1.5 backdrop-blur-md md:flex">
           {navLinks.map((link) => {
-            const isActive = activeSection === link.id;
+            const isActive = isLinkActive(link);
             return (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                  isActive
-                    ? "bg-white text-neutral-950 shadow-sm"
-                    : "text-neutral-500 hover:text-neutral-950"
-                }`}
-              >
-                <link.icon className="text-base" />
-                {isActive && <span>{link.label}</span>}
-              </button>
+              <div key={link.id} className="group relative">
+                <button
+                  onClick={() => handleNavClick(link)}
+                  className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                    isActive
+                      ? "bg-white text-neutral-950 shadow-sm"
+                      : "text-neutral-500 hover:text-neutral-950"
+                  }`}
+                >
+                  <link.icon className="text-base" />
+                  {isActive && <span>{link.label}</span>}
+                </button>
+
+                {!isActive && (
+                  <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-full bg-neutral-950 px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
+                    {link.label}
+                  </span>
+                )}
+              </div>
             );
           })}
         </div>
@@ -165,9 +218,9 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <button
               key={link.id}
-              onClick={() => scrollToSection(link.id)}
+              onClick={() => handleNavClick(link)}
               className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors duration-200 ${
-                activeSection === link.id
+                isLinkActive(link)
                   ? "bg-neutral-100 text-neutral-950"
                   : "text-neutral-500 hover:bg-neutral-100 hover:text-neutral-950"
               }`}
