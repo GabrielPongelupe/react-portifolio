@@ -1437,7 +1437,7 @@ export const MOVIES_SERIES = [
     title: "Hora de Aventura",
     type: "series",
     genre: "animation",
-    rating: 4.3,
+    rating: 5.0,
     image: "https://image.tmdb.org/t/p/w500/2EMpiF1GireQHs3f9JKCFoKElju.jpg",
     description: {
       br: "Finn, um garoto humano, e Jake, seu cão mágico, vivem aventuras na estranha Terra de Ooo.",
