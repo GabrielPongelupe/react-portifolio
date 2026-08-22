@@ -137,25 +137,18 @@ const Navbar = () => {
           {navLinks.map((link) => {
             const isActive = isLinkActive(link);
             return (
-              <div key={link.id} className="group relative">
-                <button
-                  onClick={() => handleNavClick(link)}
-                  className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                    isActive
-                      ? "bg-white text-neutral-950 shadow-sm"
-                      : "text-neutral-500 hover:text-neutral-950"
-                  }`}
-                >
-                  <link.icon className="text-base" />
-                  {isActive && <span>{link.label}</span>}
-                </button>
-
-                {!isActive && (
-                  <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-full bg-neutral-950 px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
-                    {link.label}
-                  </span>
-                )}
-              </div>
+              <button
+                key={link.id}
+                onClick={() => handleNavClick(link)}
+                className={`flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  isActive
+                    ? "bg-white text-neutral-950 shadow-sm"
+                    : "text-neutral-500 hover:text-neutral-950"
+                }`}
+              >
+                <link.icon className="text-base" />
+                <span>{link.label}</span>
+              </button>
             );
           })}
         </div>

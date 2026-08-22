@@ -393,7 +393,7 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "scifi",
     rating: 4.65,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dark_TV_Series_Logo.svg/250px-Dark_TV_Series_Logo.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/pt/thumb/f/f6/Dark_%28s%C3%A9rie%29.jpg/250px-Dark_%28s%C3%A9rie%29.jpg",
     description: {
       br: "Desaparecimentos numa cidade alemã revelam um mistério de viagem no tempo entre quatro famílias.",
       eng: "Disappearances in a German town unravel a time-travel mystery spanning four families."
@@ -404,7 +404,7 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "adventure",
     rating: 4.4,
-    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/One_Piece_Live_Action_logo.png/250px-One_Piece_Live_Action_logo.png",
+    image: "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
     description: {
       br: "Monkey D. Luffy reúne sua tripulação em busca do maior tesouro dos mares.",
       eng: "Monkey D. Luffy gathers his crew in search of the greatest treasure on the seas."
@@ -492,7 +492,7 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "comedy",
     rating: 4.45,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Brooklyn_Nine-Nine_Logo.png/250px-Brooklyn_Nine-Nine_Logo.png",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Brooklyn_Nine-Nine_Season_1.jpg/250px-Brooklyn_Nine-Nine_Season_1.jpg",
     description: {
       br: "As trapalhadas de um grupo de detetives excêntricos numa delegacia do Brooklyn.",
       eng: "The antics of a squad of eccentric detectives at a Brooklyn police precinct."
@@ -503,7 +503,7 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "horror",
     rating: 4.3,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/The_Walking_Dead_2010_logo.svg/250px-The_Walking_Dead_2010_logo.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/en/0/0e/TheWalkingDeadPoster.jpg",
     description: {
       br: "Sobreviventes lutam para se manter vivos num mundo dominado por mortos-vivos.",
       eng: "Survivors fight to stay alive in a world overrun by the undead."
@@ -723,7 +723,7 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "crime",
     rating: 4.4,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Prison_Break_logo.svg/250px-Prison_Break_logo.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Prison_Break_season_1_dvd.jpg/250px-Prison_Break_season_1_dvd.jpg",
     description: {
       br: "Um engenheiro se deixa prender de propósito para ajudar o irmão a fugir.",
       eng: "An engineer gets himself imprisoned on purpose to help his brother escape."
@@ -877,7 +877,7 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "comedy",
     rating: 4.55,
-    image: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Mr._bean_title_card.jpg/250px-Mr._bean_title_card.jpg",
+    image: "https://image.tmdb.org/t/p/w500/omEvnJQHpk8Rc6xMkm8z0wblEyL.jpg",
     description: {
       br: "As trapalhadas mudas e hilárias de um dos personagens mais icônicos da comédia britânica.",
       eng: "The silent, hilarious antics of one of British comedy's most iconic characters."
@@ -932,10 +932,560 @@ export const MOVIES_SERIES = [
     type: "series",
     genre: "mystery",
     rating: 5.0,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lost_main_title.svg/250px-Lost_main_title.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Lost_S1_DVD.jpg/250px-Lost_S1_DVD.jpg",
     description: {
       br: "Sobreviventes de um acidente aéreo desvendam os mistérios de uma ilha misteriosa.",
       eng: "Plane crash survivors unravel the mysteries of a strange island."
+    }
+  },
+  {
+    title: "Cidade de Deus",
+    type: "movie",
+    genre: "crime",
+    rating: 4.3,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/10/CidadedeDeus.jpg/250px-CidadedeDeus.jpg",
+    description: {
+      br: "Um jovem fotógrafo narra a ascensão do crime organizado em uma favela do Rio de Janeiro.",
+      eng: "A young photographer narrates the rise of organized crime in a Rio de Janeiro favela."
+    }
+  },
+  {
+    title: "A Vida é Bela",
+    type: "movie",
+    genre: "drama",
+    rating: 4.3,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Vitaebella.jpg/250px-Vitaebella.jpg",
+    description: {
+      br: "Um pai usa imaginação e humor para proteger o filho dos horrores de um campo de concentração.",
+      eng: "A father uses imagination and humor to shield his son from the horrors of a concentration camp."
+    }
+  },
+  {
+    title: "O Agente Secreto",
+    type: "movie",
+    genre: "drama",
+    rating: 3.65,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/The_Secret_Agent.png/250px-The_Secret_Agent.png",
+    description: {
+      br: "Um professor foragido tenta recomeçar a vida em Recife durante a ditadura militar brasileira de 1977.",
+      eng: "A man on the run tries to rebuild his life in Recife during Brazil's 1977 military dictatorship."
+    }
+  },
+  {
+    title: "WALL-E",
+    type: "movie",
+    genre: "animation",
+    rating: 4.2,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/WALL-E_poster.jpg/250px-WALL-E_poster.jpg",
+    description: {
+      br: "Um robô solitário encarregado de limpar a Terra encontra o amor entre as ruínas da humanidade.",
+      eng: "A lonely robot tasked with cleaning up Earth finds love amid the ruins of humanity."
+    }
+  },
+  {
+    title: "Indiana Jones e os Caçadores da Arca Perdida",
+    type: "movie",
+    genre: "adventure",
+    rating: 4.2,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Raiders_of_the_Lost_Ark.jpg/250px-Raiders_of_the_Lost_Ark.jpg",
+    description: {
+      br: "O arqueólogo Indiana Jones corre contra os nazistas para encontrar a lendária Arca da Aliança.",
+      eng: "Archaeologist Indiana Jones races against the Nazis to find the legendary Ark of the Covenant."
+    }
+  },
+  {
+    title: "Indiana Jones e o Templo da Perdição",
+    type: "movie",
+    genre: "adventure",
+    rating: 3.75,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Indiana_Jones_and_the_Temple_of_Doom_PosterB.jpg/250px-Indiana_Jones_and_the_Temple_of_Doom_PosterB.jpg",
+    description: {
+      br: "Indiana Jones enfrenta um culto sinistro para resgatar crianças escravizadas na Índia colonial.",
+      eng: "Indiana Jones confronts a sinister cult to rescue enslaved children in colonial India."
+    }
+  },
+  {
+    title: "Indiana Jones e a Última Cruzada",
+    type: "movie",
+    genre: "adventure",
+    rating: 4.1,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Indiana_Jones_and_the_Last_Crusade.png/250px-Indiana_Jones_and_the_Last_Crusade.png",
+    description: {
+      br: "Indiana Jones e seu pai se unem para encontrar o Santo Graal antes dos nazistas.",
+      eng: "Indiana Jones and his father team up to find the Holy Grail before the Nazis do."
+    }
+  },
+  {
+    title: "Indiana Jones e o Reino da Caveira de Cristal",
+    type: "movie",
+    genre: "adventure",
+    rating: 3.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Kingdomofthecrystalskull.jpg/250px-Kingdomofthecrystalskull.jpg",
+    description: {
+      br: "Já na Guerra Fria, Indiana Jones busca uma caveira de cristal alienígena disputada pelos soviéticos.",
+      eng: "During the Cold War, Indiana Jones seeks an alien crystal skull sought by the Soviets."
+    }
+  },
+  {
+    title: "Indiana Jones e a Relíquia do Destino",
+    type: "movie",
+    genre: "adventure",
+    rating: 3.45,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Indiana_Jones_and_the_Dial_of_Destiny_theatrical_poster.jpg/250px-Indiana_Jones_and_the_Dial_of_Destiny_theatrical_poster.jpg",
+    description: {
+      br: "Em sua última aventura, um Indiana Jones já idoso persegue um dispositivo mítico capaz de alterar o tempo.",
+      eng: "In his final adventure, an aging Indiana Jones chases a mythical device said to alter time."
+    }
+  },
+  {
+    title: "Piratas do Caribe: A Maldição do Pérola Negra",
+    type: "movie",
+    genre: "fantasy",
+    rating: 4.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png/250px-Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
+    description: {
+      br: "O excêntrico pirata Jack Sparrow se une a um ferreiro para resgatar sua amada de piratas amaldiçoados.",
+      eng: "Eccentric pirate Jack Sparrow joins a blacksmith to rescue his beloved from a crew of cursed pirates."
+    }
+  },
+  {
+    title: "Piratas do Caribe: O Baú da Morte",
+    type: "movie",
+    genre: "fantasy",
+    rating: 3.7,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Pirates_of_the_caribbean_2_poster_b.jpg/250px-Pirates_of_the_caribbean_2_poster_b.jpg",
+    description: {
+      br: "Jack Sparrow precisa pagar uma dívida com o temido Davy Jones, capitão do lendário Holandês Voador.",
+      eng: "Jack Sparrow must settle a debt with the dreaded Davy Jones, captain of the legendary Flying Dutchman."
+    }
+  },
+  {
+    title: "Piratas do Caribe: No Fim do Mundo",
+    type: "movie",
+    genre: "fantasy",
+    rating: 3.55,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Pirates_AWE_Poster.jpg/250px-Pirates_AWE_Poster.jpg",
+    description: {
+      br: "Piratas de todo o mundo se unem contra a poderosa Companhia das Índias Orientais.",
+      eng: "Pirates from across the world unite against the powerful East India Trading Company."
+    }
+  },
+  {
+    title: "Piratas do Caribe: Navegando em Águas Misteriosas",
+    type: "movie",
+    genre: "fantasy",
+    rating: 3.3,
+    image: "https://upload.wikimedia.org/wikipedia/en/5/5e/Pirates_of_the_Caribbean_-_On_Stranger_Tides.png",
+    description: {
+      br: "Jack Sparrow se envolve numa corrida rumo à Fonte da Juventude, cercado por sereias e piratas rivais.",
+      eng: "Jack Sparrow gets caught up in a race to the Fountain of Youth, surrounded by mermaids and rival pirates."
+    }
+  },
+  {
+    title: "Piratas do Caribe: A Vingança de Salazar",
+    type: "movie",
+    genre: "fantasy",
+    rating: 3.25,
+    image: "https://upload.wikimedia.org/wikipedia/en/2/21/Pirates_of_the_Caribbean,_Dead_Men_Tell_No_Tales.jpg",
+    description: {
+      br: "Jack Sparrow é perseguido por fantasmas espanhóis enquanto busca o lendário Tridente de Poseidon.",
+      eng: "Jack Sparrow is hunted by ghostly Spanish sailors while searching for the legendary Trident of Poseidon."
+    }
+  },
+  {
+    title: "Star Wars: O Mandaloriano e Grogu",
+    type: "movie",
+    genre: "scifi",
+    rating: 3.4,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/The_Mandalorian_and_Grogu_poster.jpg/250px-The_Mandalorian_and_Grogu_poster.jpg",
+    description: {
+      br: "Din Djarin e Grogu embarcam em sua primeira grande aventura juntos na telona.",
+      eng: "Din Djarin and Grogu embark on their first big-screen adventure together."
+    }
+  },
+  {
+    title: "Star Wars: The Mandalorian",
+    type: "series",
+    genre: "scifi",
+    rating: 4.3,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/The_Mandalorian_season_1_poster.jpg/250px-The_Mandalorian_season_1_poster.jpg",
+    description: {
+      br: "Um caçador de recompensas solitário protege uma misteriosa criança conhecida como 'a Criança' pela galáxia.",
+      eng: "A lone bounty hunter protects a mysterious child known as 'the Child' across the galaxy."
+    }
+  },
+  {
+    title: "Andor",
+    type: "series",
+    genre: "scifi",
+    rating: 4.3,
+    image: "https://image.tmdb.org/t/p/w500/yX8c3bXKzAquEKQ75eQslnodskK.jpg",
+    description: {
+      br: "Cassian Andor se transforma de contrabandista comum em revolucionário na luta contra o Império.",
+      eng: "Cassian Andor transforms from a small-time smuggler into a revolutionary fighting the Empire."
+    }
+  },
+  {
+    title: "Star Wars: A Guerra dos Clones",
+    type: "series",
+    genre: "scifi",
+    rating: 4.25,
+    image: "https://upload.wikimedia.org/wikipedia/en/7/72/Star_wars_the_clone_wars.jpg",
+    description: {
+      br: "Jedi lideram exércitos clones em batalhas épicas durante as Guerras Clônicas.",
+      eng: "Jedi lead clone armies through epic battles during the Clone Wars."
+    }
+  },
+  {
+    title: "Star Wars Rebels",
+    type: "series",
+    genre: "scifi",
+    rating: 4.05,
+    image: "https://image.tmdb.org/t/p/w500/eLrScs6Bs26JMcS8hiZhf7YRROr.jpg",
+    description: {
+      br: "Uma pequena tripulação de rebeldes acende as primeiras chamas da resistência contra o Império.",
+      eng: "A small crew of rebels sparks the first flames of resistance against the Empire."
+    }
+  },
+  {
+    title: "Gênio Indomável",
+    type: "movie",
+    genre: "drama",
+    rating: 4.15,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Good_Will_Hunting.png/250px-Good_Will_Hunting.png",
+    description: {
+      br: "Um jovem gênio autodidata da faxina em Harvard precisa enfrentar seus traumas para não desperdiçar seu talento.",
+      eng: "A janitor and self-taught genius at Harvard must confront his trauma before he wastes his gift."
+    }
+  },
+  {
+    title: "Your Name",
+    type: "movie",
+    genre: "animation",
+    rating: 4.2,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Your_Name_poster.png/250px-Your_Name_poster.png",
+    description: {
+      br: "Dois adolescentes desconhecidos trocam de corpo misteriosamente e tentam se encontrar através do tempo.",
+      eng: "Two teenage strangers mysteriously swap bodies and race to find each other across time."
+    }
+  },
+  {
+    title: "Toy Story",
+    type: "movie",
+    genre: "animation",
+    rating: 4.15,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/250px-Toy_Story.jpg",
+    description: {
+      br: "Um cowboy de brinquedo enfrenta o ciúme quando um novo boneco espacial rouba a atenção de seu dono.",
+      eng: "A cowboy toy grapples with jealousy when a flashy new spaceman steals his owner's affection."
+    }
+  },
+  {
+    title: "Coringa",
+    type: "movie",
+    genre: "drama",
+    rating: 4.15,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Joker_%282019_film%29_poster.jpg/250px-Joker_%282019_film%29_poster.jpg",
+    description: {
+      br: "Um comediante fracassado e marginalizado por Gotham mergulha na loucura e no caos.",
+      eng: "A failed comedian rejected by Gotham City spirals into madness and chaos."
+    }
+  },
+  {
+    title: "Naruto",
+    type: "series",
+    genre: "animation",
+    rating: 4.2,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/94/NarutoCoverTankobon1.jpg/250px-NarutoCoverTankobon1.jpg",
+    description: {
+      br: "Um jovem ninja rejeitado por sua vila luta para se tornar o líder mais forte e ser reconhecido por todos.",
+      eng: "A young outcast ninja fights to become his village's strongest leader and earn everyone's recognition."
+    }
+  },
+  {
+    title: "One Piece (Anime)",
+    type: "series",
+    genre: "animation",
+    rating: 4.5,
+    image: "https://image.tmdb.org/t/p/w500/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg",
+    description: {
+      br: "Monkey D. Luffy e sua tripulação pirata navegam pelos mares em busca do lendário tesouro One Piece.",
+      eng: "Monkey D. Luffy and his pirate crew sail the seas in search of the legendary One Piece treasure."
+    }
+  },
+  {
+    title: "Duro de Matar",
+    type: "movie",
+    genre: "action",
+    rating: 4.1,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Die_Hard_%281988_film%29_poster.jpg/250px-Die_Hard_%281988_film%29_poster.jpg",
+    description: {
+      br: "Um policial de Nova York fica preso sozinho num arranha-céu tomado por terroristas na véspera de Natal.",
+      eng: "A New York cop is trapped alone in a skyscraper seized by terrorists on Christmas Eve."
+    }
+  },
+  {
+    title: "O Lobo de Wall Street",
+    type: "movie",
+    genre: "drama",
+    rating: 4.1,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/The_Wolf_of_Wall_Street_%282013%29.png/250px-The_Wolf_of_Wall_Street_%282013%29.png",
+    description: {
+      br: "A ascensão e queda de um corretor inescrupuloso que construiu um império à base de fraude e excessos.",
+      eng: "The rise and fall of an unscrupulous stockbroker who built an empire on fraud and excess."
+    }
+  },
+  {
+    title: "Ilha do Medo",
+    type: "movie",
+    genre: "thriller",
+    rating: 4.1,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Shutterislandposter.jpg/250px-Shutterislandposter.jpg",
+    description: {
+      br: "Um investigador federal explora um hospital psiquiátrico isolado e começa a duvidar da própria sanidade.",
+      eng: "A federal marshal investigates an isolated psychiatric hospital and starts to doubt his own sanity."
+    }
+  },
+  {
+    title: "Jurassic Park",
+    type: "movie",
+    genre: "adventure",
+    rating: 4.1,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Jurassic_Park_poster.jpg/250px-Jurassic_Park_poster.jpg",
+    description: {
+      br: "Cientistas e visitantes lutam pela sobrevivência quando dinossauros clonados escapam do controle num parque.",
+      eng: "Scientists and visitors fight for survival when cloned dinosaurs break loose at a theme park."
+    }
+  },
+  {
+    title: "Prenda-me se for Capaz",
+    type: "movie",
+    genre: "crime",
+    rating: 4.1,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Catch_Me_If_You_Can_2002_movie.jpg/250px-Catch_Me_If_You_Can_2002_movie.jpg",
+    description: {
+      br: "Um jovem falsificador brilhante finge diversas identidades enquanto é perseguido por um agente do FBI.",
+      eng: "A brilliant young con artist forges multiple identities while pursued by a relentless FBI agent."
+    }
+  },
+  {
+    title: "Sociedade dos Poetas Mortos",
+    type: "movie",
+    genre: "drama",
+    rating: 4.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Dead_poets_society.png/250px-Dead_poets_society.png",
+    description: {
+      br: "Um professor não convencional inspira seus alunos internos a aproveitar a vida através da poesia.",
+      eng: "An unconventional teacher inspires his boarding-school students to seize the day through poetry."
+    }
+  },
+  {
+    title: "Como Treinar seu Dragão",
+    type: "movie",
+    genre: "animation",
+    rating: 4.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/How_to_Train_Your_Dragon_Poster.jpg/250px-How_to_Train_Your_Dragon_Poster.jpg",
+    description: {
+      br: "Um jovem viking forma um laço improvável com um dragão ferido, desafiando as tradições de seu povo.",
+      eng: "A young Viking forms an unlikely bond with an injured dragon, defying his people's traditions."
+    }
+  },
+  {
+    title: "Tubarão",
+    type: "movie",
+    genre: "thriller",
+    rating: 4.05,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jaws_movie_poster.jpg/250px-Jaws_movie_poster.jpg",
+    description: {
+      br: "Um xerife de cidade litorânea caça um tubarão branco gigante que aterroriza banhistas.",
+      eng: "A small-town sheriff hunts a massive great white shark terrorizing beachgoers."
+    }
+  },
+  {
+    title: "Shrek",
+    type: "movie",
+    genre: "animation",
+    rating: 3.95,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Shrek_%282001_animated_feature_film%29.jpg/250px-Shrek_%282001_animated_feature_film%29.jpg",
+    description: {
+      br: "Um ogro rabugento parte numa jornada para resgatar uma princesa e recuperar seu pântano.",
+      eng: "A grumpy ogre sets off on a quest to rescue a princess and reclaim his swamp."
+    }
+  },
+  {
+    title: "Shrek 2",
+    type: "movie",
+    genre: "animation",
+    rating: 3.7,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Shrek_2_poster.jpg/250px-Shrek_2_poster.jpg",
+    description: {
+      br: "Shrek e Fiona visitam o reino dela e enfrentam um sogro que trama contra o ogro.",
+      eng: "Shrek and Fiona visit her kingdom, where a scheming father-in-law plots against the ogre."
+    }
+  },
+  {
+    title: "Shrek Terceiro",
+    type: "movie",
+    genre: "animation",
+    rating: 3.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Shrek_the_Third_%282007_animated_feature_film%29.jpg/250px-Shrek_the_Third_%282007_animated_feature_film%29.jpg",
+    description: {
+      br: "Relutante herdeiro do trono, Shrek busca outro sucessor enquanto o Príncipe Encantado ataca.",
+      eng: "Reluctant heir to the throne, Shrek seeks another successor while Prince Charming stages a coup."
+    }
+  },
+  {
+    title: "Shrek Para Sempre",
+    type: "movie",
+    genre: "animation",
+    rating: 3.15,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Shrek_Forever_After_%282010_animated_feature_film%29.jpg/250px-Shrek_Forever_After_%282010_animated_feature_film%29.jpg",
+    description: {
+      br: "Um trato com Rumpelstiltskin joga Shrek numa realidade alternativa onde nunca existiu.",
+      eng: "A deal with Rumpelstiltskin sends Shrek into an alternate reality where he was never born."
+    }
+  },
+  {
+    title: "Rocky",
+    type: "movie",
+    genre: "sport",
+    rating: 4.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Rocky_poster.jpg/250px-Rocky_poster.jpg",
+    description: {
+      br: "Um boxeador desconhecido de Filadélfia ganha a chance única de enfrentar o campeão mundial.",
+      eng: "An unknown Philadelphia boxer gets a once-in-a-lifetime shot at the heavyweight champion."
+    }
+  },
+  {
+    title: "O Exterminador do Futuro",
+    type: "movie",
+    genre: "scifi",
+    rating: 4.05,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/The_Terminator.png/250px-The_Terminator.png",
+    description: {
+      br: "Um cyborg assassino vem do futuro para matar a mulher cujo filho salvará a humanidade.",
+      eng: "A killer cyborg is sent from the future to kill the woman whose son will save humanity."
+    }
+  },
+  {
+    title: "Gigantes de Aço",
+    type: "movie",
+    genre: "sport",
+    rating: 3.55,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Real_Steel_Poster.jpg/250px-Real_Steel_Poster.jpg",
+    description: {
+      br: "Um ex-boxeador e seu filho treinam um robô sucateado para vencer no ringue do futuro.",
+      eng: "A washed-up boxer and his son train a scrapped robot to win in the ring of the future."
+    }
+  },
+  {
+    title: "Modern Family",
+    type: "series",
+    genre: "comedy",
+    rating: 4.25,
+    image: "https://image.tmdb.org/t/p/w500/gGOZeGx3ggP5O9qvswRPN7PRVWn.jpg",
+    description: {
+      br: "Um mockumentário sobre três famílias distintas e interligadas lidando com o dia a dia.",
+      eng: "A mockumentary following three distinct, interconnected families navigating everyday life."
+    }
+  },
+  {
+    title: "Cosmos: Uma Odisseia no Espaço-Tempo",
+    type: "series",
+    genre: "documentary",
+    rating: 4.6,
+    image: "https://image.tmdb.org/t/p/w500/47f0rqHHwWVJnEHL1JOR8SHznBZ.jpg",
+    description: {
+      br: "Neil deGrasse Tyson guia uma jornada pelo universo, da origem da vida aos confins do cosmos.",
+      eng: "Neil deGrasse Tyson guides a journey through the universe, from life's origins to the cosmos' edge."
+    }
+  },
+  {
+    title: "Rick and Morty",
+    type: "series",
+    genre: "comedy",
+    rating: 4.5,
+    image: "https://image.tmdb.org/t/p/w500/5qfd0e2uMbVInX3YdeFbDsfxi1t.jpg",
+    description: {
+      br: "Um cientista genial e cínico arrasta seu neto ansioso por aventuras interdimensionais caóticas.",
+      eng: "A cynical genius scientist drags his anxious grandson through chaotic interdimensional adventures."
+    }
+  },
+  {
+    title: "Vinland Saga",
+    type: "series",
+    genre: "action",
+    rating: 5,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Vinland_Saga_key_visual.png/250px-Vinland_Saga_key_visual.png",
+    description: {
+      br: "Um jovem viking busca vingança contra o assassino de seu pai em meio a guerras brutais.",
+      eng: "A young Viking seeks revenge against his father's killer amid brutal wars and raids."
+    }
+  },
+  {
+    title: "Os Simpsons",
+    type: "series",
+    genre: "comedy",
+    rating: 4.3,
+    image: "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
+    description: {
+      br: "O cotidiano hilário e satírico da família amarela mais famosa de Springfield.",
+      eng: "The hilarious, satirical everyday life of Springfield's most famous yellow family."
+    }
+  },
+  {
+    title: "Hora de Aventura",
+    type: "series",
+    genre: "animation",
+    rating: 4.3,
+    image: "https://image.tmdb.org/t/p/w500/2EMpiF1GireQHs3f9JKCFoKElju.jpg",
+    description: {
+      br: "Finn, um garoto humano, e Jake, seu cão mágico, vivem aventuras na estranha Terra de Ooo.",
+      eng: "Finn, a human boy, and Jake, his magical dog, adventure through the strange Land of Ooo."
+    }
+  },
+  {
+    title: "Sorria",
+    type: "movie",
+    genre: "horror",
+    rating: 3.25,
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Smile_%282022_film%29.jpg/250px-Smile_%282022_film%29.jpg",
+    description: {
+      br: "Uma psiquiatra é assombrada por uma entidade sinistra após testemunhar um evento traumático.",
+      eng: "A psychiatrist is haunted by a sinister entity after witnessing a traumatic event."
+    }
+  },
+  {
+    title: "Black Mirror",
+    type: "series",
+    genre: "scifi",
+    rating: 4.35,
+    image: "https://image.tmdb.org/t/p/w500/aCTL24B8ZuiI2osMwoUI5rqBXoF.jpg",
+    description: {
+      br: "Antologia sombria sobre os efeitos perturbadores da tecnologia na sociedade moderna.",
+      eng: "A dark anthology exploring technology's unsettling effects on modern society."
+    }
+  },
+  {
+    title: "O Problema dos 3 Corpos",
+    type: "series",
+    genre: "scifi",
+    rating: 3.75,
+    image: "https://upload.wikimedia.org/wikipedia/en/c/cb/3_Body_Problem_%28TV_series%29.jpg",
+    description: {
+      br: "Cientistas descobrem uma ameaça alienígena iminente ligada a um contato feito décadas antes.",
+      eng: "Scientists uncover an imminent alien threat tied to contact made decades earlier."
+    }
+  },
+  {
+    title: "Chaves",
+    type: "series",
+    genre: "comedy",
+    rating: 4.25,
+    image: "https://upload.wikimedia.org/wikipedia/en/f/fb/El_Chavo_Cast.jpg",
+    description: {
+      br: "Um menino órfão e seus vizinhos vivem aventuras cômicas no pátio de uma vila mexicana humilde.",
+      eng: "An orphaned boy and his neighbors get into comic mischief in the courtyard of a humble Mexican tenement."
     }
   },
 ];
@@ -1071,6 +1621,94 @@ export const BOOKS = [
     description: {
       br: "Livro brasileiro gratuito e referência em cursos de Engenharia de Software pelo país.",
       eng: "A free Brazilian book that's become a reference in Software Engineering courses nationwide."
+    }
+  },
+  {
+    title: "Hamas",
+    author: "Beverley Milton-Edwards & Stephen Farrell",
+    genre: "history",
+    rating: 4.02,
+    image: "https://covers.openlibrary.org/b/id/6389499-L.jpg",
+    description: {
+      br: "Uma investigação aprofundada sobre a origem, a ideologia e a ascensão política do Hamas no conflito israelo-palestino.",
+      eng: "An in-depth investigation into the origins, ideology, and political rise of Hamas in the Israeli-Palestinian conflict."
+    }
+  },
+  {
+    title: "O Menino do Pijama Listrado",
+    author: "John Boyne",
+    genre: "drama",
+    rating: 4.16,
+    image: "https://covers.openlibrary.org/b/id/12720687-L.jpg",
+    description: {
+      br: "Um menino alemão de nove anos cria uma amizade proibida com um garoto do outro lado da cerca de um campo de concentração.",
+      eng: "A nine-year-old German boy forms a forbidden friendship with a boy on the other side of a concentration camp fence."
+    }
+  },
+  {
+    title: "Os Meninos que Enganavam Nazistas",
+    author: "Joseph Joffo",
+    genre: "war",
+    rating: 3.96,
+    image: "https://covers.openlibrary.org/b/id/976742-L.jpg",
+    description: {
+      br: "Dois irmãos judeus atravessam sozinhos a França ocupada pelos nazistas, sobrevivendo à base de esperteza e coragem.",
+      eng: "Two young Jewish brothers cross Nazi-occupied France alone, surviving on nothing but cunning and courage."
+    }
+  },
+  {
+    title: "Redes de Computadores",
+    author: "Andrew S. Tanenbaum",
+    genre: "tech",
+    rating: 4.12,
+    image: "https://covers.openlibrary.org/b/id/6672765-L.jpg",
+    description: {
+      br: "O clássico definitivo sobre arquitetura, protocolos e funcionamento das redes de computadores modernas.",
+      eng: "The definitive classic on the architecture, protocols, and inner workings of modern computer networks."
+    }
+  },
+  {
+    title: "O Homem Mais Feliz do Mundo",
+    author: "Eddie Jaku",
+    genre: "selfhelp",
+    rating: 4.62,
+    image: "https://covers.openlibrary.org/b/id/13168552-L.jpg",
+    description: {
+      br: "Um sobrevivente do Holocausto compartilha as lições de vida que o levaram a se tornar o homem mais feliz do mundo.",
+      eng: "A Holocaust survivor shares the life lessons that led him to become the happiest man on earth."
+    }
+  },
+  {
+    title: "Harry Potter e a Pedra Filosofal",
+    author: "J.K. Rowling",
+    genre: "fantasy",
+    rating: 4.47,
+    image: "https://covers.openlibrary.org/b/id/15155833-L.jpg",
+    description: {
+      br: "Um garoto órfão descobre que é um bruxo e ingressa em Hogwarts, escola de magia e bruxaria.",
+      eng: "An orphaned boy discovers he is a wizard and enrolls at Hogwarts School of Witchcraft and Wizardry."
+    }
+  },
+  {
+    title: "Star Wars: Marcas da Guerra",
+    author: "Chuck Wendig",
+    genre: "scifi",
+    rating: 3.53,
+    image: "https://covers.openlibrary.org/b/id/8760685-L.jpg",
+    description: {
+      br: "Após a queda do Império em Endor, remanescentes leais ao regime tramam um plano desesperado para se reerguer.",
+      eng: "After the Empire's fall at Endor, its loyal remnants scheme a desperate plan to rise again."
+    }
+  },
+  {
+    title: "O Problema dos Três Corpos",
+    author: "Liu Cixin",
+    genre: "scifi",
+    rating: 4.08,
+    image: "https://covers.openlibrary.org/b/id/9157544-L.jpg",
+    description: {
+      br: "Um contato alienígena secreto na China dos anos 1960 desencadeia uma ameaça que coloca em risco toda a humanidade.",
+      eng: "A secret alien contact in 1960s China sets off a threat that endangers the whole of humanity."
     }
   }
 ];
