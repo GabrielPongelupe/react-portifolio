@@ -10,7 +10,6 @@ import {
   IoSchoolOutline,
   IoPeopleOutline,
   IoHardwareChipOutline,
-  IoTimeOutline,
   IoArrowForward,
 } from "react-icons/io5";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -35,7 +34,7 @@ const Hero = () => {
     ];
 
     const stats = [
-        { icon: IoTimeOutline, value: "3+", label: portuguese ? "Anos de Experiência" : "Years of Experience" },
+        { icon: IoBriefcaseOutline, value: "3+", label: portuguese ? "Anos de Experiência" : "Years of Experience" },
         { icon: IoHardwareChipOutline, value: "15+", label: portuguese ? "Tecnologias" : "Technologies" },
         { icon: IoPeopleOutline, value: "4.2M+", label: portuguese ? "Usuários Impactados" : "Users Impacted" },
     ];
@@ -182,10 +181,14 @@ const Hero = () => {
                     className="mt-16 grid grid-cols-3 divide-x divide-neutral-200 rounded-2xl border border-neutral-200 bg-white shadow-sm"
                 >
                     {stats.map((stat, idx) => (
-                        <div key={idx} className="flex flex-col items-center gap-1 px-4 py-5 text-center">
-                            <stat.icon className="mb-1 text-lg text-emerald-600" />
-                            <p className="text-2xl font-extrabold text-neutral-950">{stat.value}</p>
-                            <p className="text-xs text-neutral-500">{stat.label}</p>
+                        <div key={idx} className="flex items-center gap-2 px-2 py-4 sm:gap-3 sm:px-4 sm:py-5">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-50 sm:h-10 sm:w-10">
+                                <stat.icon className="text-sm text-emerald-600 sm:text-lg" />
+                            </span>
+                            <div className="flex min-w-0 flex-col items-start text-left">
+                                <p className="text-base font-extrabold leading-tight text-neutral-950 sm:text-2xl">{stat.value}</p>
+                                <p className="text-[10px] leading-snug text-neutral-500 sm:text-xs">{stat.label}</p>
+                            </div>
                         </div>
                     ))}
                 </motion.div>

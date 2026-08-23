@@ -1,6 +1,7 @@
 /* Importando fontes adicionais */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* Tailwind base components and utilities */
 @tailwind base;
@@ -16,6 +17,11 @@ html {
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Classe CSS para usar a fonte Geist Sans no logo do navbar */
+.geist-sans {
+  font-family: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {

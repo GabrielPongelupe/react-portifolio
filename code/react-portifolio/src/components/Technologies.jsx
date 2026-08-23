@@ -7,8 +7,22 @@ import SectionHeading from "../common/SectionHeading";
 // Ícones
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
-import { FaJava, FaNodeJs, FaDocker } from "react-icons/fa";
-import { SiJavascript, SiSpring, SiPython, SiFastapi, SiFirebase, SiSupabase, SiElasticsearch, SiFlutter, SiRabbitmq } from "react-icons/si";
+import { FaJava, FaNodeJs, FaDocker, FaAws } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiSpring,
+  SiPython,
+  SiFastapi,
+  SiFirebase,
+  SiSupabase,
+  SiElasticsearch,
+  SiFlutter,
+  SiRabbitmq,
+  SiDotnet,
+  SiCsharp,
+  SiAzuredevops,
+  SiAmazondynamodb,
+} from "react-icons/si";
 
 // Categorias disponíveis
 const CATEGORIES = {
@@ -17,6 +31,7 @@ const CATEGORIES = {
   BACKEND: "backend",
   FRAMEWORK: "framework",
   DATABASE: "database",
+  CLOUD: "cloud",
 };
 
 // Definição das tecnologias com seus detalhes e categorias
@@ -160,6 +175,56 @@ const TECH_STACK = [
       pt: "Software de mensageria"
     },
     link: "https://www.rabbitmq.com/"
+  },
+  {
+    name: ".NET",
+    icon: SiDotnet,
+    category: CATEGORIES.FRAMEWORK,
+    description: {
+      en: "Framework for building cross-platform applications",
+      pt: "Framework para construção de aplicações multiplataforma"
+    },
+    link: "https://dotnet.microsoft.com/"
+  },
+  {
+    name: "C#",
+    icon: SiCsharp,
+    category: CATEGORIES.BACKEND,
+    description: {
+      en: "General-purpose programming language",
+      pt: "Linguagem de programação de propósito geral"
+    },
+    link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
+  },
+  {
+    name: "AWS",
+    icon: FaAws,
+    category: CATEGORIES.CLOUD,
+    description: {
+      en: "Cloud computing platform and infrastructure",
+      pt: "Plataforma de computação em nuvem e infraestrutura"
+    },
+    link: "https://aws.amazon.com/"
+  },
+  {
+    name: "Azure DevOps",
+    icon: SiAzuredevops,
+    category: CATEGORIES.CLOUD,
+    description: {
+      en: "CI/CD pipelines and project management",
+      pt: "Pipelines de CI/CD e gestão de projetos"
+    },
+    link: "https://azure.microsoft.com/en-us/products/devops"
+  },
+  {
+    name: "DynamoDB",
+    icon: SiAmazondynamodb,
+    category: CATEGORIES.DATABASE,
+    description: {
+      en: "Managed NoSQL database on AWS",
+      pt: "Banco de dados NoSQL gerenciado da AWS"
+    },
+    link: "https://aws.amazon.com/dynamodb/"
   }
 ];
 
@@ -192,7 +257,8 @@ const Technologies = () => {
     [CATEGORIES.BACKEND]: "Backend",
     [CATEGORIES.FRONTEND]: "Frontend",
     [CATEGORIES.FRAMEWORK]: portuguese ? "Frameworks" : "Frameworks",
-    [CATEGORIES.DATABASE]: portuguese ? "Banco de Dados" : "Database"
+    [CATEGORIES.DATABASE]: portuguese ? "Banco de Dados" : "Database",
+    [CATEGORIES.CLOUD]: portuguese ? "Nuvem & DevOps" : "Cloud & DevOps"
   };
 
   return (

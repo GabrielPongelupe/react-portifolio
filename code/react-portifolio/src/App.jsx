@@ -7,6 +7,8 @@ import Projects from "./components/Projects"
 import Technologies from "./components/Technologies"
 import Contact from "./components/Contact.jsx"
 import MoviesBooks from "./components/MoviesBooks.jsx"
+import Blog from "./components/Blog.jsx"
+import BlogPost from "./components/BlogPost.jsx"
 
 import { LanguageProvider } from "./contexts/LanguageContext.jsx"
 
@@ -33,6 +35,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/filmes-livros" element={<MoviesBooks />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
             </Routes>
           </main>
         </div>

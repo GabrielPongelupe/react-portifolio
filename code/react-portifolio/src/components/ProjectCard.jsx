@@ -2,51 +2,62 @@ import { motion } from "framer-motion";
 import { IoArrowForward } from "react-icons/io5";
 
 const ProjectCard = ({ project, onClick, portuguese, index }) => {
+  const shortDescription = portuguese ? project.short_description : project.short_description_eng;
+  const visibleTechnologies = project.technologies.slice(0, 4);
+  const remainingTechnologies = project.technologies.length - visibleTechnologies.length;
+
   return (
     <motion.div
       whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.4, delay: (index % 6) * 0.06, ease: "easeOut" }}
       onClick={onClick}
-      className="group relative cursor-pointer overflow-hidden rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm transition-colors duration-300 hover:border-emerald-400/50 lg:p-8"
+      className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-colors duration-300 hover:border-emerald-400/50"
     >
-      <div className="flex flex-col items-center lg:flex-row">
-        {/* Imagem do projeto */}
-        <div className="mb-6 flex justify-center lg:mb-0 lg:w-1/3">
-          <div className="relative overflow-hidden rounded-2xl">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-48 w-48 object-cover lg:h-56 lg:w-56"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-neutral-950/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <span className="text-sm font-medium text-white">{portuguese ? "Ver detalhes" : "View details"}</span>
-            </div>
-          </div>
+      {/* Imagem do projeto */}
+      <div className="relative aspect-video overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center bg-neutral-950/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <span className="text-sm font-medium text-white">{portuguese ? "Ver detalhes" : "View details"}</span>
         </div>
+      </div>
 
-        {/* Conteúdo do projeto */}
-        <div className="flex flex-col lg:w-2/3 lg:px-6">
-          <h2 className="mb-3 flex items-center gap-2 text-xl font-bold text-neutral-950 transition-colors duration-300 group-hover:text-emerald-600">
-            {project.title}
-            <IoArrowForward className="text-base text-neutral-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-emerald-600" />
-          </h2>
+      {/* Conteúdo do projeto */}
+      <div className="flex flex-1 flex-col gap-2 p-5">
+        {shortDescription && (
+          <span className="text-[11px] font-medium uppercase tracking-wide text-emerald-600">
+            {shortDescription}
+          </span>
+        )}
 
-          <p className="mb-5 leading-relaxed text-neutral-500">
-            {portuguese ? project.description : project.description_eng}
-          </p>
+        <h3 className="flex items-center gap-2 text-base font-bold text-neutral-950 transition-colors duration-300 group-hover:text-emerald-600">
+          {project.title}
+          <IoArrowForward className="text-sm text-neutral-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-emerald-600" />
+        </h3>
 
-          <div className="mt-auto flex flex-wrap gap-2">
-            {project.technologies.map((tech, techIndex) => (
-              <span
-                key={techIndex}
-                className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+        <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-neutral-500">
+          {portuguese ? project.description : project.description_eng}
+        </p>
+
+        <div className="mt-2 flex flex-wrap gap-2">
+          {visibleTechnologies.map((tech, techIndex) => (
+            <span
+              key={techIndex}
+              className="rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-[11px] font-medium text-neutral-600"
+            >
+              {tech}
+            </span>
+          ))}
+          {remainingTechnologies > 0 && (
+            <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-[11px] font-medium text-neutral-400">
+              +{remainingTechnologies}
+            </span>
+          )}
         </div>
       </div>
     </motion.div>

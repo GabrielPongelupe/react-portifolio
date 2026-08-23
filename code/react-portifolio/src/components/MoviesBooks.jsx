@@ -73,13 +73,13 @@ const MovieCard = ({ item, portuguese, index }) => (
     className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-colors duration-300 hover:border-emerald-400/50"
   >
     <div className="relative">
-      <PosterImage src={item.image} title={item.title} />
+      <PosterImage src={item.image} title={portuguese ? item.title.br : item.title.eng} />
       <span className="absolute left-2 top-2 rounded-full bg-neutral-950/80 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white backdrop-blur">
         {item.type === "series" ? (portuguese ? "Série" : "Series") : portuguese ? "Filme" : "Movie"}
       </span>
     </div>
     <div className="flex flex-1 flex-col gap-2 p-4">
-      <h3 className="text-sm font-bold leading-snug text-neutral-950">{item.title}</h3>
+      <h3 className="text-sm font-bold leading-snug text-neutral-950">{portuguese ? item.title.br : item.title.eng}</h3>
       <span className="text-[11px] font-medium uppercase tracking-wide text-emerald-600">
         {genreLabel(item.genre, portuguese)}
       </span>
@@ -99,10 +99,10 @@ const BookCard = ({ book, portuguese, index }) => (
     transition={{ duration: 0.4, delay: (index % 10) * 0.03, ease: "easeOut" }}
     className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-colors duration-300 hover:border-emerald-400/50"
   >
-    <PosterImage src={book.image} title={book.title} aspect="aspect-[3/4]" />
+    <PosterImage src={book.image} title={portuguese ? book.title.br : book.title.eng} aspect="aspect-[3/4]" />
     <div className="flex flex-1 flex-col gap-2 p-4">
       <div>
-        <h3 className="text-sm font-bold leading-snug text-neutral-950">{book.title}</h3>
+        <h3 className="text-sm font-bold leading-snug text-neutral-950">{portuguese ? book.title.br : book.title.eng}</h3>
         <p className="text-xs text-neutral-400">{book.author}</p>
       </div>
       <span className="text-[11px] font-medium uppercase tracking-wide text-emerald-600">
@@ -142,7 +142,9 @@ const MoviesBooks = () => {
 
   const normalizedSearch = searchTerm.trim().toLowerCase();
   const filteredItems = currentDataset.filter((item) => {
-    const matchesSearch = item.title.toLowerCase().includes(normalizedSearch);
+    const matchesSearch =
+      item.title.br.toLowerCase().includes(normalizedSearch) ||
+      item.title.eng.toLowerCase().includes(normalizedSearch);
     const matchesGenre = selectedGenre === "all" || item.genre === selectedGenre;
     const matchesRating = item.rating >= minRating;
     return matchesSearch && matchesGenre && matchesRating;
@@ -229,10 +231,10 @@ const MoviesBooks = () => {
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {activeCategory === CATEGORIES.MOVIES
             ? filteredItems.map((item, index) => (
-                <MovieCard key={item.title} item={item} portuguese={portuguese} index={index} />
+                <MovieCard key={item.title.eng} item={item} portuguese={portuguese} index={index} />
               ))
             : filteredItems.map((book, index) => (
-                <BookCard key={book.title} book={book} portuguese={portuguese} index={index} />
+                <BookCard key={book.title.eng} book={book} portuguese={portuguese} index={index} />
               ))}
         </div>
       )}

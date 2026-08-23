@@ -2,6 +2,7 @@ import caronaImage from "../assets/projects/caronaImage.png";
 import ticketTradeImage from "../assets/projects/ticketTradeImage.png";
 import dePinhoImage from "../assets/projects/dePinhoImage.png"
 import portifolioImage from "../assets/projects/portifolioImage.png"
+import ossContributorsImage from "../assets/projects/project-1.jpg"
 
 import aesExperienceImage from "../assets/experiences/aes_1.png";
 import levtyExperienceImage1 from "../assets/experiences/levty_1.jpeg";
@@ -81,7 +82,21 @@ export const PROJECTS = [
     color: "bg-green-500", // Verde de tom médio
     technologies: ["Spring Boot", "Java", "JavaScript", "HTML5", "CSS"],
   },
-  
+  {
+    title: "OSS Contributors Profile",
+    link: "/blog/oss-contributors-profile",
+    pdfUrl: "/oss-contributors-profile.pdf",
+    image: ossContributorsImage,
+    description:
+      "Estudo científico desenvolvido com colegas da PUC Minas (projeto interdisciplinar do 6º período de Engenharia de Software) que analisou o perfil de contribuidores de código aberto no GitHub. Usando o paradigma Goal-Question-Metric, mineramos 1.000 repositórios entre as linguagens mais populares, totalizando 52.743 contribuidores ao longo de doze meses, para entender concentração geográfica, nível de experiência e taxa de aprovação de pull requests. O artigo foi eleito o melhor trabalho do período.",
+    description_eng:
+      "Scientific study developed with classmates from PUC Minas (an interdisciplinary project from the 6th period of the Software Engineering program) analyzing the profile of open-source contributors on GitHub. Using the Goal-Question-Metric paradigm, we mined 1,000 repositories across the most popular languages, covering 52,743 contributors over twelve months, to understand geographic concentration, experience level, and pull-request approval rates. The paper was recognized as the best of its period.",
+    short_description: "Pesquisa Científica",
+    short_description_eng: "Scientific Research",
+    color: "bg-purple-600",
+    technologies: ["GitHub API", "Data Mining", "GQM", "Empirical Software Engineering"],
+  },
+
 
 
 ];
@@ -89,8 +104,8 @@ export const PROJECTS = [
 
 
 export const CONTACT = {
-  phoneNo: "+55 (31) 99903-6093",
   email: "gabrielpongelupee@gmail.com",
+  linkedin: "https://www.linkedin.com/in/gabrielpongelupe/",
 };
 
 
@@ -191,7 +206,7 @@ export const EXPERIENCES = [
 // foram resolvidos com a melhor correspondência encontrada; "Mario 2" ainda não tem nota estável no IMDb.
 export const MOVIES_SERIES = [
   {
-    title: "Smile 2",
+    title: { br: "Sorria 2", eng: "Smile 2" },
     type: "movie",
     genre: "horror",
     rating: 3.6,
@@ -202,7 +217,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Carros",
+    title: { br: "Carros", eng: "Cars" },
     type: "movie",
     genre: "animation",
     rating: 3.9,
@@ -213,7 +228,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Homem-Aranha no Aranhaverso",
+    title: { br: "Homem-Aranha no Aranhaverso", eng: "Spider-Man: Into the Spider-Verse" },
     type: "movie",
     genre: "animation",
     rating: 4.5,
@@ -224,7 +239,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Zootopia",
+    title: { br: "Zootopia: Essa Cidade é o Bicho", eng: "Zootopia" },
     type: "movie",
     genre: "animation",
     rating: 4.25,
@@ -235,7 +250,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Rastros de um Sequestro",
+    title: { br: "Rastros de um Sequestro", eng: "Recall the Night" },
     type: "movie",
     genre: "thriller",
     rating: 3.95,
@@ -246,7 +261,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Todos Menos Você",
+    title: { br: "Todos Menos Você", eng: "Anyone but You" },
     type: "movie",
     genre: "romance",
     rating: 3.4,
@@ -257,7 +272,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Ponyo",
+    title: { br: "Ponyo: Uma Amizade que Veio do Mar", eng: "Ponyo" },
     type: "movie",
     genre: "animation",
     rating: 4.05,
@@ -268,7 +283,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: Episódio I - A Ameaça Fantasma",
+    title: { br: "Star Wars: Episódio I - A Ameaça Fantasma", eng: "Star Wars: Episode I - The Phantom Menace" },
     type: "movie",
     genre: "scifi",
     rating: 3.5,
@@ -279,7 +294,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: Episódio II - Ataque dos Clones",
+    title: { br: "Star Wars: Episódio II - Ataque dos Clones", eng: "Star Wars: Episode II - Attack of the Clones" },
     type: "movie",
     genre: "scifi",
     rating: 3.55,
@@ -290,7 +305,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: Episódio III - A Vingança dos Sith",
+    title: { br: "Star Wars: Episódio III - A Vingança dos Sith", eng: "Star Wars: Episode III - Revenge of the Sith" },
     type: "movie",
     genre: "scifi",
     rating: 5.0,
@@ -301,7 +316,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: Episódio IV - Uma Nova Esperança",
+    title: { br: "Star Wars: Episódio IV - Uma Nova Esperança", eng: "Star Wars: Episode IV - A New Hope" },
     type: "movie",
     genre: "scifi",
     rating: 4.55,
@@ -312,7 +327,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: Episódio V - O Império Contra-Ataca",
+    title: { br: "Star Wars: Episódio V - O Império Contra-Ataca", eng: "Star Wars: Episode V - The Empire Strikes Back" },
     type: "movie",
     genre: "scifi",
     rating: 5,
@@ -323,7 +338,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: Episódio VI - O Retorno de Jedi",
+    title: { br: "Star Wars: Episódio VI - O Retorno de Jedi", eng: "Star Wars: Episode VI - Return of the Jedi" },
     type: "movie",
     genre: "scifi",
     rating: 4.4,
@@ -334,7 +349,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Rogue One: Uma História Star Wars",
+    title: { br: "Rogue One: Uma História Star Wars", eng: "Rogue One: A Star Wars Story" },
     type: "movie",
     genre: "scifi",
     rating: 4.15,
@@ -345,7 +360,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Preço da Confissão",
+    title: { br: "O Preço da Confissão", eng: "The Price of Confession" },
     type: "series",
     genre: "thriller",
     rating: 4.05,
@@ -356,7 +371,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Gente Grande",
+    title: { br: "Gente Grande", eng: "Grown Ups" },
     type: "movie",
     genre: "comedy",
     rating: 3.25,
@@ -367,7 +382,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Se Beber, Não Case!",
+    title: { br: "Se Beber, Não Case!", eng: "The Hangover" },
     type: "movie",
     genre: "comedy",
     rating: 4.1,
@@ -378,7 +393,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Pretendente Surpresa",
+    title: { br: "Pretendente Surpresa", eng: "A Business Proposal" },
     type: "series",
     genre: "romance",
     rating: 4.3,
@@ -389,7 +404,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Dark",
+    title: { br: "Dark", eng: "Dark" },
     type: "series",
     genre: "scifi",
     rating: 4.65,
@@ -400,7 +415,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "One Piece (Live-Action)",
+    title: { br: "One Piece (Live-Action)", eng: "One Piece (Live-Action)" },
     type: "series",
     genre: "adventure",
     rating: 4.4,
@@ -411,7 +426,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Os Donos do Jogo",
+    title: { br: "Os Donos do Jogo", eng: "Os Donos do Jogo" },
     type: "series",
     genre: "crime",
     rating: 4.45,
@@ -422,7 +437,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Haikyu!!",
+    title: { br: "Haikyu!!", eng: "Haikyu!!" },
     type: "series",
     genre: "sport",
     rating: 4.6,
@@ -433,7 +448,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "It: A Coisa",
+    title: { br: "It: A Coisa", eng: "It" },
     type: "movie",
     genre: "horror",
     rating: 3.9,
@@ -444,7 +459,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Projeto Almanaque",
+    title: { br: "Projeto Almanaque", eng: "Project Almanac" },
     type: "movie",
     genre: "scifi",
     rating: 3.45,
@@ -455,7 +470,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Senhor dos Anéis: A Sociedade do Anel",
+    title: { br: "O Senhor dos Anéis: A Sociedade do Anel", eng: "The Lord of the Rings: The Fellowship of the Ring" },
     type: "movie",
     genre: "fantasy",
     rating: 4.7,
@@ -466,7 +481,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Devoradores de Estrela",
+    title: { br: "Devoradores de Estrela", eng: "Project Hail Mary" },
     type: "movie",
     genre: "scifi",
     rating: 4.4,
@@ -477,7 +492,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Parasita",
+    title: { br: "Parasita", eng: "Parasite" },
     type: "movie",
     genre: "thriller",
     rating: 4.5,
@@ -488,7 +503,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Brooklyn Nine-Nine",
+    title: { br: "Brooklyn Nine-Nine", eng: "Brooklyn Nine-Nine" },
     type: "series",
     genre: "comedy",
     rating: 4.45,
@@ -499,7 +514,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "The Walking Dead",
+    title: { br: "The Walking Dead", eng: "The Walking Dead" },
     type: "series",
     genre: "horror",
     rating: 4.3,
@@ -510,7 +525,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Homem-Aranha",
+    title: { br: "Homem-Aranha", eng: "Spider-Man" },
     type: "movie",
     genre: "action",
     rating: 4.2,
@@ -521,7 +536,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Homem-Aranha 2",
+    title: { br: "Homem-Aranha 2", eng: "Spider-Man 2" },
     type: "movie",
     genre: "action",
     rating: 5.0,
@@ -532,7 +547,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Adolescence",
+    title: { br: "Adolescence", eng: "Adolescence" },
     type: "series",
     genre: "drama",
     rating: 4.3,
@@ -543,7 +558,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "The Dark Knight",
+    title: { br: "Batman: O Cavaleiro das Trevas", eng: "The Dark Knight" },
     type: "movie",
     genre: "action",
     rating: 5.0,
@@ -554,7 +569,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "The Dark Knight Rises",
+    title: { br: "Batman: O Cavaleiro das Trevas Ressurge", eng: "The Dark Knight Rises" },
     type: "movie",
     genre: "action",
     rating: 4.45,
@@ -565,7 +580,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Senhor dos Anéis: As Duas Torres",
+    title: { br: "O Senhor dos Anéis: As Duas Torres", eng: "The Lord of the Rings: The Two Towers" },
     type: "movie",
     genre: "fantasy",
     rating: 5.0,
@@ -576,7 +591,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Senhor dos Anéis: O Retorno do Rei",
+    title: { br: "O Senhor dos Anéis: O Retorno do Rei", eng: "The Lord of the Rings: The Return of the King" },
     type: "movie",
     genre: "fantasy",
     rating: 4.75,
@@ -587,7 +602,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Projeto X",
+    title: { br: "Projeto X", eng: "Project X" },
     type: "movie",
     genre: "comedy",
     rating: 3.6,
@@ -598,7 +613,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Sociedade da Neve",
+    title: { br: "Sociedade da Neve", eng: "Society of the Snow" },
     type: "movie",
     genre: "drama",
     rating: 4.15,
@@ -609,7 +624,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Corra!",
+    title: { br: "Corra!", eng: "Get Out" },
     type: "movie",
     genre: "horror",
     rating: 4.05,
@@ -620,7 +635,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Avatar",
+    title: { br: "Avatar", eng: "Avatar" },
     type: "movie",
     genre: "scifi",
     rating: 4.2,
@@ -631,7 +646,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Band of Brothers",
+    title: { br: "Irmãos de Guerra", eng: "Band of Brothers" },
     type: "series",
     genre: "war",
     rating: 4.95,
@@ -642,7 +657,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Tick, Tick... Boom!",
+    title: { br: "Tick, Tick... Boom!", eng: "tick, tick... BOOM!" },
     type: "movie",
     genre: "musical",
     rating: 3.9,
@@ -653,7 +668,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Até o Último Homem",
+    title: { br: "Até o Último Homem", eng: "Hacksaw Ridge" },
     type: "movie",
     genre: "war",
     rating: 4.3,
@@ -664,7 +679,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Resgate do Soldado Ryan",
+    title: { br: "Resgate do Soldado Ryan", eng: "Saving Private Ryan" },
     type: "movie",
     genre: "war",
     rating: 4.55,
@@ -675,7 +690,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "De Volta para o Futuro",
+    title: { br: "De Volta para o Futuro", eng: "Back to the Future" },
     type: "movie",
     genre: "scifi",
     rating: 4.5,
@@ -686,7 +701,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "De Volta para o Futuro II",
+    title: { br: "De Volta para o Futuro II", eng: "Back to the Future Part II" },
     type: "movie",
     genre: "scifi",
     rating: 4.15,
@@ -697,7 +712,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "De Volta para o Futuro III",
+    title: { br: "De Volta para o Futuro III", eng: "Back to the Future Part III" },
     type: "movie",
     genre: "scifi",
     rating: 4,
@@ -708,7 +723,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Rei do Show",
+    title: { br: "O Rei do Show", eng: "The Greatest Showman" },
     type: "movie",
     genre: "musical",
     rating: 4,
@@ -719,7 +734,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Prison Break",
+    title: { br: "Prison Break", eng: "Prison Break" },
     type: "series",
     genre: "crime",
     rating: 4.4,
@@ -730,7 +745,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Harry Potter e as Relíquias da Morte – Parte 2",
+    title: { br: "Harry Potter e as Relíquias da Morte – Parte 2", eng: "Harry Potter and the Deathly Hallows – Part 2" },
     type: "movie",
     genre: "fantasy",
     rating: 4.3,
@@ -741,7 +756,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Harry Potter e o Prisioneiro de Azkaban",
+    title: { br: "Harry Potter e o Prisioneiro de Azkaban", eng: "Harry Potter and the Prisoner of Azkaban" },
     type: "movie",
     genre: "fantasy",
     rating: 4.2,
@@ -752,7 +767,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Up: Altas Aventuras",
+    title: { br: "Up: Altas Aventuras", eng: "Up" },
     type: "movie",
     genre: "animation",
     rating: 4.4,
@@ -763,7 +778,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Unbroken",
+    title: { br: "Invencível", eng: "Unbroken" },
     type: "movie",
     genre: "war",
     rating: 3.85,
@@ -774,7 +789,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "1917",
+    title: { br: "1917", eng: "1917" },
     type: "movie",
     genre: "war",
     rating: 4.35,
@@ -785,7 +800,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Forrest Gump",
+    title: { br: "Forrest Gump: O Contador de Histórias", eng: "Forrest Gump" },
     type: "movie",
     genre: "drama",
     rating: 4.65,
@@ -796,7 +811,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Fractured",
+    title: { br: "Fratura", eng: "Fractured" },
     type: "movie",
     genre: "thriller",
     rating: 3.5,
@@ -807,7 +822,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Deadpool",
+    title: { br: "Deadpool", eng: "Deadpool" },
     type: "movie",
     genre: "action",
     rating: 4.25,
@@ -818,7 +833,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Pianista",
+    title: { br: "O Pianista", eng: "The Pianist" },
     type: "movie",
     genre: "war",
     rating: 4.5,
@@ -829,7 +844,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Menino do Pijama Listrado",
+    title: { br: "O Menino do Pijama Listrado", eng: "The Boy in the Striped Pyjamas" },
     type: "movie",
     genre: "war",
     rating: 4.15,
@@ -840,7 +855,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "A Lista de Schindler",
+    title: { br: "A Lista de Schindler", eng: "Schindler's List" },
     type: "movie",
     genre: "war",
     rating: 4.75,
@@ -851,7 +866,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Era Uma Vez em Hollywood",
+    title: { br: "Era Uma Vez em Hollywood", eng: "Once Upon a Time in Hollywood" },
     type: "movie",
     genre: "comedy",
     rating: 4.05,
@@ -862,7 +877,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Free Guy",
+    title: { br: "Free Guy: Assumindo o Controle", eng: "Free Guy" },
     type: "movie",
     genre: "action",
     rating: 3.8,
@@ -873,7 +888,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Mr. Bean",
+    title: { br: "Mr. Bean", eng: "Mr. Bean" },
     type: "series",
     genre: "comedy",
     rating: 4.55,
@@ -884,7 +899,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Curtindo a Vida Adoidado",
+    title: { br: "Curtindo a Vida Adoidado", eng: "Ferris Bueller's Day Off" },
     type: "movie",
     genre: "comedy",
     rating: 4.15,
@@ -895,7 +910,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Show de Truman",
+    title: { br: "Show de Truman", eng: "The Truman Show" },
     type: "movie",
     genre: "drama",
     rating: 4.35,
@@ -906,7 +921,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Atypical",
+    title: { br: "Atypical", eng: "Atypical" },
     type: "series",
     genre: "drama",
     rating: 4.25,
@@ -917,7 +932,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Jojo Rabbit",
+    title: { br: "Jojo Rabbit", eng: "Jojo Rabbit" },
     type: "movie",
     genre: "comedy",
     rating: 4.2,
@@ -928,7 +943,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Lost",
+    title: { br: "Lost", eng: "Lost" },
     type: "series",
     genre: "mystery",
     rating: 5.0,
@@ -939,7 +954,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Cidade de Deus",
+    title: { br: "Cidade de Deus", eng: "City of God" },
     type: "movie",
     genre: "crime",
     rating: 4.3,
@@ -950,7 +965,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "A Vida é Bela",
+    title: { br: "A Vida é Bela", eng: "Life Is Beautiful" },
     type: "movie",
     genre: "drama",
     rating: 4.3,
@@ -961,7 +976,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Agente Secreto",
+    title: { br: "O Agente Secreto", eng: "The Secret Agent" },
     type: "movie",
     genre: "drama",
     rating: 3.65,
@@ -972,7 +987,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "WALL-E",
+    title: { br: "WALL-E", eng: "WALL-E" },
     type: "movie",
     genre: "animation",
     rating: 4.2,
@@ -983,7 +998,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Indiana Jones e os Caçadores da Arca Perdida",
+    title: { br: "Indiana Jones e os Caçadores da Arca Perdida", eng: "Indiana Jones and the Raiders of the Lost Ark" },
     type: "movie",
     genre: "adventure",
     rating: 4.2,
@@ -994,7 +1009,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Indiana Jones e o Templo da Perdição",
+    title: { br: "Indiana Jones e o Templo da Perdição", eng: "Indiana Jones and the Temple of Doom" },
     type: "movie",
     genre: "adventure",
     rating: 3.75,
@@ -1005,7 +1020,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Indiana Jones e a Última Cruzada",
+    title: { br: "Indiana Jones e a Última Cruzada", eng: "Indiana Jones and the Last Crusade" },
     type: "movie",
     genre: "adventure",
     rating: 4.1,
@@ -1016,7 +1031,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Indiana Jones e o Reino da Caveira de Cristal",
+    title: { br: "Indiana Jones e o Reino da Caveira de Cristal", eng: "Indiana Jones and the Kingdom of the Crystal Skull" },
     type: "movie",
     genre: "adventure",
     rating: 3.05,
@@ -1027,7 +1042,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Indiana Jones e a Relíquia do Destino",
+    title: { br: "Indiana Jones e a Relíquia do Destino", eng: "Indiana Jones and the Dial of Destiny" },
     type: "movie",
     genre: "adventure",
     rating: 3.45,
@@ -1038,7 +1053,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Piratas do Caribe: A Maldição do Pérola Negra",
+    title: { br: "Piratas do Caribe: A Maldição do Pérola Negra", eng: "Pirates of the Caribbean: The Curse of the Black Pearl" },
     type: "movie",
     genre: "fantasy",
     rating: 4.05,
@@ -1049,7 +1064,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Piratas do Caribe: O Baú da Morte",
+    title: { br: "Piratas do Caribe: O Baú da Morte", eng: "Pirates of the Caribbean: Dead Man's Chest" },
     type: "movie",
     genre: "fantasy",
     rating: 3.7,
@@ -1060,7 +1075,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Piratas do Caribe: No Fim do Mundo",
+    title: { br: "Piratas do Caribe: No Fim do Mundo", eng: "Pirates of the Caribbean: At World's End" },
     type: "movie",
     genre: "fantasy",
     rating: 3.55,
@@ -1071,7 +1086,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Piratas do Caribe: Navegando em Águas Misteriosas",
+    title: { br: "Piratas do Caribe: Navegando em Águas Misteriosas", eng: "Pirates of the Caribbean: On Stranger Tides" },
     type: "movie",
     genre: "fantasy",
     rating: 3.3,
@@ -1082,7 +1097,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Piratas do Caribe: A Vingança de Salazar",
+    title: { br: "Piratas do Caribe: A Vingança de Salazar", eng: "Pirates of the Caribbean: Dead Men Tell No Tales" },
     type: "movie",
     genre: "fantasy",
     rating: 3.25,
@@ -1093,7 +1108,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: O Mandaloriano e Grogu",
+    title: { br: "Star Wars: O Mandaloriano e Grogu", eng: "Star Wars: The Mandalorian and Grogu" },
     type: "movie",
     genre: "scifi",
     rating: 3.4,
@@ -1104,7 +1119,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: The Mandalorian",
+    title: { br: "Star Wars: The Mandalorian", eng: "Star Wars: The Mandalorian" },
     type: "series",
     genre: "scifi",
     rating: 4.3,
@@ -1115,7 +1130,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Andor",
+    title: { br: "Andor", eng: "Andor" },
     type: "series",
     genre: "scifi",
     rating: 4.3,
@@ -1126,7 +1141,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars: A Guerra dos Clones",
+    title: { br: "Star Wars: A Guerra dos Clones", eng: "Star Wars: The Clone Wars" },
     type: "series",
     genre: "scifi",
     rating: 4.25,
@@ -1137,7 +1152,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Star Wars Rebels",
+    title: { br: "Star Wars Rebels", eng: "Star Wars Rebels" },
     type: "series",
     genre: "scifi",
     rating: 4.05,
@@ -1148,7 +1163,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Gênio Indomável",
+    title: { br: "Gênio Indomável", eng: "Good Will Hunting" },
     type: "movie",
     genre: "drama",
     rating: 4.15,
@@ -1159,7 +1174,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Your Name",
+    title: { br: "Your Name", eng: "Your Name" },
     type: "movie",
     genre: "animation",
     rating: 4.2,
@@ -1170,7 +1185,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Toy Story",
+    title: { br: "Toy Story", eng: "Toy Story" },
     type: "movie",
     genre: "animation",
     rating: 4.15,
@@ -1181,7 +1196,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Coringa",
+    title: { br: "Coringa", eng: "Joker" },
     type: "movie",
     genre: "drama",
     rating: 4.15,
@@ -1192,7 +1207,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Naruto",
+    title: { br: "Naruto", eng: "Naruto" },
     type: "series",
     genre: "animation",
     rating: 4.2,
@@ -1203,7 +1218,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "One Piece (Anime)",
+    title: { br: "One Piece (Anime)", eng: "One Piece (Anime)" },
     type: "series",
     genre: "animation",
     rating: 4.5,
@@ -1214,7 +1229,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Duro de Matar",
+    title: { br: "Duro de Matar", eng: "Die Hard" },
     type: "movie",
     genre: "action",
     rating: 4.1,
@@ -1225,7 +1240,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Lobo de Wall Street",
+    title: { br: "O Lobo de Wall Street", eng: "The Wolf of Wall Street" },
     type: "movie",
     genre: "drama",
     rating: 4.1,
@@ -1236,7 +1251,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Ilha do Medo",
+    title: { br: "Ilha do Medo", eng: "Shutter Island" },
     type: "movie",
     genre: "thriller",
     rating: 4.1,
@@ -1247,7 +1262,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Jurassic Park",
+    title: { br: "Jurassic Park", eng: "Jurassic Park" },
     type: "movie",
     genre: "adventure",
     rating: 4.1,
@@ -1258,7 +1273,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Prenda-me se for Capaz",
+    title: { br: "Prenda-me se for Capaz", eng: "Catch Me If You Can" },
     type: "movie",
     genre: "crime",
     rating: 4.1,
@@ -1269,7 +1284,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Sociedade dos Poetas Mortos",
+    title: { br: "Sociedade dos Poetas Mortos", eng: "Dead Poets Society" },
     type: "movie",
     genre: "drama",
     rating: 4.05,
@@ -1280,7 +1295,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Como Treinar seu Dragão",
+    title: { br: "Como Treinar seu Dragão", eng: "How to Train Your Dragon" },
     type: "movie",
     genre: "animation",
     rating: 4.05,
@@ -1291,7 +1306,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Tubarão",
+    title: { br: "Tubarão", eng: "Jaws" },
     type: "movie",
     genre: "thriller",
     rating: 4.05,
@@ -1302,7 +1317,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Shrek",
+    title: { br: "Shrek", eng: "Shrek" },
     type: "movie",
     genre: "animation",
     rating: 3.95,
@@ -1313,7 +1328,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Shrek 2",
+    title: { br: "Shrek 2", eng: "Shrek 2" },
     type: "movie",
     genre: "animation",
     rating: 3.7,
@@ -1324,7 +1339,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Shrek Terceiro",
+    title: { br: "Shrek Terceiro", eng: "Shrek the Third" },
     type: "movie",
     genre: "animation",
     rating: 3.05,
@@ -1335,7 +1350,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Shrek Para Sempre",
+    title: { br: "Shrek Para Sempre", eng: "Shrek Forever After" },
     type: "movie",
     genre: "animation",
     rating: 3.15,
@@ -1346,7 +1361,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Rocky",
+    title: { br: "Rocky", eng: "Rocky" },
     type: "movie",
     genre: "sport",
     rating: 4.05,
@@ -1357,7 +1372,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Exterminador do Futuro",
+    title: { br: "O Exterminador do Futuro", eng: "The Terminator" },
     type: "movie",
     genre: "scifi",
     rating: 4.05,
@@ -1368,7 +1383,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Gigantes de Aço",
+    title: { br: "Gigantes de Aço", eng: "Real Steel" },
     type: "movie",
     genre: "sport",
     rating: 3.55,
@@ -1379,7 +1394,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Modern Family",
+    title: { br: "Modern Family", eng: "Modern Family" },
     type: "series",
     genre: "comedy",
     rating: 4.25,
@@ -1390,7 +1405,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Cosmos: Uma Odisseia no Espaço-Tempo",
+    title: { br: "Cosmos: Uma Odisseia no Espaço-Tempo", eng: "Cosmos: A Spacetime Odyssey" },
     type: "series",
     genre: "documentary",
     rating: 4.6,
@@ -1401,7 +1416,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Rick and Morty",
+    title: { br: "Rick and Morty", eng: "Rick and Morty" },
     type: "series",
     genre: "comedy",
     rating: 4.5,
@@ -1412,7 +1427,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Vinland Saga",
+    title: { br: "Vinland Saga", eng: "Vinland Saga" },
     type: "series",
     genre: "action",
     rating: 5,
@@ -1423,7 +1438,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Os Simpsons",
+    title: { br: "Os Simpsons", eng: "The Simpsons" },
     type: "series",
     genre: "comedy",
     rating: 4.3,
@@ -1434,7 +1449,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Hora de Aventura",
+    title: { br: "Hora de Aventura", eng: "Adventure Time" },
     type: "series",
     genre: "animation",
     rating: 5.0,
@@ -1445,7 +1460,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Sorria",
+    title: { br: "Sorria", eng: "Smile" },
     type: "movie",
     genre: "horror",
     rating: 3.25,
@@ -1456,7 +1471,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Black Mirror",
+    title: { br: "Black Mirror", eng: "Black Mirror" },
     type: "series",
     genre: "scifi",
     rating: 4.35,
@@ -1467,7 +1482,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "O Problema dos 3 Corpos",
+    title: { br: "O Problema dos 3 Corpos", eng: "3 Body Problem" },
     type: "series",
     genre: "scifi",
     rating: 3.75,
@@ -1478,7 +1493,7 @@ export const MOVIES_SERIES = [
     }
   },
   {
-    title: "Chaves",
+    title: { br: "Chaves", eng: "El Chavo del Ocho" },
     type: "series",
     genre: "comedy",
     rating: 4.25,
@@ -1488,11 +1503,33 @@ export const MOVIES_SERIES = [
       eng: "An orphaned boy and his neighbors get into comic mischief in the courtyard of a humble Mexican tenement."
     }
   },
+  {
+    title: { br: "Drake e Josh", eng: "Drake & Josh" },
+    type: "series",
+    genre: "comedy",
+    rating: 3.85,
+    image: "https://image.tmdb.org/t/p/w500/udCvGctktHvvf8w51XyTPfcmzDa.jpg",
+    description: {
+      br: "Dois adolescentes muito diferentes viram irmãos por adoção e têm que aprender a conviver sob o mesmo teto.",
+      eng: "Two very different teenagers become stepbrothers and have to learn to live under the same roof."
+    }
+  },
+  {
+    title: { br: "Bob Esponja", eng: "SpongeBob SquarePants" },
+    type: "series",
+    genre: "animation",
+    rating: 3.85,
+    image: "https://image.tmdb.org/t/p/w500/yXrtQINkVRyNmfUQFyVG2LuoTqm.jpg",
+    description: {
+      br: "Uma esponja otimista e seus amigos vivem aventuras hilárias no fundo do mar em Fenda do Biquíni.",
+      eng: "An optimistic sponge and his friends have hilarious underwater adventures in Bikini Bottom."
+    }
+  },
 ];
 
 export const BOOKS = [
   {
-    title: "How to Win Friends and Influence People",
+    title: { br: "How to Win Friends and Influence People", eng: "How to Win Friends and Influence People" },
     author: "Dale Carnegie",
     genre: "selfhelp",
     rating: 4.21,
@@ -1503,7 +1540,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "O Hobbit",
+    title: { br: "O Hobbit", eng: "The Hobbit" },
     author: "J.R.R. Tolkien",
     genre: "fantasy",
     rating: 4.30,
@@ -1514,7 +1551,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Psicocibernética",
+    title: { br: "Psicocibernética", eng: "Psycho-Cybernetics" },
     author: "Maxwell Maltz",
     genre: "selfhelp",
     rating: 4.24,
@@ -1525,7 +1562,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "A Arte da Guerra",
+    title: { br: "A Arte da Guerra", eng: "The Art of War" },
     author: "Sun Tzu",
     genre: "strategy",
     rating: 3.94,
@@ -1536,7 +1573,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "As 48 Leis do Poder",
+    title: { br: "As 48 Leis do Poder", eng: "The 48 Laws of Power" },
     author: "Robert Greene",
     genre: "strategy",
     rating: 4.07,
@@ -1547,7 +1584,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Refactoring",
+    title: { br: "Refactoring", eng: "Refactoring" },
     author: "Martin Fowler",
     genre: "tech",
     rating: 4.24,
@@ -1558,7 +1595,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "The Pragmatic Programmer",
+    title: { br: "The Pragmatic Programmer", eng: "The Pragmatic Programmer" },
     author: "David Thomas, Andrew Hunt",
     genre: "tech",
     rating: 4.33,
@@ -1569,7 +1606,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Domain-Driven Design",
+    title: { br: "Domain-Driven Design", eng: "Domain-Driven Design" },
     author: "Eric Evans",
     genre: "tech",
     rating: 4.15,
@@ -1580,7 +1617,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Cracking the Coding Interview",
+    title: { br: "Cracking the Coding Interview", eng: "Cracking the Coding Interview" },
     author: "Gayle Laakmann McDowell",
     genre: "tech",
     rating: 4.33,
@@ -1591,7 +1628,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Head First Java",
+    title: { br: "Head First Java", eng: "Head First Java" },
     author: "Kathy Sierra, Bert Bates",
     genre: "tech",
     rating: 4.24,
@@ -1602,7 +1639,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Lives of the Stoics",
+    title: { br: "Lives of the Stoics", eng: "Lives of the Stoics" },
     author: "Ryan Holiday, Stephen Hanselman",
     genre: "philosophy",
     rating: 3.99,
@@ -1613,7 +1650,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Engenharia de Software Moderna",
+    title: { br: "Engenharia de Software Moderna", eng: "Modern Software Engineering" },
     author: "Marco Tulio Valente",
     genre: "tech",
     rating: 4.69,
@@ -1624,7 +1661,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Hamas",
+    title: { br: "Hamas", eng: "Hamas: The Islamic Resistance Movement" },
     author: "Beverley Milton-Edwards & Stephen Farrell",
     genre: "history",
     rating: 4.02,
@@ -1635,7 +1672,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "O Menino do Pijama Listrado",
+    title: { br: "O Menino do Pijama Listrado", eng: "The Boy in the Striped Pyjamas" },
     author: "John Boyne",
     genre: "drama",
     rating: 4.16,
@@ -1646,7 +1683,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Os Meninos que Enganavam Nazistas",
+    title: { br: "Os Meninos que Enganavam Nazistas", eng: "A Bag of Marbles" },
     author: "Joseph Joffo",
     genre: "war",
     rating: 3.96,
@@ -1657,7 +1694,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Redes de Computadores",
+    title: { br: "Redes de Computadores", eng: "Computer Networks" },
     author: "Andrew S. Tanenbaum",
     genre: "tech",
     rating: 4.12,
@@ -1668,7 +1705,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "O Homem Mais Feliz do Mundo",
+    title: { br: "O Homem Mais Feliz do Mundo", eng: "The Happiest Man on Earth" },
     author: "Eddie Jaku",
     genre: "selfhelp",
     rating: 4.62,
@@ -1679,7 +1716,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Harry Potter e a Pedra Filosofal",
+    title: { br: "Harry Potter e a Pedra Filosofal", eng: "Harry Potter and the Philosopher's Stone" },
     author: "J.K. Rowling",
     genre: "fantasy",
     rating: 4.47,
@@ -1690,7 +1727,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "Star Wars: Marcas da Guerra",
+    title: { br: "Star Wars: Marcas da Guerra", eng: "Star Wars: Aftermath" },
     author: "Chuck Wendig",
     genre: "scifi",
     rating: 3.53,
@@ -1701,7 +1738,7 @@ export const BOOKS = [
     }
   },
   {
-    title: "O Problema dos Três Corpos",
+    title: { br: "O Problema dos Três Corpos", eng: "The Three-Body Problem" },
     author: "Liu Cixin",
     genre: "scifi",
     rating: 4.08,
@@ -1711,4 +1748,42 @@ export const BOOKS = [
       eng: "A secret alien contact in 1960s China sets off a threat that endangers the whole of humanity."
     }
   }
+];
+
+export const BLOG_POSTS = [
+  {
+    slug: "oss-contributors-profile",
+    title: {
+      br: "Perfil dos Contribuidores de Projetos Open Source",
+      eng: "Profile of Open Source Project Contributors",
+    },
+    date: "2026-08-23",
+    readTime: { br: "8 min de leitura", eng: "8 min read" },
+    tags: ["pesquisa", "open-source", "github"],
+    pdfUrl: "/oss-contributors-profile.pdf",
+    excerpt: {
+      br: "Um resumo do artigo científico que escrevi com colegas da PUC Minas: quem contribui para os projetos open source mais populares do GitHub e como a experiência molda essa participação.",
+      eng: "An overview of the scientific paper I wrote with classmates at PUC Minas: who contributes to GitHub's most popular open-source projects, and how experience shapes that participation.",
+    },
+    content: {
+      br: `Este artigo nasceu como o projeto interdisciplinar do 6º período do curso de Engenharia de Software na PUC Minas, escrito ao lado de Pedro Braga, Arthur F. Costa, Fernando A. F. Ibrahim, Luca F. Azalim e Renato M. A. Penna. Diferente da maioria dos projetos da faculdade, o objetivo aqui não era construir um produto, e sim conduzir uma pesquisa científica original — e o trabalho acabou sendo eleito o melhor artigo do período.
+
+A pergunta que guiou a pesquisa foi simples de enunciar e difícil de responder: quem participa do desenvolvimento de software open source, e como o nível de experiência influencia essa participação? Para respondê-la, usamos o paradigma Goal-Question-Metric (GQM), uma abordagem que estrutura a pesquisa a partir de objetivos concretos, decompostos em perguntas, que por sua vez são respondidas por métricas extraídas dos dados.
+
+Em termos de escopo, analisamos os 100 repositórios mais populares (por estrelas) em cada uma das dez linguagens mais usadas do GitHub, totalizando 1.000 repositórios. A partir deles, mineramos doze meses de atividade e chegamos a uma base de 52.743 contribuidores únicos.
+
+Os resultados mais interessantes vieram em três frentes. Na distribuição geográfica, os contribuidores se concentram fortemente em poucos países — Estados Unidos, Índia e China lideram o ranking, com o Brasil aparecendo apenas na oitava posição. No nível de experiência, a grande maioria dos contribuidores (88,41%) se enquadra em um nível intermediário, o que sugere que projetos populares dependem menos de especialistas isolados do que se costuma imaginar. E na taxa de aprovação de pull requests, contribuidores mais experientes se destacam claramente, com uma média de aprovação de 83,76% em suas submissões — um indício forte de que a experiência prévia no projeto (ou no ecossistema) pesa bastante na revisão de código.
+
+O artigo completo, com a metodologia detalhada, os gráficos e a discussão dos resultados, está disponível para leitura logo abaixo.`,
+      eng: `This paper started as the 6th-period interdisciplinary project of the Software Engineering program at PUC Minas, written together with Pedro Braga, Arthur F. Costa, Fernando A. F. Ibrahim, Luca F. Azalim, and Renato M. A. Penna. Unlike most coursework projects, the goal here wasn't to build a product but to conduct original scientific research — and it ended up being recognized as the best paper of the period.
+
+The question guiding the research was simple to state and hard to answer: who participates in open-source software development, and how does experience level shape that participation? To answer it, we used the Goal-Question-Metric (GQM) paradigm, an approach that structures research around concrete goals, broken down into questions, which are in turn answered by metrics extracted from the data.
+
+In terms of scope, we analyzed the 100 most-starred repositories in each of GitHub's ten most popular languages, totaling 1,000 repositories. From there, we mined twelve months of activity and arrived at a dataset of 52,743 unique contributors.
+
+The most interesting results came on three fronts. In geographic distribution, contributors are heavily concentrated in a handful of countries — the United States, India, and China lead the ranking, with Brazil showing up only in eighth place. In experience level, the vast majority of contributors (88.41%) fall into an intermediate tier, suggesting that popular projects rely less on isolated experts than one might assume. And in pull-request approval rates, more experienced contributors clearly stand out, averaging an 83.76% approval rate on their submissions — a strong sign that prior experience with the project (or the ecosystem) weighs heavily in code review.
+
+The full paper, with the detailed methodology, charts, and discussion of results, is available to read right below.`,
+    },
+  },
 ];

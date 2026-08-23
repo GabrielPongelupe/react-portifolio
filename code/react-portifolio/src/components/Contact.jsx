@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-import { IoMailOutline, IoCallOutline, IoCopyOutline, IoArrowForward } from "react-icons/io5";
+import { IoMailOutline, IoLogoLinkedin, IoCopyOutline, IoArrowForward } from "react-icons/io5";
 import SectionHeading from "../common/SectionHeading";
 
 const Contact = () => {
@@ -70,16 +70,22 @@ const Contact = () => {
           variants={fadeInUp}
         >
           <div className="flex flex-col space-y-3">
-            {/* Phone Number */}
-            <motion.div variants={fadeInUp} className="flex items-center gap-4 rounded-2xl p-3">
+            {/* LinkedIn */}
+            <motion.a
+              href={CONTACT.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={fadeInUp}
+              className="flex items-center gap-4 rounded-2xl p-3 hover:bg-neutral-50 transition-colors duration-300"
+            >
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-neutral-100 text-emerald-600">
-                <IoCallOutline className="text-lg" />
+                <IoLogoLinkedin className="text-lg" />
               </span>
               <div className="flex-grow">
-                <p className="text-xs text-neutral-500">{portuguese ? "Telefone" : "Phone"}</p>
-                <p className="font-medium text-neutral-900">{CONTACT.phoneNo}</p>
+                <p className="text-xs text-neutral-500">LinkedIn</p>
+                <p className="font-medium text-neutral-900">gabrielpongelupe</p>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* Email */}
             <motion.div

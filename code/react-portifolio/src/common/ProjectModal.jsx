@@ -1,22 +1,25 @@
 import { useEffect, useRef, useContext } from "react";
 import { createPortal } from "react-dom";
-import { IoClose, IoGlobe, IoLogoGithub } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+import { IoClose, IoDocumentTextOutline, IoGlobe, IoLogoGithub, IoNewspaperOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageContext } from "../contexts/LanguageContext";
 
 const ProjectModal = ({ project, onClose, isOpen }) => {
-  const modalRef = useRef(null);
+  const panelRef = useRef(null);
+  const navigate = useNavigate();
   const { portuguese } = useContext(LanguageContext);
-  
-  // Fecha o modal ao clicar fora dele
+  const isInternalLink = project.link?.startsWith("/");
+
+  // Fecha o painel ao clicar fora dele
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
+      if (panelRef.current && !panelRef.current.contains(e.target)) {
         onClose();
       }
     };
 
-    // Fecha o modal com a tecla ESC
+    // Fecha o painel com a tecla ESC
     const handleEscKey = (e) => {
       if (e.key === "Escape") {
         onClose();
@@ -25,54 +28,59 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
 
     document.addEventListener("mousedown", handleOutsideClick);
     document.addEventListener("keydown", handleEscKey);
-    
+
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
       document.removeEventListener("keydown", handleEscKey);
     };
   }, [onClose]);
 
+  const handleInternalLinkClick = () => {
+    onClose();
+    navigate(project.link);
+  };
+
   const modalContent = (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 px-4">
-          <motion.div 
+        <div className="fixed inset-0 z-50">
+          {/* Backdrop */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm"
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
           />
-          
+
+          {/* Painel lateral */}
           <motion.div
-            ref={modalRef}
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="bg-white rounded-3xl p-8 w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 shadow-2xl border border-neutral-200"
+            ref={panelRef}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.35, ease: "easeInOut" }}
+            className="fixed inset-y-0 right-0 z-10 flex w-full max-w-md flex-col overflow-y-auto border-l border-neutral-200 bg-white shadow-2xl sm:max-w-lg lg:max-w-xl"
           >
-            {/* Botão de fechar - reposicionado e com espaçamento adicional */}
+            {/* Botão de fechar */}
             <button
               onClick={onClose}
-              className="absolute top-6 right-6 text-neutral-500 hover:text-neutral-950 p-2 rounded-full bg-neutral-100 hover:bg-neutral-200 transition-colors duration-200 z-20"
-              aria-label="Fechar modal"
+              className="absolute right-4 top-4 z-20 rounded-full bg-white/90 p-2 text-neutral-600 shadow-sm backdrop-blur-sm transition-colors duration-200 hover:text-neutral-950"
+              aria-label={portuguese ? "Fechar painel" : "Close panel"}
             >
-              <IoClose size={22} />
+              <IoClose size={20} />
             </button>
 
-            {/* Conteúdo do modal com margem superior adicional para separar do botão */}
-            <div className="flex flex-col gap-4 mt-4">
-              <div className="rounded-2xl overflow-hidden mt-2">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover"
-                />
-              </div>
+            {/* Imagem do projeto */}
+            <div className="aspect-video w-full shrink-0 overflow-hidden">
+              <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+            </div>
 
-              <h2 className="text-2xl font-semibold text-neutral-950 mt-2">{project.title}</h2>
+            {/* Conteúdo */}
+            <div className="flex flex-1 flex-col gap-5 p-6 sm:p-8">
+              <h2 className="text-2xl font-bold text-neutral-950">{project.title}</h2>
 
-              <p className="text-neutral-500 leading-relaxed">
+              <p className="leading-relaxed text-neutral-500">
                 {portuguese && project.fullDescription_pt
                   ? project.fullDescription_pt
                   : portuguese && !project.fullDescription_pt
@@ -81,8 +89,8 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
               </p>
 
               {/* Tecnologias */}
-              <div className="mt-4">
-                <h3 className="text-neutral-950 text-sm font-semibold mb-3">
+              <div>
+                <h3 className="mb-3 text-sm font-semibold text-neutral-950">
                   {portuguese ? "Tecnologias" : "Technologies"}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -98,17 +106,36 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
               </div>
 
               {/* Links */}
-              <div className="flex flex-wrap gap-4 mt-6">
-                {/* Botão para ver no GitHub - sempre presente usando o atributo 'link' */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-neutral-950 hover:bg-neutral-800 px-4 py-2.5 rounded-full transition-colors duration-200 text-white text-sm font-medium"
-                >
-                  <IoLogoGithub size={18} />
-                  <span>{portuguese ? "Ver no GitHub" : "See on GitHub"}</span>
-                </a>
+              <div className="mt-auto flex flex-col gap-3 pt-4">
+                {/* Botão para ver o link do projeto (GitHub, página externa, ou post do blog) */}
+                {project.link && isInternalLink && (
+                  <button
+                    onClick={handleInternalLinkClick}
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-neutral-950 px-4 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800"
+                  >
+                    <IoNewspaperOutline size={18} />
+                    <span>{portuguese ? "Ver projeto" : "View project"}</span>
+                  </button>
+                )}
+                {project.link && !isInternalLink && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-neutral-950 px-4 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800"
+                  >
+                    {project.link.includes("github.com") ? <IoLogoGithub size={18} /> : <IoGlobe size={18} />}
+                    <span>
+                      {project.link.includes("github.com")
+                        ? portuguese
+                          ? "Ver no GitHub"
+                          : "See on GitHub"
+                        : portuguese
+                        ? "Ver projeto"
+                        : "View project"}
+                    </span>
+                  </a>
+                )}
 
                 {/* Botão Live Demo - exibe apenas se o projeto tiver o atributo liveDemoUrl */}
                 {project.liveDemoUrl && (
@@ -116,10 +143,24 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
                     href={project.liveDemoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-full transition-colors duration-200 text-sm font-semibold"
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
                   >
                     <IoGlobe size={18} />
                     <span>Live Demo</span>
+                  </a>
+                )}
+
+                {/* Botão Download PDF - exibe no lugar do Live Demo quando o projeto tiver pdfUrl */}
+                {!project.liveDemoUrl && project.pdfUrl && (
+                  <a
+                    href={project.pdfUrl}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
+                  >
+                    <IoDocumentTextOutline size={18} />
+                    <span>{portuguese ? "Baixar PDF" : "Download PDF"}</span>
                   </a>
                 )}
               </div>
@@ -130,7 +171,7 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
     </AnimatePresence>
   );
 
-  // Usar createPortal para renderizar o modal no fim do documento
+  // Usar createPortal para renderizar o painel no fim do documento
   // para evitar problemas com z-index e estilização
   return createPortal(modalContent, document.body);
 };
