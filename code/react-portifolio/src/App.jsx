@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar"
 import Projects from "./components/Projects"
 import Technologies from "./components/Technologies"
 import Contact from "./components/Contact.jsx"
-import MoviesBooks from "./components/MoviesBooks.jsx"
+import Interests from "./components/Interests.jsx"
 import Blog from "./components/Blog.jsx"
 import BlogPost from "./components/BlogPost.jsx"
 
@@ -34,7 +34,7 @@ const App = () => {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/filmes-livros" element={<MoviesBooks />} />
+              <Route path="/interesses" element={<Interests />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
             </Routes>

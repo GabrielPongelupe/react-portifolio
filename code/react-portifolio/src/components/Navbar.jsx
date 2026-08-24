@@ -26,7 +26,7 @@ const Navbar = () => {
     { id: "experience", label: portuguese ? "Experiências" : "Experience" },
     { id: "projects", label: portuguese ? "Projetos" : "Projects" },
     { id: "technologies", label: portuguese ? "Tecnologias" : "Tech Stack" },
-    { id: "movies-books", label: portuguese ? "Filmes/Livros" : "Movies/Books", path: "/filmes-livros" },
+    { id: "interests", label: portuguese ? "Meus Interesses" : "My Interests", path: "/interesses" },
     { id: "blog", label: "Blog", path: "/blog" },
     { id: "contact", label: portuguese ? "Contato" : "Contact" },
   ];
@@ -186,7 +186,7 @@ const Navbar = () => {
                     className={`whitespace-nowrap border-b-2 pb-1 font-mono text-sm uppercase tracking-wide transition-colors duration-200 ${
                       isActive
                         ? "border-emerald-600 text-neutral-950"
-                        : "border-transparent text-neutral-400 hover:text-neutral-950"
+                        : "border-transparent text-neutral-600 hover:text-neutral-950"
                     }`}
                   >
                     {link.label}
@@ -199,7 +199,7 @@ const Navbar = () => {
           {/* Separador visual entre os dois grupos de navegação */}
           <span className="h-4 w-px bg-neutral-300" aria-hidden="true" />
 
-          {/* Grupo 2: páginas próprias (Filmes/Livros, Blog) agrupadas num menu compacto */}
+          {/* Grupo 2: páginas próprias (Meus Interesses, Blog) agrupadas num menu compacto */}
           <div className="relative" ref={pagesMenuRef}>
             <button
               onClick={() => {
@@ -209,7 +209,7 @@ const Navbar = () => {
               className={`flex items-center gap-1.5 whitespace-nowrap border-b-2 pb-1 font-mono text-sm uppercase tracking-wide transition-colors duration-200 ${
                 secondaryLinks.some(isLinkActive)
                   ? "border-emerald-600 text-neutral-950"
-                  : "border-transparent text-neutral-400 hover:text-neutral-950"
+                  : "border-transparent text-neutral-600 hover:text-neutral-950"
               }`}
             >
               <span>{portuguese ? "Explorar" : "Explore"}</span>
@@ -303,14 +303,14 @@ const Navbar = () => {
               className={`flex w-full items-center rounded-xl px-3 py-2.5 font-mono text-sm uppercase tracking-wide transition-colors duration-200 ${
                 isLinkActive(link)
                   ? "bg-neutral-100 text-neutral-950"
-                  : "text-neutral-400 hover:bg-neutral-100 hover:text-neutral-950"
+                  : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-950"
               }`}
             >
               {link.label}
             </button>
           ))}
 
-          <p className="border-t border-neutral-200 px-3 pb-1 pt-3 font-mono text-xs uppercase tracking-wide text-neutral-400">
+          <p className="border-t border-neutral-200 px-3 pb-1 pt-3 font-mono text-xs uppercase tracking-wide text-neutral-600">
             {portuguese ? "Explorar" : "Explore"}
           </p>
           {secondaryLinks.map((link) => (
@@ -320,7 +320,7 @@ const Navbar = () => {
               className={`flex w-full items-center rounded-xl px-3 py-2.5 font-mono text-sm uppercase tracking-wide transition-colors duration-200 ${
                 isLinkActive(link)
                   ? "bg-neutral-100 text-neutral-950"
-                  : "text-neutral-400 hover:bg-neutral-100 hover:text-neutral-950"
+                  : "text-neutral-600 hover:bg-neutral-100 hover:text-neutral-950"
               }`}
             >
               {link.label}
@@ -331,7 +331,7 @@ const Navbar = () => {
             <button
               onClick={() => handleToggleLanguage("portuguese")}
               className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm ${
-                portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-400"
+                portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-600"
               }`}
             >
               <img src={brasilFlag} alt="Bandeira do Brasil" className="h-5 w-5 rounded-full" />
@@ -340,7 +340,7 @@ const Navbar = () => {
             <button
               onClick={() => handleToggleLanguage("english")}
               className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm ${
-                !portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-400"
+                !portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-600"
               }`}
             >
               <img src={usaFlag} alt="USA Flag" className="h-5 w-5 rounded-full" />
