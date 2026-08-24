@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { IoArrowBack, IoTimeOutline, IoDocumentTextOutline, IoOpenOutline } from "react-icons/io5";
 import { BLOG_POSTS } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
-
-const formatDate = (isoDate, portuguese) =>
-  new Date(`${isoDate}T00:00:00`).toLocaleDateString(portuguese ? "pt-BR" : "en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+import { formatDate } from "../utils/formatDate";
 
 const BlogPost = () => {
   const { portuguese } = useContext(LanguageContext);

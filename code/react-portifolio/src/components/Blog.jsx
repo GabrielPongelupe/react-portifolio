@@ -5,13 +5,7 @@ import { IoArrowForward, IoNewspaperOutline, IoSearchOutline, IoTimeOutline } fr
 import { BLOG_POSTS } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
 import SectionHeading from "../common/SectionHeading";
-
-const formatDate = (isoDate, portuguese) =>
-  new Date(`${isoDate}T00:00:00`).toLocaleDateString(portuguese ? "pt-BR" : "en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+import { formatDate } from "../utils/formatDate";
 
 const BlogCard = ({ post, portuguese, index, onClick }) => (
   <motion.article
