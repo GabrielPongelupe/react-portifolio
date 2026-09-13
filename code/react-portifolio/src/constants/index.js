@@ -30,15 +30,8 @@ export const HERO_CONTENT = {
 
 
 export const ABOUT_TEXT = {
-    br: `Sou um estudante de Engenharia de Software na PUC Minas e um desenvolvedor apaixonado por criar
- soluções tecnológicas inovadoras e funcionais. Utilizei diversas tecnologias, como Java, Spring Boot, SQL, HTML, CSS, JavaScript
- , e React, em projetos que desafiaram minha capacidade de resolver problemas e entregar resultados impactantes. Desde cedo, minha 
- curiosidade natural despertou um interesse profundo em entender como as coisas funcionam, o que me levou a explorar o mundo da tecnologia.
-  Gosto de trabalhar em equipe e enfrentar desafios complexos, sempre buscando aprender e evoluir. Fora do ambiente acadêmico, 
-  estou constantemente explorando novas tecnologias e aprimorando minhas habilidades para me manter na vanguarda do desenvolvimento.
-
-`,
-  eng: `I am a Software Engineering student at PUC Minas and a passionate developer focused on creating innovative and functional technological solutions. I have used various technologies such as Java, Spring Boot, SQL, HTML, CSS, JavaScript, and React in projects that challenged my problem-solving skills and delivered impactful results. From an early age, my natural curiosity sparked a deep interest in understanding how things work, which led me to explore the world of technology. I enjoy working in teams and tackling complex challenges, always striving to learn and grow. Outside of the academic environment, I am constantly exploring new technologies and honing my skills to stay at the forefront of development.`
+    br: `Sou estudante de Engenharia de Software na PUC Minas. Já usei Java, Spring Boot, SQL, HTML, CSS, JavaScript e React em projetos que me obrigaram a resolver problemas reais e entregar resultado. Desde cedo tive curiosidade por entender como as coisas funcionam, e foi isso que me levou à tecnologia. Gosto de trabalhar em equipe e encarar desafios complexos, e continuo estudando novas tecnologias por conta própria, fora da faculdade.`,
+  eng: `I'm a Software Engineering student at PUC Minas. I've used Java, Spring Boot, SQL, HTML, CSS, JavaScript, and React in projects that forced me to solve real problems and deliver results. I've been curious about how things work since I was a kid, and that's what led me to technology. I enjoy working in teams and taking on complex challenges, and I keep studying new technologies on my own, outside of school.`
 };
 
 
@@ -140,12 +133,12 @@ export const EXPERIENCES = [
       br: [
         "Atuação em uma plataforma que conecta mais de 20 exchanges, custodians e bancos a múltiplas blockchains, incluindo trilhos fiat como Pix e SWIFT",
         "Desenvolvimento e suporte de microsserviços críticos de custódia digital e execução de operações (RFQ) em ambiente de produção",
-        "Atuação em todo o ciclo de entrega — do desenvolvimento ao deploy — utilizando .NET, Node.js e Angular, com infraestrutura AWS e pipelines Azure DevOps"
+        "Atuação em todo o ciclo de entrega (do desenvolvimento ao deploy), utilizando .NET, Node.js e Angular, com infraestrutura AWS e pipelines Azure DevOps"
       ],
       eng: [
         "Worked on a platform connecting 20+ exchanges, custodians, and banks across multiple blockchains, including fiat rails like Pix and SWIFT",
         "Developed and supported critical digital custody and trade execution (RFQ) microservices in a production environment",
-        "Contributed across the full delivery cycle — from development to deploy — using .NET, Node.js, and Angular, with AWS infrastructure and Azure DevOps pipelines"
+        "Contributed across the full delivery cycle (from development to deploy), using .NET, Node.js, and Angular, with AWS infrastructure and Azure DevOps pipelines"
       ]
     }
   },
@@ -442,8 +435,8 @@ export const MOVIES_SERIES = [
     rating: 4.45,
     image: null,
     description: {
-      br: "Drama sobre o submundo do jogo ilegal e do poder no Rio de Janeiro. Nota estimada — sem consolidação oficial no IMDb.",
-      eng: "Drama about the underworld of illegal gambling and power in Rio de Janeiro. Estimated rating — no official IMDb consolidation yet."
+      br: "Drama sobre o submundo do jogo ilegal e do poder no Rio de Janeiro. Nota estimada, sem consolidação oficial no IMDb.",
+      eng: "Drama about the underworld of illegal gambling and power in Rio de Janeiro. Estimated rating, no official IMDb consolidation yet."
     }
   },
   {
@@ -497,8 +490,8 @@ export const MOVIES_SERIES = [
     rating: 4.4,
     image: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Project_Hail_Mary_poster.jpg/250px-Project_Hail_Mary_poster.jpg",
     description: {
-      br: "Um astronauta solitário acorda sem memória numa missão para salvar o Sol — e a humanidade.",
-      eng: "A lone astronaut wakes with no memory on a mission to save the Sun — and humanity."
+      br: "Um astronauta solitário acorda sem memória numa missão para salvar o Sol, e a humanidade junto com ele.",
+      eng: "A lone astronaut wakes with no memory on a mission to save the Sun, and humanity along with it."
     }
   },
   {
@@ -2048,8 +2041,8 @@ export const GAMES = [
     rating: 3.80,
     image: "https://upload.wikimedia.org/wikipedia/en/5/54/Wii_Sports_Sleeve_Cover_Art.jpg",
     description: {
-      br: "Uma coletânea de cinco esportes controlados por movimento — tênis, boliche, boxe, golfe e beisebol — que acompanhava o console Wii.",
-      eng: "A motion-controlled compilation of five sports — tennis, bowling, boxing, golf, and baseball — bundled with the Wii console."
+      br: "Uma coletânea de cinco esportes controlados por movimento (tênis, boliche, boxe, golfe e beisebol) que acompanhava o console Wii.",
+      eng: "A motion-controlled compilation of five sports (tennis, bowling, boxing, golf, and baseball) bundled with the Wii console."
     }
   },
   {

@@ -1,17 +1,17 @@
 ---
 title: 20 Conceitos que Separam Devs Júnior de Sênior
-excerpt: Uma releitura dos 20 conceitos do vídeo de Augusto Galego que separam devs júnior de sênior — idempotência, CAP, circuit breaker, migrações sem downtime e mais — organizados em 4 grupos, com os diagramas originais.
+excerpt: Uma releitura dos 20 conceitos do vídeo de Augusto Galego que separam devs júnior de sênior (idempotência, CAP, circuit breaker, migrações sem downtime e mais), organizados em 4 grupos, com os diagramas originais.
 readTime: 16 min de leitura
 ---
 
 Este post é um apanhado geral do vídeo "20 Conceitos que Separam Devs Júnior de Sênior", de Augusto Galego (https://www.youtube.com/watch?v=7lH36O1Pudg), reunindo de forma resumida os 20 conceitos que ele apresenta e explicando cada um deles. Organizei tudo em 4 grupos: dados e confiabilidade, escala e resiliência, evolução e migração, e arquitetura.
 
 
-Antes de entrar em cada grupo, vale visualizar onde a maioria desses conceitos aparece na prática — no caminho de uma única requisição, do cliente até o banco:
+Antes de entrar em cada grupo, vale visualizar onde a maioria desses conceitos aparece na prática, no caminho de uma única requisição, do cliente até o banco:
 
 ![](./images/request-flow-diagram.png)
 
-## Seção 1 — Dados, consistência e confiabilidade
+## Seção 1: Dados, consistência e confiabilidade
 
 Todo sistema que lida com mais de uma cópia dos dados, mais de um servidor, ou mais de uma tentativa de fazer a mesma coisa esbarra nos mesmos problemas: requisições podem se repetir, dados demoram pra propagar, caches ficam desatualizados. Os seis conceitos abaixo são, no fundo, respostas a essas perguntas.
 
@@ -19,11 +19,11 @@ Todo sistema que lida com mais de uma cópia dos dados, mais de um servidor, ou 
 
 Uma operação é idempotente quando podemos executá-la várias vezes sem alterar o resultado final. Imagine um pagamento: você clica em "Pagar", o servidor processa a cobrança, mas ocorre um erro antes de conseguir responder. Como você não sabe se o pagamento foi concluído, tenta novamente. Se a operação não for idempotente, o servidor pode processar a segunda tentativa como um novo pagamento e você acaba sendo cobrado duas vezes. A idempotência existe justamente para **garantir que repetir uma operação não gere efeitos colaterais duplicados.**
 
-![1ª tentativa falha por timeout, o cliente reenvia sem nenhum identificador, e o servidor processa a cobrança de novo — total: R$ 100](./images/idempotencia-sem-chave.svg)
+![1ª tentativa falha por timeout, o cliente reenvia sem nenhum identificador, e o servidor processa a cobrança de novo, total: R$ 100](./images/idempotencia-sem-chave.svg)
 
 A solução mais comum é a idempotency key: um identificador único para aquela operação, gerado pelo cliente no momento do clique. Pense nela como um número de protocolo da solicitação.
 
-No exemplo do pagamento: na primeira tentativa, o cliente envia a requisição junto com essa chave, e o servidor processa o pagamento normalmente. Se a resposta não chegar — timeout, queda de conexão, erro do servidor — o cliente tenta de novo, mas reenvia a mesma idempotency key. O servidor reconhece a chave repetida e entende: "essa operação já foi processada". Em vez de cobrar de novo, ele apenas devolve o resultado que já tinha gerado.
+No exemplo do pagamento: na primeira tentativa, o cliente envia a requisição junto com essa chave, e o servidor processa o pagamento normalmente. Se a resposta não chegar (timeout, queda de conexão, erro do servidor), o cliente tenta de novo, mas reenvia a mesma idempotency key. O servidor reconhece a chave repetida e entende: "essa operação já foi processada". Em vez de cobrar de novo, ele apenas devolve o resultado que já tinha gerado.
 
 O fluxo fica mais ou menos assim:
 
@@ -31,9 +31,9 @@ O fluxo fica mais ou menos assim:
 
 `2ª tentativa → idempotency key: abc-123 → operação já processada → retorna o resultado`
 
-![Na 2ª tentativa, a mesma idempotency key permite ao servidor reconhecer a operação e devolver o resultado salvo, sem cobrar de novo — total: R$ 50](./images/idempotencia-com-chave.svg)
+![Na 2ª tentativa, a mesma idempotency key permite ao servidor reconhecer a operação e devolver o resultado salvo, sem cobrar de novo, total: R$ 50](./images/idempotencia-com-chave.svg)
 
-O ponto importante é que a chave identifica a operação, não os dados enviados. É isso que permite ao servidor reconhecer que duas requisições — mesmo separadas por um retry, um timeout ou uma falha de conexão — são, na prática, a mesma tentativa.
+O ponto importante é que a chave identifica a operação, não os dados enviados. É isso que permite ao servidor reconhecer que duas requisições (mesmo separadas por um retry, um timeout ou uma falha de conexão) são, na prática, a mesma tentativa.
 
 Vale lembrar como isso funciona nos verbos HTTP tradicionais: GET, PUT e DELETE já são idempotentes por definição, POST não é, e PATCH depende da implementação. Em outras palavras: idempotência não é sobre "não repetir a ação", é sobre garantir que repetir não cause efeitos colaterais duplicados.
 
@@ -43,9 +43,9 @@ Em sistemas com múltiplos bancos, é comum ter um banco principal responsável 
 
 ![Durante a replicação, réplicas diferentes respondem valores diferentes; segundos depois, todas convergem para o mesmo valor](./images/consistencia-eventual.svg)
 
-O benefício é ganhar desempenho e disponibilidade, já que a aplicação não precisa esperar todas as réplicas serem atualizadas antes de confirmar a escrita. O custo é aceitar esse período curto de inconsistência. Se quiséssemos que todas as cópias estivessem sempre atualizadas antes de responder ao usuário, teríamos consistência forte — mas isso aumentaria a latência e poderia reduzir a disponibilidade do sistema.
+O benefício é ganhar desempenho e disponibilidade, já que a aplicação não precisa esperar todas as réplicas serem atualizadas antes de confirmar a escrita. O custo é aceitar esse período curto de inconsistência. Se quiséssemos que todas as cópias estivessem sempre atualizadas antes de responder ao usuário, teríamos consistência forte, mas isso aumentaria a latência e poderia reduzir a disponibilidade do sistema.
 
-No YouTube, o "+1 view" é salvo instantaneamente no banco principal, mas duas pessoas em países diferentes, consultando a página quase ao mesmo tempo, podem receber `999` e `1.000` visualizações, porque cada uma está lendo de uma réplica diferente — uma já recebeu a atualização, a outra ainda não. O sistema não está quebrado — ele trocou consistência imediata por velocidade e disponibilidade, de propósito. Para esse tipo de dado, alguns segundos de diferença são aceitáveis; para informações como saldo bancário ou estoque, provavelmente não.
+No YouTube, o "+1 view" é salvo instantaneamente no banco principal, mas duas pessoas em países diferentes, consultando a página quase ao mesmo tempo, podem receber `999` e `1.000` visualizações, porque cada uma está lendo de uma réplica diferente: uma já recebeu a atualização, a outra ainda não. O sistema não está quebrado. Ele trocou consistência imediata por velocidade e disponibilidade, de propósito. Para esse tipo de dado, alguns segundos de diferença são aceitáveis; para informações como saldo bancário ou estoque, provavelmente não.
 
 ## Read replicas
 
@@ -55,27 +55,27 @@ Read replicas são cópias do banco principal usadas para distribuir as operaç�
 
 Por exemplo, se uma aplicação recebe 10.000 leituras e apenas 500 escritas, não faz muito sentido sobrecarregar o banco principal com todas essas consultas. As réplicas permitem distribuir essa carga e aumentar a capacidade de leitura do sistema.
 
-A desvantagem é que a replicação geralmente é assíncrona: uma réplica pode levar alguns milissegundos ou segundos para receber uma alteração feita no banco principal. Por isso, read replicas estão diretamente relacionadas à consistência eventual — é exatamente esse atraso de replicação que faz uma réplica responder um valor desatualizado por um tempo curto.
+A desvantagem é que a replicação geralmente é assíncrona: uma réplica pode levar alguns milissegundos ou segundos para receber uma alteração feita no banco principal. Por isso, read replicas estão diretamente relacionadas à consistência eventual: é exatamente esse atraso de replicação que faz uma réplica responder um valor desatualizado por um tempo curto.
 
 ## Teorema de CAP
 
-O Teorema de CAP descreve um trade-off de sistemas distribuídos quando ocorre uma partição de rede, ou seja, quando dois ou mais nós deixam de conseguir se comunicar corretamente. Ele considera três propriedades: Consistency (C) — todos os nós retornam o mesmo dado; Availability (A) — o sistema continua respondendo às requisições; e Partition Tolerance (P) — o sistema continua funcionando mesmo com uma falha na comunicação entre os nós.
+O Teorema de CAP descreve um trade-off de sistemas distribuídos quando ocorre uma partição de rede, ou seja, quando dois ou mais nós deixam de conseguir se comunicar corretamente. Ele considera três propriedades: Consistency (C): todos os nós retornam o mesmo dado; Availability (A): o sistema continua respondendo às requisições; e Partition Tolerance (P): o sistema continua funcionando mesmo com uma falha na comunicação entre os nós.
 
-Na prática, o P é praticamente obrigatório em sistemas distribuídos, porque não temos como garantir que a rede nunca vai falhar — cabos podem ser rompidos, servidores podem ficar indisponíveis, conexões podem cair. Por isso, quando uma partição acontece, a decisão real passa a ser entre C e A.
+Na prática, o P é praticamente obrigatório em sistemas distribuídos, porque não temos como garantir que a rede nunca vai falhar: cabos podem ser rompidos, servidores podem ficar indisponíveis, conexões podem cair. Por isso, quando uma partição acontece, a decisão real passa a ser entre C e A.
 
-![Com uma partição de rede, só dá pra garantir 2 das 3 propriedades — a escolha real é entre priorizar consistência (CP) ou disponibilidade (AP)](./images/cap-diagram.svg)
+![Com uma partição de rede, só dá pra garantir 2 das 3 propriedades: a escolha real é entre priorizar consistência (CP) ou disponibilidade (AP)](./images/cap-diagram.svg)
 
-CP prefere manter os dados consistentes, mesmo que precise deixar de responder temporariamente; AP prefere continuar respondendo, mesmo que algumas respostas possam estar temporariamente desatualizadas. Um sistema bancário tende a priorizar consistência — é melhor não realizar uma operação do que correr o risco de trabalhar com um saldo incorreto. Já uma rede social pode priorizar disponibilidade — alguns usuários verem uma informação alguns segundos atrasada geralmente é aceitável. A consistência eventual do item acima é basicamente o que acontece quando um sistema escolhe AP.
+CP prefere manter os dados consistentes, mesmo que precise deixar de responder temporariamente; AP prefere continuar respondendo, mesmo que algumas respostas possam estar temporariamente desatualizadas. Um sistema bancário tende a priorizar consistência: é melhor não realizar uma operação do que correr o risco de trabalhar com um saldo incorreto. Já uma rede social pode priorizar disponibilidade: alguns usuários verem uma informação alguns segundos atrasada geralmente é aceitável. A consistência eventual do item acima é basicamente o que acontece quando um sistema escolhe AP.
 
 ## Exactly once
 
-Em sistemas de mensageria, como o Kafka, uma das preocupações é garantir quantas vezes uma mensagem será processada. Existem três garantias principais: at most once — a mensagem pode ser perdida, mas não será processada mais de uma vez; at least once — a mensagem não deve ser perdida, mas pode ser processada mais de uma vez; e exactly once — a mensagem é processada uma única vez.
+Em sistemas de mensageria, como o Kafka, uma das preocupações é garantir quantas vezes uma mensagem será processada. Existem três garantias principais: at most once: a mensagem pode ser perdida, mas não será processada mais de uma vez; at least once: a mensagem não deve ser perdida, mas pode ser processada mais de uma vez; e exactly once: a mensagem é processada uma única vez.
 
-O problema é que exactly once é muito mais difícil de garantir, principalmente quando o processamento envolve outros sistemas. Imagine um consumidor que recebe uma mensagem para realizar um pagamento: ele processa o pagamento com sucesso, mas falha antes de confirmar ao sistema de mensageria que terminou. Como o sistema de mensageria não sabe se o pagamento realmente aconteceu, ele reenvia a mensagem — e agora existe o risco de processar o pagamento duas vezes.
+O problema é que exactly once é muito mais difícil de garantir, principalmente quando o processamento envolve outros sistemas. Imagine um consumidor que recebe uma mensagem para realizar um pagamento: ele processa o pagamento com sucesso, mas falha antes de confirmar ao sistema de mensageria que terminou. Como o sistema de mensageria não sabe se o pagamento realmente aconteceu, ele reenvia a mensagem, e agora existe o risco de processar o pagamento duas vezes.
 
-![Comparação das três garantias de entrega — na prática, o mercado combina at least once com consumidores idempotentes](./images/exactly-once.svg)
+![Comparação das três garantias de entrega: na prática, o mercado combina at least once com consumidores idempotentes](./images/exactly-once.svg)
 
-Por isso, garantir exactly once de ponta a ponta é bastante complexo, e geralmente só vale dentro do próprio sistema de mensageria. Na prática, é comum trabalhar com at least once + consumidores idempotentes: a mensagem pode chegar mais de uma vez, mas o consumidor reconhece que aquela operação já foi realizada e evita o efeito duplicado — que é literalmente o conceito de idempotência resolvendo o problema de mensagens duplicadas. Ou seja, em vez de tentar garantir que a mensagem nunca será processada duas vezes, garantimos que processá-la duas vezes não causa problema.
+Por isso, garantir exactly once de ponta a ponta é bastante complexo, e geralmente só vale dentro do próprio sistema de mensageria. Na prática, é comum trabalhar com at least once + consumidores idempotentes: a mensagem pode chegar mais de uma vez, mas o consumidor reconhece que aquela operação já foi realizada e evita o efeito duplicado, que é literalmente o conceito de idempotência resolvendo o problema de mensagens duplicadas. Ou seja, em vez de tentar garantir que a mensagem nunca será processada duas vezes, garantimos que processá-la duas vezes não causa problema.
 
 ## Cache invalidation
 
@@ -85,13 +85,13 @@ Manter os dados guardados em cache sincronizados com a fonte de verdade, pra nin
 
 As estratégias mais comuns:
 
-- TTL: o item expira sozinho depois de um tempo fixo — simples, mas convive com dados desatualizados por definição
-- Write-through: toda escrita atualiza o cache na mesma operação — nunca fica desatualizado, mas cada escrita fica mais lenta
-- Cache-aside com invalidação explícita: a aplicação deleta ou atualiza a chave do cache quando escreve no banco, em vez de esperar o TTL — é o padrão mais usado
+- TTL: o item expira sozinho depois de um tempo fixo. É simples, mas convive com dados desatualizados por definição
+- Write-through: toda escrita atualiza o cache na mesma operação. Nunca fica desatualizado, mas cada escrita fica mais lenta
+- Cache-aside com invalidação explícita: a aplicação deleta ou atualiza a chave do cache quando escreve no banco, em vez de esperar o TTL. É o padrão mais usado
 
-Essa é só a primeira metade da história — cache invalidation aparece de novo, com mais nuances, na Seção 4.
+Essa é só a primeira metade da história: cache invalidation aparece de novo, com mais nuances, na Seção 4.
 
-## Seção 2 — Escala, performance e resiliência
+## Seção 2: Escala, performance e resiliência
 
 Os conceitos desta seção tratam de um problema comum em sistemas reais: o que acontece quando a aplicação recebe mais carga do que consegue processar ou quando algum de seus componentes começa a falhar?
 
@@ -117,7 +117,7 @@ Imagine um conteúdo muito acessado que está no cache. Quando ele expira, milha
 
 ![Enquanto o cache está quente ele absorve o tráfego; quando expira, todas as requisições caem no banco ao mesmo tempo](./images/thundering-herd-diagram.svg)
 
-Uma forma de evitar isso é usar jitter: em vez de todo mundo tentar de novo no mesmo instante, cada cliente espera um tempo aleatório antes do retry, espalhando a carga ao longo de alguns segundos em vez de concentrá-la num único pico. Outra é request coalescing: quando várias requisições pedem o mesmo dado ao mesmo tempo, apenas a primeira de fato vai até o banco — as demais ficam esperando e recebem o mesmo resultado assim que ele chega, em vez de gerar N consultas idênticas.
+Uma forma de evitar isso é usar jitter: em vez de todo mundo tentar de novo no mesmo instante, cada cliente espera um tempo aleatório antes do retry, espalhando a carga ao longo de alguns segundos em vez de concentrá-la num único pico. Outra é request coalescing: quando várias requisições pedem o mesmo dado ao mesmo tempo, apenas a primeira de fato vai até o banco. As demais ficam esperando e recebem o mesmo resultado assim que ele chega, em vez de gerar N consultas idênticas.
 
 ## Celebrity Problem / Hot Shards
 
@@ -127,7 +127,7 @@ Imagine uma rede social que distribui posts entre diferentes shards. Se uma cele
 
 ![Capacidade agregada sobra, mas o shard que guarda o perfil viral concentra todo o tráfego](./images/hot-shard-diagram.svg)
 
-Cache na frente do shard quente absorve boa parte das leituras antes que cheguem ao banco. Réplicas de leitura para aquela chave específica distribuem o tráfego entre várias cópias, em vez de concentrar tudo numa única instância. E uma distribuição mais granular — particionar por algum atributo além do autor, por exemplo — evita que um único registro popular consiga sozinho lotar um shard inteiro.
+Cache na frente do shard quente absorve boa parte das leituras antes que cheguem ao banco. Réplicas de leitura para aquela chave específica distribuem o tráfego entre várias cópias, em vez de concentrar tudo numa única instância. E uma distribuição mais granular (particionar por algum atributo além do autor, por exemplo) evita que um único registro popular consiga sozinho lotar um shard inteiro.
 
 Ter vários servidores não ajuda se todo o tráfego continua concentrado em um único lugar.
 
@@ -143,7 +143,7 @@ Ele funciona de forma parecida com um disjuntor elétrico:
 
 ![As três máquinas de estado do circuit breaker](./images/circuit-breaker-states.svg)
 
-Assim, em vez de esperar um timeout completo a cada tentativa — o que consome tempo, threads e conexões enquanto o serviço já está com problema —, o sistema falha rapidamente assim que percebe o padrão de falhas. Isso evita que a lentidão de um serviço se propague para quem depende dele, formando uma fila crescente de requisições presas esperando uma resposta que não vai chegar. E o estado half-open garante que o sistema volte a confiar no serviço automaticamente assim que ele se recuperar, sem precisar de intervenção manual.
+Assim, em vez de esperar um timeout completo a cada tentativa (o que consome tempo, threads e conexões enquanto o serviço já está com problema), o sistema falha rapidamente assim que percebe o padrão de falhas. Isso evita que a lentidão de um serviço se propague para quem depende dele, formando uma fila crescente de requisições presas esperando uma resposta que não vai chegar. E o estado half-open garante que o sistema volte a confiar no serviço automaticamente assim que ele se recuperar, sem precisar de intervenção manual.
 
 ## Rate Limiting
 
@@ -155,7 +155,7 @@ Isso ajuda a proteger a aplicação contra abuso e picos de tráfego.
 
 ![Quatro estratégias comuns de rate limiting](./images/rate-limiting-comparison.svg)
 
-Existem diferentes estratégias para implementar isso. Fixed Window conta as requisições dentro de janelas fixas de tempo (por exemplo, a cada minuto) — é simples, mas permite uma rajada dupla bem na virada da janela. Sliding Window resolve esse problema considerando uma janela contínua que desliza com o tempo, ao custo de mais memória. Token Bucket acumula "tokens" num ritmo constante e cada requisição consome um deles, permitindo rajadas ocasionais enquanto o balde não esvazia. Leaky Bucket força as requisições a serem processadas sempre no mesmo ritmo, não importa como elas chegaram, suavizando qualquer rajada.
+Existem diferentes estratégias para implementar isso. Fixed Window conta as requisições dentro de janelas fixas de tempo (por exemplo, a cada minuto). É simples, mas permite uma rajada dupla bem na virada da janela. Sliding Window resolve esse problema considerando uma janela contínua que desliza com o tempo, ao custo de mais memória. Token Bucket acumula "tokens" num ritmo constante e cada requisição consome um deles, permitindo rajadas ocasionais enquanto o balde não esvazia. Leaky Bucket força as requisições a serem processadas sempre no mesmo ritmo, não importa como elas chegaram, suavizando qualquer rajada.
 
 A ideia principal é simples: não deixe um único cliente consumir toda a capacidade do sistema.
 
@@ -167,11 +167,11 @@ Em uma AWS Lambda, por exemplo, se não houver uma instância pronta, a platafor
 
 ![Sem instância quente, a requisição espera o container inteiro subir antes de executar](./images/cold-start-flowchart.svg)
 
-Algumas formas de reduzir o impacto: Provisioned Concurrency mantém um número mínimo de instâncias sempre quentes, prontas para receber requisições mesmo sem tráfego constante, trocando custo por latência previsível. Pacotes de deploy menores fazem o runtime inicializar mais rápido, já que há menos código e dependências para carregar. E inicializar conexões — banco, cache, SDKs — fora do handler, na fase de setup da função, evita que esse custo seja pago em toda invocação fria e permite reaproveitar a mesma conexão entre chamadas na mesma instância.
+Algumas formas de reduzir o impacto: Provisioned Concurrency mantém um número mínimo de instâncias sempre quentes, prontas para receber requisições mesmo sem tráfego constante, trocando custo por latência previsível. Pacotes de deploy menores fazem o runtime inicializar mais rápido, já que há menos código e dependências para carregar. E inicializar conexões (banco, cache, SDKs) fora do handler, na fase de setup da função, evita que esse custo seja pago em toda invocação fria e permite reaproveitar a mesma conexão entre chamadas na mesma instância.
 
-Serverless não elimina o custo de inicialização — apenas transfere essa responsabilidade para a plataforma.
+Serverless não elimina o custo de inicialização. Apenas transfere essa responsabilidade para a plataforma.
 
-## Seção 3 — Evolução e migração de sistemas
+## Seção 3: Evolução e migração de sistemas
 
 Até aqui, os conceitos estavam mais ligados a manter o sistema funcionando sob carga. Agora, o foco é outro: como mudar um sistema em produção sem precisar pará-lo ou quebrar quem ainda depende da versão antiga.
 
@@ -179,7 +179,7 @@ Até aqui, os conceitos estavam mais ligados a manter o sistema funcionando sob 
 
 Expand-Contract é uma estratégia para fazer mudanças de schema de forma segura e sem downtime. Em vez de alterar tudo de uma vez, a mudança é dividida em etapas menores, permitindo que versões antigas e novas do sistema coexistam durante a transição.
 
-Imagine que você precisa renomear a coluna `endereco` para `full_address` numa tabela de usuários que está em produção, sendo lida e escrita por várias instâncias da aplicação ao mesmo tempo. Se você simplesmente renomear a coluna direto no banco, todas as instâncias que ainda esperam `endereco` quebram na hora — não existe um jeito de fazer o banco e todas as réplicas do código mudarem no mesmo instante.
+Imagine que você precisa renomear a coluna `endereco` para `full_address` numa tabela de usuários que está em produção, sendo lida e escrita por várias instâncias da aplicação ao mesmo tempo. Se você simplesmente renomear a coluna direto no banco, todas as instâncias que ainda esperam `endereco` quebram na hora. Não existe um jeito de fazer o banco e todas as réplicas do código mudarem no mesmo instante.
 
 ![](./images/expand-contract-overview.png)
 
@@ -189,7 +189,7 @@ A ideia é simples: primeiro adicionamos o que é necessário (expand), depois m
 - Migração: um job de backfill preenche `full_address` para os registros que já existiam, e o código passa a escrever nas duas colunas ao mesmo tempo (dual writes), garantindo que nenhuma escrita nova fique desatualizada em nenhuma das duas.
 - Contract: depois que todas as instâncias da aplicação já leem e escrevem só em `full_address`, e os dados foram validados como consistentes, a coluna `endereco` é removida.
 
-Os principais mecanismos usados nesse processo são backfill, dual writes e shadow tables — cada um resolve uma parte específica dessa transição, e cada um é detalhado logo abaixo.
+Os principais mecanismos usados nesse processo são backfill, dual writes e shadow tables: cada um resolve uma parte específica dessa transição, e cada um é detalhado logo abaixo.
 
 ## Feature Flags
 
@@ -215,7 +215,7 @@ Imagine que queremos adicionar um novo campo obrigatório a uma tabela. Se o ban
 
 Por isso, a mudança é feita gradualmente: adicionar → preencher → utilizar → tornar obrigatório → remover o antigo.
 
-![Cada etapa é deployada e validada isoladamente — nunca há um momento de quebra](./images/expand-contract-steps.png)
+![Cada etapa é deployada e validada isoladamente: nunca há um momento de quebra](./images/expand-contract-steps.png)
 
 Cada etapa pode ser implantada e validada separadamente, evitando uma mudança que quebre o sistema de uma vez.
 
@@ -260,7 +260,7 @@ Esses conceitos trabalham juntos durante uma migração:
 
 A ideia principal é não tentar mudar tudo de uma vez. Sistemas em produção precisam evoluir gradualmente, mantendo as versões antiga e nova funcionando até que a migração esteja completa.
 
-## Seção 4 — Arquitetura e System Design
+## Seção 4: Arquitetura e System Design
 
 Os últimos conceitos conectam os temas anteriores e mostram como diferentes técnicas podem ser combinadas para construir sistemas mais robustos e preparados para produção.
 

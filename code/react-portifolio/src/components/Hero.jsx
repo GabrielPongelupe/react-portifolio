@@ -28,9 +28,7 @@ const Hero = () => {
   const { portuguese } = useContext(LanguageContext);
 
   const highlights = [
-    { icon: IoSchoolOutline, text: portuguese ? "Eng. de Software — PUC Minas" : "Software Eng. — PUC Minas" },
-    { icon: IoBriefcaseOutline, text: portuguese ? "Engenheiro de Software na Parfin" : "Software Engineer at Parfin" },
-    { icon: IoPeopleOutline, text: portuguese ? "+4.2M usuários impactados" : "+4.2M users impacted" },
+    
   ];
 
   const stats = [

@@ -70,7 +70,7 @@ const extractHeadings = (text) => {
       const count = seen.get(slug) || 0;
       seen.set(slug, count + 1);
       if (count > 0) slug = `${slug}-${count}`;
-      return { id: slug, title, isGroup: title.includes(" — ") };
+      return { id: slug, title, isGroup: /^(Seção|Section)\s+\d+:/.test(title) };
     });
 };
 
