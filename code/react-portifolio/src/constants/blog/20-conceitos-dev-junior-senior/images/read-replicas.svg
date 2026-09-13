@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1000 510" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <marker id="rrArrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="rrArrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/>
+    </marker>
+    <marker id="rrArrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c9822a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="510" fill="#ffffff"/>
+
+  <!-- Cliente -->
+  <circle cx="500" cy="90" r="68" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="500" y="97" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Cliente</text>
+
+  <!-- spokes: cliente -> banco (escreve) e cliente -> replicas (le) -->
+  <path d="M440,150 C380,190 250,220 140,248" fill="none" stroke="#1a1a1a" stroke-width="3" marker-end="url(#rrArrowB)"/>
+  <path d="M470,155 C420,190 400,220 380,248" fill="none" stroke="#8a8a8a" stroke-width="2.2" marker-end="url(#rrArrowG)"/>
+  <path d="M530,155 C580,190 600,220 620,248" fill="none" stroke="#8a8a8a" stroke-width="2.2" marker-end="url(#rrArrowG)"/>
+  <path d="M560,150 C620,190 750,220 860,248" fill="none" stroke="#8a8a8a" stroke-width="2.2" marker-end="url(#rrArrowG)"/>
+
+  <!-- label: escreve -->
+  <rect x="205" y="180" width="150" height="32" rx="10" fill="#ffffff"/>
+  <text x="280" y="201" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">escreve</text>
+
+  <!-- label: le -->
+  <rect x="510" y="180" width="280" height="32" rx="10" fill="#ffffff"/>
+  <text x="650" y="201" text-anchor="middle" font-size="15" font-weight="bold" fill="#5b5b5b">lê (distribuído entre réplicas)</text>
+
+  <!-- Banco principal -->
+  <rect x="40" y="250" width="200" height="100" rx="16" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="140" y="284" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Banco principal</text>
+  <text x="140" y="304" text-anchor="middle" font-size="12" fill="#666666">(fonte da verdade)</text>
+  <text x="140" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">500 escritas</text>
+
+  <!-- Replicas -->
+  <rect x="280" y="250" width="200" height="100" rx="16" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="380" y="286" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Réplica 1</text>
+  <text x="380" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7a3c">≈3.333 leituras</text>
+  <text x="380" y="330" text-anchor="middle" font-size="11" fill="#888888">pode atrasar</text>
+
+  <rect x="520" y="250" width="200" height="100" rx="16" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="620" y="286" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Réplica 2</text>
+  <text x="620" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7a3c">≈3.333 leituras</text>
+  <text x="620" y="330" text-anchor="middle" font-size="11" fill="#888888">pode atrasar</text>
+
+  <rect x="760" y="250" width="200" height="100" rx="16" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="860" y="286" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Réplica 3</text>
+  <text x="860" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7a3c">≈3.333 leituras</text>
+  <text x="860" y="330" text-anchor="middle" font-size="11" fill="#888888">pode atrasar</text>
+
+  <!-- replicacao assincrona: loops por baixo da fileira -->
+  <path d="M100,350 C100,410 380,410 380,350" fill="none" stroke="#c9822a" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#rrArrowO)"/>
+  <path d="M140,350 C300,430 500,430 620,350" fill="none" stroke="#c9822a" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#rrArrowO)"/>
+  <path d="M180,350 C400,455 700,455 860,350" fill="none" stroke="#c9822a" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#rrArrowO)"/>
+
+  <rect x="385" y="440" width="230" height="32" rx="10" fill="#ffffff"/>
+  <text x="500" y="461" text-anchor="middle" font-size="15" font-weight="bold" fill="#c9822a">replicação assíncrona</text>
+</svg>

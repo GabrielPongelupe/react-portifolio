@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="360" fill="#ffffff"/>
+
+  <rect x="30" y="30" width="460" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="260" y="82" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Fixed Window</text>
+  <text x="260" y="112" text-anchor="middle" font-size="14" fill="#666666">janela fixa; permite rajada</text>
+  <text x="260" y="132" text-anchor="middle" font-size="14" fill="#666666">bem na borda</text>
+
+  <rect x="510" y="30" width="460" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="740" y="82" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Sliding Window</text>
+  <text x="740" y="112" text-anchor="middle" font-size="14" fill="#666666">sem rajada na borda;</text>
+  <text x="740" y="132" text-anchor="middle" font-size="14" fill="#666666">usa mais memória</text>
+
+  <rect x="30" y="190" width="460" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="260" y="242" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Token Bucket</text>
+  <text x="260" y="272" text-anchor="middle" font-size="14" fill="#666666">permite rajada até o</text>
+  <text x="260" y="292" text-anchor="middle" font-size="14" fill="#666666">limite do balde</text>
+
+  <rect x="510" y="190" width="460" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="740" y="242" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Leaky Bucket</text>
+  <text x="740" y="272" text-anchor="middle" font-size="14" fill="#666666">processa sempre</text>
+  <text x="740" y="292" text-anchor="middle" font-size="14" fill="#666666">no mesmo ritmo</text>
+</svg>

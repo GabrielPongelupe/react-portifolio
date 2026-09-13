@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 660" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="660" fill="#ffffff"/>
+
+  <!-- triangle edges (drawn between circle boundaries, so they never cross the labels) -->
+  <line x1="397" y1="170" x2="243" y2="340" stroke="#1a1a1a" stroke-width="2.5"/>
+  <line x1="503" y1="170" x2="657" y2="340" stroke="#1a1a1a" stroke-width="2.5"/>
+  <line x1="270" y1="400" x2="630" y2="400" stroke="#1a1a1a" stroke-width="2.5"/>
+
+  <!-- C -->
+  <circle cx="450" cy="110" r="80" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="450" y="122" text-anchor="middle" font-size="30" font-weight="bold" fill="#1a1a1a">C</text>
+  <text x="450" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">Consistência</text>
+
+  <!-- A -->
+  <circle cx="190" cy="400" r="80" fill="#cdf3d8" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="190" y="412" text-anchor="middle" font-size="30" font-weight="bold" fill="#1a1a1a">A</text>
+  <text x="190" y="438" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">Disponibilidade</text>
+
+  <!-- P -->
+  <circle cx="710" cy="400" r="80" fill="#fbe9c6" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="710" y="412" text-anchor="middle" font-size="30" font-weight="bold" fill="#1a1a1a">P</text>
+  <text x="710" y="434" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a">Tolerância a</text>
+  <text x="710" y="450" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a">Partição</text>
+
+  <!-- nota central -->
+  <text x="450" y="255" text-anchor="middle" font-size="16" fill="#444444">Com falha de rede (partição),</text>
+  <text x="450" y="278" text-anchor="middle" font-size="16" fill="#444444">só dá pra garantir 2 das 3</text>
+
+  <!-- AP card -->
+  <rect x="60" y="500" width="380" height="140" rx="18" fill="#eafaf0" stroke="#1a7a3c" stroke-width="3"/>
+  <text x="250" y="538" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a7a3c">AP</text>
+  <text x="250" y="568" text-anchor="middle" font-size="14" fill="#245c34">Prioriza disponibilidade,</text>
+  <text x="250" y="588" text-anchor="middle" font-size="14" fill="#245c34">aceita inconsistência temporária</text>
+  <text x="250" y="618" text-anchor="middle" font-size="13" font-style="italic" fill="#4a7a5a">ex: YouTube, redes sociais</text>
+
+  <!-- CP card -->
+  <rect x="460" y="500" width="380" height="140" rx="18" fill="#fdecea" stroke="#c0392b" stroke-width="3"/>
+  <text x="650" y="538" text-anchor="middle" font-size="24" font-weight="bold" fill="#c0392b">CP</text>
+  <text x="650" y="568" text-anchor="middle" font-size="14" fill="#8a2e22">Prioriza consistência,</text>
+  <text x="650" y="588" text-anchor="middle" font-size="14" fill="#8a2e22">recusa responder se não tiver certeza</text>
+  <text x="650" y="618" text-anchor="middle" font-size="13" font-style="italic" fill="#a05a4e">ex: sistema bancário</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1100 480" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <marker id="ceArrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="ceArrowO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c9822a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="480" fill="#ffffff"/>
+
+  <line x1="550" y1="15" x2="550" y2="460" stroke="#bbbbbb" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- ===================== PANEL 1: durante a replicacao ===================== -->
+  <rect x="30" y="15" width="480" height="48" rx="24" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="270" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">Durante a replicação</text>
+
+  <rect x="170" y="80" width="200" height="68" rx="14" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="270" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">Banco principal</text>
+  <text x="270" y="127" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a7a3c">1.000 views</text>
+
+  <rect x="40" y="185" width="190" height="85" rx="14" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="135" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">Réplica A</text>
+  <text x="135" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a7a3c">1.000 views</text>
+
+  <rect x="310" y="185" width="190" height="85" rx="14" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="405" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">Réplica B</text>
+  <text x="405" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#c9822a">999 views</text>
+
+  <path d="M220,148 C190,160 160,168 135,183" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+
+  <path d="M320,148 C350,160 380,168 405,183" fill="none" stroke="#c9822a" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#ceArrowO)"/>
+
+  <path d="M135,270 C135,285 135,295 135,302" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+  <path d="M405,270 C405,285 405,295 405,302" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+
+  <circle cx="135" cy="360" r="56" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="135" y="354" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Usuário A</text>
+  <text x="135" y="374" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a7a3c">vê 1.000</text>
+
+  <circle cx="405" cy="360" r="56" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="405" y="354" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Usuário B</text>
+  <text x="405" y="374" text-anchor="middle" font-size="13" font-weight="bold" fill="#c9822a">vê 999</text>
+
+  <text x="270" y="440" text-anchor="middle" font-size="16" fill="#444444">Mesmo instante, respostas diferentes</text>
+
+  <path d="M500,360 C520,360 535,360 560,360" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+  <text x="530" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">depois</text>
+
+  <!-- ===================== PANEL 2: depois da replicacao ===================== -->
+  <rect x="590" y="15" width="480" height="48" rx="24" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="830" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">Depois da replicação</text>
+
+  <rect x="730" y="80" width="200" height="68" rx="14" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="830" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">Banco principal</text>
+  <text x="830" y="127" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a7a3c">1.000 views</text>
+
+  <rect x="600" y="185" width="190" height="85" rx="14" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="695" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">Réplica A</text>
+  <text x="695" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a7a3c">1.000 views</text>
+
+  <rect x="870" y="185" width="190" height="85" rx="14" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="965" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">Réplica B</text>
+  <text x="965" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a7a3c">1.000 views</text>
+
+  <path d="M780,148 C750,160 720,168 695,183" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+
+  <path d="M880,148 C910,160 940,168 965,183" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+
+  <path d="M695,270 C695,285 695,295 695,302" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+  <path d="M965,270 C965,285 965,295 965,302" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#ceArrowB)"/>
+
+  <circle cx="695" cy="360" r="56" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="695" y="354" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Usuário A</text>
+  <text x="695" y="374" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a7a3c">vê 1.000</text>
+
+  <circle cx="965" cy="360" r="56" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="965" y="354" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">Usuário B</text>
+  <text x="965" y="374" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a7a3c">vê 1.000</text>
+
+  <text x="830" y="440" text-anchor="middle" font-size="16" fill="#444444">As réplicas já convergiram</text>
+</svg>

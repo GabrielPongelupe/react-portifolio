@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1100 390" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <marker id="arrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="arrowR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="390" fill="#ffffff"/>
+
+  <line x1="550" y1="15" x2="550" y2="370" stroke="#bbbbbb" stroke-width="2" stroke-dasharray="6,6"/>
+
+  <!-- ===================== PANEL 1: 1a tentativa ===================== -->
+  <rect x="30" y="15" width="480" height="48" rx="24" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="270" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">1ª tentativa</text>
+
+  <text x="225" y="95" text-anchor="middle" font-size="14" fill="#1a1a1a">POST /pagamento</text>
+  <path d="M183,156 C215,140 240,132 268,142" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowB)"/>
+
+  <circle cx="115" cy="195" r="78" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="115" y="188" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Cliente</text>
+  <text x="115" y="211" text-anchor="middle" font-size="14" fill="#1a1a1a">clica em "Pagar"</text>
+
+  <rect x="270" y="130" width="230" height="130" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="385" y="160" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Servidor</text>
+  <rect x="286" y="176" width="198" height="66" rx="12" fill="#cdf3d8" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="385" y="216" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">cobra R$ 50</text>
+
+  <path d="M268,242 C238,254 210,258 186,248" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="7,5" marker-end="url(#arrowR)"/>
+  <circle cx="228" cy="253" r="12" fill="#ffffff" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="228" y="258" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">✕</text>
+  <text x="270" y="288" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">timeout</text>
+
+  <text x="270" y="335" text-anchor="middle" font-size="16" fill="#444444">Cliente não sabe se funcionou</text>
+
+  <path d="M500,352 C520,352 535,352 560,352" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowB)"/>
+  <text x="530" y="340" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">retry</text>
+
+  <!-- ===================== PANEL 2: 2a tentativa ===================== -->
+  <rect x="590" y="15" width="480" height="48" rx="24" fill="#f2f2f2" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="830" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">2ª tentativa (retry)</text>
+
+  <text x="785" y="95" text-anchor="middle" font-size="14" fill="#1a1a1a">POST /pagamento</text>
+  <path d="M743,156 C775,140 800,132 828,142" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowB)"/>
+
+  <circle cx="675" cy="195" r="78" fill="#ded1fb" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="675" y="188" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Cliente</text>
+  <text x="675" y="211" text-anchor="middle" font-size="14" fill="#1a1a1a">tenta de novo</text>
+
+  <rect x="830" y="130" width="230" height="130" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="945" y="160" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a">Servidor</text>
+  <rect x="846" y="176" width="198" height="66" rx="12" fill="#fbdcd1" stroke="#c0392b" stroke-width="2"/>
+  <text x="945" y="200" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#c0392b">não sabe que já cobrou</text>
+  <text x="945" y="223" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">cobra de novo</text>
+
+  <path d="M828,242 C798,254 770,258 748,248" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowB)"/>
+  <text x="790" y="280" text-anchor="middle" font-size="14" fill="#1a1a1a">confirmado</text>
+
+  <text x="830" y="335" text-anchor="middle" font-size="16" fill="#444444">Servidor acha que é um pagamento novo</text>
+</svg>

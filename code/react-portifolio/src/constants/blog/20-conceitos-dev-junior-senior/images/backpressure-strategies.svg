@@ -1,0 +1,18 @@
+<svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="200" fill="#ffffff"/>
+
+  <rect x="30" y="30" width="300" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="180" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a1a1a">Desacelerar</text>
+  <text x="180" y="115" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a1a1a">o produtor</text>
+  <text x="180" y="145" text-anchor="middle" font-size="13.5" fill="#666666">produz mais devagar</text>
+
+  <rect x="350" y="30" width="300" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="500" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a1a1a">Limitar</text>
+  <text x="500" y="115" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a1a1a">a fila</text>
+  <text x="500" y="145" text-anchor="middle" font-size="13.5" fill="#666666">tamanho máximo definido</text>
+
+  <rect x="670" y="30" width="300" height="140" rx="18" fill="#e9ecef" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="820" y="90" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a1a1a">Aumentar</text>
+  <text x="820" y="115" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a1a1a">o consumidor</text>
+  <text x="820" y="145" text-anchor="middle" font-size="13.5" fill="#666666">mais capacidade de processar</text>
+</svg>

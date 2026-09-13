@@ -9,9 +9,19 @@ import levtyExperienceImage1 from "../assets/experiences/levty_1.jpeg";
 import levtyExperienceImage2 from "../assets/experiences/levty_2.png";
 import parfinExperienceImage from "../assets/experiences/parfin_1.webp";
 
+export { BLOG_POSTS } from "./blog";
+
 export const HERO_CONTENT = {
-  br: `Desenvolvedor apaixonado por resolver problemas com código desde 2017. Hoje curso Engenharia de Software na PUC Minas e atuo na Parfin, construindo soluções para o mercado financeiro e blockchain.`,
-  eng: `Developer passionate about solving problems with code since 2017. Currently studying Software Engineering at PUC Minas and working at Parfin, building solutions for the financial and blockchain markets.`
+  br: [
+    `Desde criança, sempre fui **muito curioso** e gostava de entender como as coisas funcionavam. Movido pelo meu interesse por **videogames**, em 2017 comecei a estudar como desenvolver jogos e sistemas de software. Foi assim que aquela curiosidade começou a se transformar no início da minha carreira como desenvolvedor.`,
+    `Hoje, sou Engenheiro de Software na Parfin, onde construo sistemas para o **mercado financeiro** e de **ativos digitais**, sempre movido pela curiosidade de aprender, entender problemas e transformá-los em soluções.`,
+    `Role para baixo para conhecer um pouco da minha **trajetória profissional** ou, se quiser conhecer também meu lado pessoal, visite a **aba Explorar**, onde compartilho aprendizados no meu blog e interesses como filmes, séries, livros e videogames.`,
+  ],
+  eng: [
+    `Ever since I was a kid, I've always been **very curious** and enjoyed understanding how things worked. Driven by my interest in **video games**, I started studying game and software systems development in 2017. That's how that curiosity began turning into the start of my career as a developer.`,
+    `Today, I'm a Software Engineer at Parfin, where I build systems for the **financial** and **digital asset** markets, always driven by the curiosity to learn, understand problems, and turn them into solutions.`,
+    `Scroll down to learn a bit about my **professional journey**, or, if you'd also like to see my personal side, visit the **Explore tab**, where I share what I'm learning on my blog and interests like movies, shows, books, and video games.`,
+  ],
 }
 
 
@@ -2289,7 +2299,7 @@ export const GAMES = [
     title: { br: "Star Wars Battlefront", eng: "Star Wars Battlefront" },
     type: "game",
     genre: "shooter",
-    rating: 3.60,
+    rating: 4,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1237980/library_600x900.jpg",
     description: {
       br: "Um shooter multijogador em grande escala que recria batalhas icônicas de Star Wars em combates terrestres e aéreos em locais clássicos.",
@@ -2310,40 +2320,3 @@ export const GAMES = [
   }
 ];
 
-export const BLOG_POSTS = [
-  {
-    slug: "oss-contributors-profile",
-    title: {
-      br: "Perfil dos Contribuidores de Projetos Open Source",
-      eng: "Profile of Open Source Project Contributors",
-    },
-    date: "2026-08-23",
-    readTime: { br: "8 min de leitura", eng: "8 min read" },
-    tags: ["pesquisa", "open-source", "github"],
-    pdfUrl: "/oss-contributors-profile.pdf",
-    excerpt: {
-      br: "Um resumo do artigo científico que escrevi com colegas da PUC Minas: quem contribui para os projetos open source mais populares do GitHub e como a experiência molda essa participação.",
-      eng: "An overview of the scientific paper I wrote with classmates at PUC Minas: who contributes to GitHub's most popular open-source projects, and how experience shapes that participation.",
-    },
-    content: {
-      br: `Este artigo nasceu como o projeto interdisciplinar do 6º período do curso de Engenharia de Software na PUC Minas, escrito ao lado de Pedro Braga, Arthur F. Costa, Fernando A. F. Ibrahim, Luca F. Azalim e Renato M. A. Penna. Diferente da maioria dos projetos da faculdade, o objetivo aqui não era construir um produto, e sim conduzir uma pesquisa científica original — e o trabalho acabou sendo eleito o melhor artigo do período.
-
-A pergunta que guiou a pesquisa foi simples de enunciar e difícil de responder: quem participa do desenvolvimento de software open source, e como o nível de experiência influencia essa participação? Para respondê-la, usamos o paradigma Goal-Question-Metric (GQM), uma abordagem que estrutura a pesquisa a partir de objetivos concretos, decompostos em perguntas, que por sua vez são respondidas por métricas extraídas dos dados.
-
-Em termos de escopo, analisamos os 100 repositórios mais populares (por estrelas) em cada uma das dez linguagens mais usadas do GitHub, totalizando 1.000 repositórios. A partir deles, mineramos doze meses de atividade e chegamos a uma base de 52.743 contribuidores únicos.
-
-Os resultados mais interessantes vieram em três frentes. Na distribuição geográfica, os contribuidores se concentram fortemente em poucos países — Estados Unidos, Índia e China lideram o ranking, com o Brasil aparecendo apenas na oitava posição. No nível de experiência, a grande maioria dos contribuidores (88,41%) se enquadra em um nível intermediário, o que sugere que projetos populares dependem menos de especialistas isolados do que se costuma imaginar. E na taxa de aprovação de pull requests, contribuidores mais experientes se destacam claramente, com uma média de aprovação de 83,76% em suas submissões — um indício forte de que a experiência prévia no projeto (ou no ecossistema) pesa bastante na revisão de código.
-
-O artigo completo, com a metodologia detalhada, os gráficos e a discussão dos resultados, está disponível para leitura logo abaixo.`,
-      eng: `This paper started as the 6th-period interdisciplinary project of the Software Engineering program at PUC Minas, written together with Pedro Braga, Arthur F. Costa, Fernando A. F. Ibrahim, Luca F. Azalim, and Renato M. A. Penna. Unlike most coursework projects, the goal here wasn't to build a product but to conduct original scientific research — and it ended up being recognized as the best paper of the period.
-
-The question guiding the research was simple to state and hard to answer: who participates in open-source software development, and how does experience level shape that participation? To answer it, we used the Goal-Question-Metric (GQM) paradigm, an approach that structures research around concrete goals, broken down into questions, which are in turn answered by metrics extracted from the data.
-
-In terms of scope, we analyzed the 100 most-starred repositories in each of GitHub's ten most popular languages, totaling 1,000 repositories. From there, we mined twelve months of activity and arrived at a dataset of 52,743 unique contributors.
-
-The most interesting results came on three fronts. In geographic distribution, contributors are heavily concentrated in a handful of countries — the United States, India, and China lead the ranking, with Brazil showing up only in eighth place. In experience level, the vast majority of contributors (88.41%) fall into an intermediate tier, suggesting that popular projects rely less on isolated experts than one might assume. And in pull-request approval rates, more experienced contributors clearly stand out, averaging an 83.76% approval rate on their submissions — a strong sign that prior experience with the project (or the ecosystem) weighs heavily in code review.
-
-The full paper, with the detailed methodology, charts, and discussion of results, is available to read right below.`,
-    },
-  },
-];

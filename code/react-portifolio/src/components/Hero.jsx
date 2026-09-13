@@ -103,14 +103,26 @@ const Hero = () => {
               </span>
             </motion.div>
 
-            <motion.p
+            <motion.div
               variants={container(0.3)}
               initial="hidden"
               animate="visible"
-              className="mt-6 max-w-xl text-center text-base leading-relaxed text-neutral-500 sm:text-lg lg:text-left"
+              className="mt-6 flex max-w-2xl flex-col gap-4 text-center text-base leading-relaxed text-neutral-500 sm:text-lg lg:text-left"
             >
-              {portuguese ? HERO_CONTENT.br : HERO_CONTENT.eng}
-            </motion.p>
+              {(portuguese ? HERO_CONTENT.br : HERO_CONTENT.eng).map((paragraph, idx) => (
+                <p key={idx}>
+                  {paragraph.split(/\*\*(.+?)\*\*/g).map((chunk, chunkIdx) =>
+                    chunkIdx % 2 === 1 ? (
+                      <strong key={chunkIdx} className="font-semibold text-neutral-900">
+                        {chunk}
+                      </strong>
+                    ) : (
+                      chunk
+                    )
+                  )}
+                </p>
+              ))}
+            </motion.div>
 
             <motion.div
               variants={container(0.4)}

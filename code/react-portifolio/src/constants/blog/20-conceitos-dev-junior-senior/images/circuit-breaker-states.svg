@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1100 520" xmlns="http://www.w3.org/2000/svg" font-family="Verdana, Arial, sans-serif">
+  <defs>
+    <marker id="arrowB4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="arrowG4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a7a3c"/>
+    </marker>
+    <marker id="arrowR4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1100" height="520" fill="#ffffff"/>
+
+  <rect x="60" y="30" width="340" height="150" rx="18" fill="#cdf3d8" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="230" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">CLOSED</text>
+  <text x="230" y="118" text-anchor="middle" font-size="14" fill="#444444">estado normal</text>
+  <text x="230" y="140" text-anchor="middle" font-size="14" fill="#444444">requisições passam direto</text>
+
+  <rect x="700" y="30" width="340" height="150" rx="18" fill="#fdecea" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="870" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">OPEN</text>
+  <text x="870" y="118" text-anchor="middle" font-size="14" fill="#444444">rejeita tudo na hora</text>
+  <text x="870" y="140" text-anchor="middle" font-size="14" fill="#444444">nem tenta chamar o serviço</text>
+
+  <rect x="380" y="330" width="340" height="150" rx="18" fill="#fbe9c6" stroke="#1a1a1a" stroke-width="3"/>
+  <text x="550" y="390" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">HALF-OPEN</text>
+  <text x="550" y="418" text-anchor="middle" font-size="14" fill="#444444">deixa passar algumas</text>
+  <text x="550" y="440" text-anchor="middle" font-size="14" fill="#444444">requisições de teste</text>
+
+  <path d="M400,80 Q550,40 700,80" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowB4)"/>
+  <text x="550" y="42" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">falhas excedem o limite</text>
+
+  <path d="M750,180 Q680,260 618,328" fill="none" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowB4)"/>
+  <text x="700" y="255" text-anchor="end" font-size="14.5" font-weight="bold" fill="#1a1a1a">timeout de</text>
+  <text x="700" y="274" text-anchor="end" font-size="14.5" font-weight="bold" fill="#1a1a1a">espera</text>
+
+  <path d="M300,180 Q280,280 380,358" fill="none" stroke="#1a7a3c" stroke-width="2.5" marker-end="url(#arrowG4)"/>
+  <text x="255" y="274" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#1a7a3c">teste teve</text>
+  <text x="255" y="293" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#1a7a3c">sucesso</text>
+
+  <path d="M720,362 Q840,320 838,182" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arrowR4)"/>
+  <text x="875" y="255" text-anchor="start" font-size="14.5" font-weight="bold" fill="#c0392b">teste</text>
+  <text x="875" y="274" text-anchor="start" font-size="14.5" font-weight="bold" fill="#c0392b">falhou</text>
+</svg>

@@ -2,20 +2,16 @@ import { useContext, useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { IoChevronDown, IoMenu, IoClose } from "react-icons/io5";
 import { LanguageContext } from "../contexts/LanguageContext";
-import brasilFlag from "../assets/brasil.png";
-import usaFlag from "../assets/usa.png";
 
 const Navbar = () => {
   const { portuguese, toggleLanguage } = useContext(LanguageContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [pagesMenuOpen, setPagesMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const pagesMenuRef = useRef(null);
-  const languageMenuRef = useRef(null);
   // Enquanto true, ignora o scroll-spy: evita que ele sobrescreva a seção
   // ativa com um valor "de trânsito" durante um scroll suave disparado por clique.
   const isClickScrollRef = useRef(false);
@@ -110,9 +106,6 @@ const Navbar = () => {
       if (pagesMenuRef.current && !pagesMenuRef.current.contains(e.target)) {
         setPagesMenuOpen(false);
       }
-      if (languageMenuRef.current && !languageMenuRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
     };
     document.addEventListener("mousedown", handleOutsideClick);
     return () => document.removeEventListener("mousedown", handleOutsideClick);
@@ -146,7 +139,6 @@ const Navbar = () => {
     if ((language === "portuguese" && !portuguese) || (language === "english" && portuguese)) {
       toggleLanguage();
     }
-    setDropdownOpen(false);
   };
 
   return (
@@ -202,10 +194,7 @@ const Navbar = () => {
           {/* Grupo 2: páginas próprias (Meus Interesses, Blog) agrupadas num menu compacto */}
           <div className="relative" ref={pagesMenuRef}>
             <button
-              onClick={() => {
-                setPagesMenuOpen((prev) => !prev);
-                setDropdownOpen(false);
-              }}
+              onClick={() => setPagesMenuOpen((prev) => !prev)}
               className={`flex items-center gap-1.5 whitespace-nowrap border-b-2 pb-1 font-mono text-sm uppercase tracking-wide transition-colors duration-200 ${
                 secondaryLinks.some(isLinkActive)
                   ? "border-emerald-600 text-neutral-950"
@@ -239,44 +228,26 @@ const Navbar = () => {
         </div>
 
         {/* Seletor de idioma - desktop */}
-        <div className="hidden md:block relative" ref={languageMenuRef}>
+        <div className="hidden items-center gap-2 font-mono text-sm uppercase tracking-wide md:flex">
           <button
-            onClick={() => {
-              setDropdownOpen(!dropdownOpen);
-              setPagesMenuOpen(false);
-            }}
-            className="flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-100/80 py-2 pl-2 pr-3 text-neutral-500 transition-colors duration-300 hover:text-neutral-950"
-          >
-            <img
-              src={portuguese ? brasilFlag : usaFlag}
-              alt={portuguese ? "Bandeira do Brasil" : "USA Flag"}
-              className="h-7 w-7 rounded-full"
-            />
-            <IoChevronDown className={`text-sm transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
-          </button>
-
-          <div
-            className={`absolute right-0 mt-2 w-40 overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-xl transition-all duration-300 ${
-              dropdownOpen ? "max-h-40 opacity-100" : "pointer-events-none max-h-0 opacity-0"
+            onClick={() => handleToggleLanguage("portuguese")}
+            className={`transition-colors duration-200 ${
+              portuguese ? "text-neutral-950" : "text-neutral-400 hover:text-neutral-950"
             }`}
           >
-            <ul className="text-neutral-950">
-              <li
-                onClick={() => handleToggleLanguage("portuguese")}
-                className="flex items-center gap-2.5 px-3.5 py-3 cursor-pointer text-sm hover:bg-neutral-100"
-              >
-                <img src={brasilFlag} alt="Bandeira do Brasil" className="h-6 w-6 rounded-full" />
-                Português
-              </li>
-              <li
-                onClick={() => handleToggleLanguage("english")}
-                className="flex items-center gap-2.5 px-3.5 py-3 cursor-pointer text-sm hover:bg-neutral-100"
-              >
-                <img src={usaFlag} alt="USA Flag" className="h-6 w-6 rounded-full" />
-                English
-              </li>
-            </ul>
-          </div>
+            PT
+          </button>
+          <span className="text-neutral-300" aria-hidden="true">
+            |
+          </span>
+          <button
+            onClick={() => handleToggleLanguage("english")}
+            className={`transition-colors duration-200 ${
+              !portuguese ? "text-neutral-950" : "text-neutral-400 hover:text-neutral-950"
+            }`}
+          >
+            EN
+          </button>
         </div>
 
         {/* Hamburger - mobile */}
@@ -327,23 +298,21 @@ const Navbar = () => {
             </button>
           ))}
 
-          <div className="flex justify-center gap-2 border-t border-neutral-200 pt-3 mt-3">
+          <div className="flex justify-center gap-2 border-t border-neutral-200 pt-3 mt-3 font-mono text-sm uppercase tracking-wide">
             <button
               onClick={() => handleToggleLanguage("portuguese")}
-              className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm ${
-                portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-600"
+              className={`rounded-full px-3 py-2 transition-colors duration-200 ${
+                portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-400"
               }`}
             >
-              <img src={brasilFlag} alt="Bandeira do Brasil" className="h-5 w-5 rounded-full" />
               PT
             </button>
             <button
               onClick={() => handleToggleLanguage("english")}
-              className={`flex items-center gap-2 rounded-full px-3 py-2 text-sm ${
-                !portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-600"
+              className={`rounded-full px-3 py-2 transition-colors duration-200 ${
+                !portuguese ? "bg-neutral-100 text-neutral-950" : "text-neutral-400"
               }`}
             >
-              <img src={usaFlag} alt="USA Flag" className="h-5 w-5 rounded-full" />
               EN
             </button>
           </div>
