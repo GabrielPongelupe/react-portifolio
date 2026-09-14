@@ -6,7 +6,7 @@ export const GAMES = [
     title: { br: "Counter-Strike 2", eng: "Counter-Strike 2" },
     type: "game",
     genre: "shooter",
-    rating: 4.10,
+    rating: 5,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/730/library_600x900.jpg",
     description: {
       br: "Um shooter tático gratuito em que duas equipes, terroristas e contraterroristas, competem em combates por objetivos, em rounds.",
@@ -39,7 +39,7 @@ export const GAMES = [
     title: { br: "Clair Obscur: Expedition 33", eng: "Clair Obscur: Expedition 33" },
     type: "game",
     genre: "rpg",
-    rating: 4.60,
+    rating: 4.90,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1903340/library_600x900.jpg",
     description: {
       br: "Um RPG por turnos em que uma expedição parte todo ano para derrotar uma misteriosa entidade pintada que apaga pessoas da existência.",
@@ -50,7 +50,7 @@ export const GAMES = [
     title: { br: "Business Tour", eng: "Business Tour" },
     type: "game",
     genre: "strategy",
-    rating: 2.75,
+    rating: 4.10,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/397900/library_600x900.jpg",
     description: {
       br: "Um jogo de tabuleiro online no estilo Banco Imobiliário, em que os jogadores compram propriedades, cobram aluguel e tentam falir os adversários.",
@@ -61,8 +61,8 @@ export const GAMES = [
     title: { br: "Minecraft", eng: "Minecraft" },
     type: "game",
     genre: "sandbox",
-    rating: 4.65,
-    image: "https://upload.wikimedia.org/wikipedia/en/b/be/Minecraft_game_logo_2023.png",
+    rating: 5,
+    image: "https://minecraft.wiki/images/MC_PC_vertical_key_art_2024.jpg",
     description: {
       br: "Um jogo sandbox sobre minerar recursos, criar ferramentas e construir o que a imaginação permitir em um mundo de blocos gerado proceduralmente.",
       eng: "A sandbox game about mining resources, crafting tools, and building anything imaginable in a procedurally generated block world."
@@ -116,7 +116,7 @@ export const GAMES = [
     title: { br: "GTA IV", eng: "GTA IV" },
     type: "game",
     genre: "action",
-    rating: 4.90,
+    rating: 4.60,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/12210/library_600x900.jpg",
     description: {
       br: "O imigrante Niko Bellic persegue o sonho americano através do crime na sombria e fictícia Liberty City.",
@@ -160,7 +160,7 @@ export const GAMES = [
     title: { br: "Assassin's Creed IV: Black Flag", eng: "Assassin's Creed IV: Black Flag" },
     type: "game",
     genre: "action",
-    rating: 4.40,
+    rating: 4.70,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/242050/library_600x900.jpg",
     description: {
       br: "O capitão pirata Edward Kenway navega pelo Caribe, unindo combate naval à furtividade e ao parkour característicos da série.",
@@ -172,7 +172,7 @@ export const GAMES = [
     title: { br: "Assassin's Creed: Ezio Trilogy", eng: "Assassin's Creed: Ezio Trilogy" },
     type: "game",
     genre: "action",
-    rating: 3.75,
+    rating: 4.30,
     description: {
       br: "Uma coletânea remasterizada de Assassin's Creed II, Brotherhood e Revelations, acompanhando a trajetória de Ezio Auditore pela Itália renascentista e além.",
       eng: "A remastered bundle of Assassin's Creed II, Brotherhood, and Revelations, following Ezio Auditore's rise across Renaissance Italy and beyond."
@@ -182,7 +182,7 @@ export const GAMES = [
     title: { br: "RiME", eng: "RiME" },
     type: "game",
     genre: "adventure",
-    rating: 3.90,
+    rating: 4.70,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/493200/library_600x900.jpg",
     description: {
       br: "Uma aventura sem diálogos que acompanha um garoto naufragado explorando uma ilha misteriosa para descobrir a verdade sobre uma perda.",
@@ -228,7 +228,7 @@ export const GAMES = [
     title: { br: "LEGO Star Wars: The Complete Saga", eng: "LEGO Star Wars: The Complete Saga" },
     type: "game",
     genre: "platformer",
-    rating: 4.00,
+    rating: 5,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/32440/library_600x900.jpg",
     description: {
       br: "Uma releitura em LEGO dos seis filmes originais de Star Wars, misturando plataforma, quebra-cabeças e humor cooperativo.",
@@ -272,7 +272,7 @@ export const GAMES = [
     title: { br: "Rocket League", eng: "Rocket League" },
     type: "game",
     genre: "sport",
-    rating: 4.25,
+    rating: 4.85,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/252950/library_600x900.jpg",
     description: {
       br: "Um esporte baseado em física em que jogadores dirigem carros com propulsão a foguete para acertar uma bola gigante no gol adversário.",
@@ -283,7 +283,7 @@ export const GAMES = [
     title: { br: "Wii Sports", eng: "Wii Sports" },
     type: "game",
     genre: "sport",
-    rating: 3.80,
+    rating: 4.80,
     image: "https://upload.wikimedia.org/wikipedia/en/5/54/Wii_Sports_Sleeve_Cover_Art.jpg",
     description: {
       br: "Uma coletânea de cinco esportes controlados por movimento (tênis, boliche, boxe, golfe e beisebol) que acompanhava o console Wii.",
@@ -317,7 +317,7 @@ export const GAMES = [
     type: "game",
     genre: "party",
     rating: 4.45,
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/851100/library_600x900.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/880940/library_600x900.jpg",
     description: {
       br: "Um jogo de festa em estilo tabuleiro em que até oito jogadores competem em minijogos caóticos para coletar gemas e sabotar uns aos outros.",
       eng: "A board-game-style party title where up to eight players compete in chaotic minigames to collect gems and sabotage each other."
@@ -340,7 +340,7 @@ export const GAMES = [
     type: "game",
     genre: "puzzle",
     rating: 4.15,
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/1055540/library_600x900.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/990630/library_600x900.jpg",
     description: {
       br: "Uma suave aventura de quebra-cabeças que acompanha uma brasa perdida enquanto ela ajuda criaturas encalhadas a encontrar paz.",
       eng: "A gentle puzzle-adventure following a lost ember as it helps stranded creatures find peace before it can move on."
@@ -350,7 +350,7 @@ export const GAMES = [
     title: { br: "Life is Strange", eng: "Life is Strange" },
     type: "game",
     genre: "adventure",
-    rating: 4.15,
+    rating: 4.25,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/319630/library_600x900.jpg",
     description: {
       br: "Uma aventura episódica guiada por escolhas sobre uma adolescente que descobre poder voltar o tempo enquanto investiga o desaparecimento de uma amiga.",
@@ -361,7 +361,7 @@ export const GAMES = [
     title: { br: "Life is Strange 2", eng: "Life is Strange 2" },
     type: "game",
     genre: "adventure",
-    rating: 3.90,
+    rating: 4.80,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/532210/library_600x900.jpg",
     description: {
       br: "Uma aventura episódica de viagem que acompanha dois irmãos com um poder misterioso enquanto fogem pelo oeste americano após uma tragédia.",
@@ -372,7 +372,7 @@ export const GAMES = [
     title: { br: "Dead by Daylight", eng: "Dead by Daylight" },
     type: "game",
     genre: "horror",
-    rating: 3.55,
+    rating: 3.85,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/381210/library_600x900.jpg",
     description: {
       br: "Um jogo de terror multijogador assimétrico que coloca um assassino implacável contra quatro sobreviventes tentando escapar.",
@@ -394,7 +394,7 @@ export const GAMES = [
     title: { br: "Project Zomboid", eng: "Project Zomboid" },
     type: "game",
     genre: "survival",
-    rating: 4.70,
+    rating: 4.80,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/108600/library_600x900.jpg",
     description: {
       br: "Um sandbox isométrico de sobrevivência a zumbis em mundo aberto focado em construção de base a longo prazo, morte permanente e mecânicas realistas.",
@@ -427,7 +427,7 @@ export const GAMES = [
     title: { br: "Stardew Valley", eng: "Stardew Valley" },
     type: "game",
     genre: "simulation",
-    rating: 4.45,
+    rating: 4.90,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/413150/library_600x900.jpg",
     description: {
       br: "Uma simulação de vida no campo em que o jogador herda uma fazenda abandonada e constrói uma nova vida por meio de plantações, mineração, pesca e relacionamentos.",
@@ -438,8 +438,8 @@ export const GAMES = [
     title: { br: "Amanda the Adventurer", eng: "Amanda the Adventurer" },
     type: "game",
     genre: "horror",
-    rating: 4.75,
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/1885690/library_600x900.jpg",
+    rating: 3.55,
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/2166060/library_600x900.jpg",
     description: {
       br: "Um jogo de terror em estilo found footage em que o jogador assiste a episódios perturbadores de um desenho infantil que esconde algo sinistro.",
       eng: "A found-footage horror game where players watch unsettling episodes of a children's cartoon that hides something sinister."
@@ -449,8 +449,8 @@ export const GAMES = [
     title: { br: "The Painscreek Killings", eng: "The Painscreek Killings" },
     type: "game",
     genre: "mystery",
-    rating: 4.40,
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/550650/library_600x900.jpg",
+    rating: 4.60,
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/624270/library_600x900.jpg",
     description: {
       br: "Um jogo de exploração e mistério em primeira pessoa ambientado em uma cidade abandonada, reunindo pistas sobre um assassinato não resolvido.",
       eng: "A first-person mystery exploration game set in an abandoned town, piecing together clues about a decades-old unsolved murder."
@@ -460,7 +460,7 @@ export const GAMES = [
     title: { br: "ARK: Survival Evolved", eng: "ARK: Survival Evolved" },
     type: "game",
     genre: "survival",
-    rating: 3.50,
+    rating: 3.90,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/346110/library_600x900.jpg",
     description: {
       br: "Um jogo de sobrevivência em mundo aberto em que os jogadores domam dinossauros, constroem bases e lutam para sobreviver em uma misteriosa ilha pré-histórica.",
@@ -471,7 +471,7 @@ export const GAMES = [
     title: { br: "LEGO Harry Potter: Years 1-4", eng: "LEGO Harry Potter: Years 1-4" },
     type: "game",
     genre: "platformer",
-    rating: 3.95,
+    rating: 4.60,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/21130/library_600x900.jpg",
     description: {
       br: "Uma aventura de ação em LEGO que reconta os quatro primeiros livros de Harry Potter por meio de quebra-cabeças cooperativos e plataforma em Hogwarts.",
@@ -482,7 +482,7 @@ export const GAMES = [
     title: { br: "Little Nightmares", eng: "Little Nightmares" },
     type: "game",
     genre: "horror",
-    rating: 3.90,
+    rating: 4.70,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/424840/library_600x900.jpg",
     description: {
       br: "Um jogo de terror e quebra-cabeças de plataforma que acompanha uma pequena criança chamada Six enquanto escapa de uma embarcação pesadelesca cheia de habitantes grotescos.",
@@ -493,7 +493,7 @@ export const GAMES = [
     title: { br: "Little Nightmares II", eng: "Little Nightmares II" },
     type: "game",
     genre: "horror",
-    rating: 4.10,
+    rating: 4.70,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/860510/library_600x900.jpg",
     description: {
       br: "Uma sequência de terror e quebra-cabeças de plataforma que acompanha Mono e Six em uma jornada por um mundo em decomposição para silenciar um sinal corrompido.",
@@ -526,7 +526,7 @@ export const GAMES = [
     title: { br: "Star Wars Jedi: Survivor", eng: "Star Wars Jedi: Survivor" },
     type: "game",
     genre: "action",
-    rating: 4.30,
+    rating: 5,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1774580/library_600x900.jpg",
     description: {
       br: "Uma sequência direta que acompanha Cal Kestis em busca de um refúgio escondido do alcance crescente do Império pela galáxia.",
@@ -537,7 +537,7 @@ export const GAMES = [
     title: { br: "Star Wars Battlefront", eng: "Star Wars Battlefront" },
     type: "game",
     genre: "shooter",
-    rating: 4,
+    rating: 4.90,
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1237980/library_600x900.jpg",
     description: {
       br: "Um shooter multijogador em grande escala que recria batalhas icônicas de Star Wars em combates terrestres e aéreos em locais clássicos.",
