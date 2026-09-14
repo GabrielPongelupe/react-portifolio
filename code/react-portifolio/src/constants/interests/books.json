@@ -1,0 +1,282 @@
+[
+  {
+    "title": {
+      "br": "How to Win Friends and Influence People",
+      "eng": "How to Win Friends and Influence People"
+    },
+    "author": "Dale Carnegie",
+    "genre": "selfhelp",
+    "rating": 4.21,
+    "image": "https://covers.openlibrary.org/b/id/13314878-L.jpg",
+    "description": {
+      "br": "Clássico atemporal sobre como se comunicar melhor e construir relações genuínas.",
+      "eng": "A timeless classic on communicating better and building genuine relationships."
+    }
+  },
+  {
+    "title": {
+      "br": "O Hobbit",
+      "eng": "The Hobbit"
+    },
+    "author": "J.R.R. Tolkien",
+    "genre": "fantasy",
+    "rating": 4.3,
+    "image": "https://covers.openlibrary.org/b/id/14627509-L.jpg",
+    "description": {
+      "br": "Bilbo Bolseiro é arrastado para uma aventura inesperada rumo à Montanha Solitária.",
+      "eng": "Bilbo Baggins is swept into an unexpected adventure toward the Lonely Mountain."
+    }
+  },
+  {
+    "title": {
+      "br": "Psicocibernética",
+      "eng": "Psycho-Cybernetics"
+    },
+    "author": "Maxwell Maltz",
+    "genre": "selfhelp",
+    "rating": 4.24,
+    "image": "https://covers.openlibrary.org/b/id/14428293-L.jpg",
+    "description": {
+      "br": "Um dos pioneiros do autodesenvolvimento, sobre como a autoimagem molda o sucesso.",
+      "eng": "One of the pioneers of self-development, on how self-image shapes success."
+    }
+  },
+  {
+    "title": {
+      "br": "A Arte da Guerra",
+      "eng": "The Art of War"
+    },
+    "author": "Sun Tzu",
+    "genre": "strategy",
+    "rating": 3.94,
+    "image": "https://covers.openlibrary.org/b/id/4849549-L.jpg",
+    "description": {
+      "br": "Tratado militar milenar sobre estratégia, aplicado até hoje em negócios e liderança.",
+      "eng": "An ancient military treatise on strategy, still applied today in business and leadership."
+    }
+  },
+  {
+    "title": {
+      "br": "As 48 Leis do Poder",
+      "eng": "The 48 Laws of Power"
+    },
+    "author": "Robert Greene",
+    "genre": "strategy",
+    "rating": 4.07,
+    "image": "https://covers.openlibrary.org/b/id/6424160-L.jpg",
+    "description": {
+      "br": "Um guia direto sobre dinâmicas de poder através da história.",
+      "eng": "A blunt guide to power dynamics drawn from history."
+    }
+  },
+  {
+    "title": {
+      "br": "Refactoring",
+      "eng": "Refactoring"
+    },
+    "author": "Martin Fowler",
+    "genre": "tech",
+    "rating": 4.24,
+    "image": "https://covers.openlibrary.org/b/id/7087623-L.jpg",
+    "description": {
+      "br": "A referência definitiva sobre como melhorar código existente sem alterar seu comportamento.",
+      "eng": "The definitive reference on improving existing code without changing its behavior."
+    }
+  },
+  {
+    "title": {
+      "br": "The Pragmatic Programmer",
+      "eng": "The Pragmatic Programmer"
+    },
+    "author": "David Thomas, Andrew Hunt",
+    "genre": "tech",
+    "rating": 4.33,
+    "image": "https://covers.openlibrary.org/b/id/10143650-L.jpg",
+    "description": {
+      "br": "Leitura essencial para qualquer desenvolvedor que quer evoluir na carreira.",
+      "eng": "Essential reading for any developer looking to grow in their career."
+    }
+  },
+  {
+    "title": {
+      "br": "Domain-Driven Design",
+      "eng": "Domain-Driven Design"
+    },
+    "author": "Eric Evans",
+    "genre": "tech",
+    "rating": 4.15,
+    "image": "https://covers.openlibrary.org/b/id/9777760-L.jpg",
+    "description": {
+      "br": "O clássico 'livro vermelho' sobre modelagem de domínio em sistemas complexos.",
+      "eng": "The classic 'red book' on domain modeling for complex systems."
+    }
+  },
+  {
+    "title": {
+      "br": "Cracking the Coding Interview",
+      "eng": "Cracking the Coding Interview"
+    },
+    "author": "Gayle Laakmann McDowell",
+    "genre": "tech",
+    "rating": 4.33,
+    "image": "https://covers.openlibrary.org/b/id/7276811-L.jpg",
+    "description": {
+      "br": "O guia mais usado para se preparar para entrevistas técnicas em grandes empresas.",
+      "eng": "The go-to guide for preparing for technical interviews at top tech companies."
+    }
+  },
+  {
+    "title": {
+      "br": "Head First Java",
+      "eng": "Head First Java"
+    },
+    "author": "Kathy Sierra, Bert Bates",
+    "genre": "tech",
+    "rating": 4.24,
+    "image": "https://covers.openlibrary.org/b/id/388761-L.jpg",
+    "description": {
+      "br": "Introdução divertida e visual à programação em Java para iniciantes.",
+      "eng": "A fun, visual introduction to Java programming for beginners."
+    }
+  },
+  {
+    "title": {
+      "br": "Lives of the Stoics",
+      "eng": "Lives of the Stoics"
+    },
+    "author": "Ryan Holiday, Stephen Hanselman",
+    "genre": "philosophy",
+    "rating": 3.99,
+    "image": "https://covers.openlibrary.org/b/id/13098570-L.jpg",
+    "description": {
+      "br": "Biografias dos grandes filósofos estoicos e suas lições atemporais.",
+      "eng": "Biographies of the great Stoic philosophers and their timeless lessons."
+    }
+  },
+  {
+    "title": {
+      "br": "Engenharia de Software Moderna",
+      "eng": "Modern Software Engineering"
+    },
+    "author": "Marco Tulio Valente",
+    "genre": "tech",
+    "rating": 4.69,
+    "image": "https://engsoftmoderna.info/figs/capa/capa-principal.png",
+    "description": {
+      "br": "Livro brasileiro gratuito e referência em cursos de Engenharia de Software pelo país.",
+      "eng": "A free Brazilian book that's become a reference in Software Engineering courses nationwide."
+    }
+  },
+  {
+    "title": {
+      "br": "Hamas",
+      "eng": "Hamas: The Islamic Resistance Movement"
+    },
+    "author": "Beverley Milton-Edwards & Stephen Farrell",
+    "genre": "history",
+    "rating": 4.02,
+    "image": "https://covers.openlibrary.org/b/id/6389499-L.jpg",
+    "description": {
+      "br": "Uma investigação aprofundada sobre a origem, a ideologia e a ascensão política do Hamas no conflito israelo-palestino.",
+      "eng": "An in-depth investigation into the origins, ideology, and political rise of Hamas in the Israeli-Palestinian conflict."
+    }
+  },
+  {
+    "title": {
+      "br": "O Menino do Pijama Listrado",
+      "eng": "The Boy in the Striped Pyjamas"
+    },
+    "author": "John Boyne",
+    "genre": "drama",
+    "rating": 4.16,
+    "image": "https://covers.openlibrary.org/b/id/12720687-L.jpg",
+    "description": {
+      "br": "Um menino alemão de nove anos cria uma amizade proibida com um garoto do outro lado da cerca de um campo de concentração.",
+      "eng": "A nine-year-old German boy forms a forbidden friendship with a boy on the other side of a concentration camp fence."
+    }
+  },
+  {
+    "title": {
+      "br": "Os Meninos que Enganavam Nazistas",
+      "eng": "A Bag of Marbles"
+    },
+    "author": "Joseph Joffo",
+    "genre": "war",
+    "rating": 3.96,
+    "image": "https://covers.openlibrary.org/b/id/976742-L.jpg",
+    "description": {
+      "br": "Dois irmãos judeus atravessam sozinhos a França ocupada pelos nazistas, sobrevivendo à base de esperteza e coragem.",
+      "eng": "Two young Jewish brothers cross Nazi-occupied France alone, surviving on nothing but cunning and courage."
+    }
+  },
+  {
+    "title": {
+      "br": "Redes de Computadores",
+      "eng": "Computer Networks"
+    },
+    "author": "Andrew S. Tanenbaum",
+    "genre": "tech",
+    "rating": 4.12,
+    "image": "https://covers.openlibrary.org/b/id/6672765-L.jpg",
+    "description": {
+      "br": "O clássico definitivo sobre arquitetura, protocolos e funcionamento das redes de computadores modernas.",
+      "eng": "The definitive classic on the architecture, protocols, and inner workings of modern computer networks."
+    }
+  },
+  {
+    "title": {
+      "br": "O Homem Mais Feliz do Mundo",
+      "eng": "The Happiest Man on Earth"
+    },
+    "author": "Eddie Jaku",
+    "genre": "selfhelp",
+    "rating": 4.62,
+    "image": "https://covers.openlibrary.org/b/id/13168552-L.jpg",
+    "description": {
+      "br": "Um sobrevivente do Holocausto compartilha as lições de vida que o levaram a se tornar o homem mais feliz do mundo.",
+      "eng": "A Holocaust survivor shares the life lessons that led him to become the happiest man on earth."
+    }
+  },
+  {
+    "title": {
+      "br": "Harry Potter e a Pedra Filosofal",
+      "eng": "Harry Potter and the Philosopher's Stone"
+    },
+    "author": "J.K. Rowling",
+    "genre": "fantasy",
+    "rating": 4.47,
+    "image": "https://covers.openlibrary.org/b/id/15155833-L.jpg",
+    "description": {
+      "br": "Um garoto órfão descobre que é um bruxo e ingressa em Hogwarts, escola de magia e bruxaria.",
+      "eng": "An orphaned boy discovers he is a wizard and enrolls at Hogwarts School of Witchcraft and Wizardry."
+    }
+  },
+  {
+    "title": {
+      "br": "Star Wars: Marcas da Guerra",
+      "eng": "Star Wars: Aftermath"
+    },
+    "author": "Chuck Wendig",
+    "genre": "scifi",
+    "rating": 3.53,
+    "image": "https://covers.openlibrary.org/b/id/8760685-L.jpg",
+    "description": {
+      "br": "Após a queda do Império em Endor, remanescentes leais ao regime tramam um plano desesperado para se reerguer.",
+      "eng": "After the Empire's fall at Endor, its loyal remnants scheme a desperate plan to rise again."
+    }
+  },
+  {
+    "title": {
+      "br": "O Problema dos Três Corpos",
+      "eng": "The Three-Body Problem"
+    },
+    "author": "Liu Cixin",
+    "genre": "scifi",
+    "rating": 4.08,
+    "image": "https://covers.openlibrary.org/b/id/9157544-L.jpg",
+    "description": {
+      "br": "Um contato alienígena secreto na China dos anos 1960 desencadeia uma ameaça que coloca em risco toda a humanidade.",
+      "eng": "A secret alien contact in 1960s China sets off a threat that endangers the whole of humanity."
+    }
+  }
+]

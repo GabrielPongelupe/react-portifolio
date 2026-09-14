@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+        serif: ['"Instrument Serif"', "Georgia", "ui-serif", "serif"],
       },
     },
   },

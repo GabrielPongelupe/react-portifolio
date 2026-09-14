@@ -89,15 +89,23 @@ const ExperienceCard = ({ experience, portuguese, index }) => {
 
       {images.length > 0 && (
         <div className={`mt-5 grid gap-3 ${images.length > 1 ? "grid-cols-2" : "max-w-sm grid-cols-1"}`}>
-          {images.map((img, imgIdx) => (
-            <div key={imgIdx} className="overflow-hidden rounded-xl ring-1 ring-neutral-200">
-              <img
-                src={img}
-                alt={`${experience.company} ${imgIdx + 1}`}
-                className="aspect-video w-full object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          ))}
+          {images.map((img, imgIdx) => {
+            const isLogo = typeof img === "string" && img.endsWith(".svg");
+            return (
+              <div
+                key={imgIdx}
+                className={`overflow-hidden rounded-xl ring-1 ring-neutral-200 ${isLogo ? "bg-white" : ""}`}
+              >
+                <img
+                  src={img}
+                  alt={`${experience.company} ${imgIdx + 1}`}
+                  className={`aspect-video w-full transition-transform duration-500 hover:scale-110 ${
+                    isLogo ? "object-contain p-6" : "object-cover"
+                  }`}
+                />
+              </div>
+            );
+          })}
         </div>
       )}
     </motion.div>

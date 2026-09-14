@@ -4,7 +4,7 @@ import { PROJECTS } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ProjectModal from "../common/ProjectModal";
 import SectionHeading from "../common/SectionHeading";
-import ProjectCard from "./ProjectCard";
+import ProjectRow from "./ProjectRow";
 
 const Projects = () => {
   const { portuguese } = useContext(LanguageContext);
@@ -33,9 +33,9 @@ const Projects = () => {
         }
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="divide-y divide-neutral-200">
         {PROJECTS.map((project, index) => (
-          <ProjectCard
+          <ProjectRow
             key={project.id || index}
             project={project}
             index={index}

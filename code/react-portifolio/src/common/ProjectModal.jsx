@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { IoClose, IoDocumentTextOutline, IoGlobe, IoLogoGithub, IoNewspaperOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageContext } from "../contexts/LanguageContext";
+import ProjectThumbnail from "./ProjectThumbnail";
 
 const ProjectModal = ({ project, onClose, isOpen }) => {
   const panelRef = useRef(null);
@@ -73,14 +74,14 @@ const ProjectModal = ({ project, onClose, isOpen }) => {
 
             {/* Imagem do projeto */}
             <div className="aspect-video w-full shrink-0 overflow-hidden">
-              <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+              <ProjectThumbnail project={project} portuguese={portuguese} />
             </div>
 
             {/* Conteúdo */}
             <div className="flex flex-1 flex-col gap-5 p-6 sm:p-8">
               <h2 className="text-2xl font-bold text-neutral-950">{project.title}</h2>
 
-              <p className="leading-relaxed text-neutral-500">
+              <p className="whitespace-pre-line leading-relaxed text-neutral-500">
                 {portuguese && project.fullDescription_pt
                   ? project.fullDescription_pt
                   : portuguese && !project.fullDescription_pt
