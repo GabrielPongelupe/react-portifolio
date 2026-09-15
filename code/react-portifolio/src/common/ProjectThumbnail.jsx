@@ -4,7 +4,7 @@
  * - "logo": imagem da marca do projeto, já entregue em 16:9 com o fundo embutido.
  * - "cover": capa tipográfica, usada quando o projeto não tem logo próprio.
  */
-const ProjectThumbnail = ({ project, portuguese, imageClassName = "" }) => {
+const ProjectThumbnail = ({ project, portuguese, imageClassName = "", onImageClick }) => {
   const { cover } = project;
   const pick = (field) => (portuguese ? field?.br : field?.eng);
 
@@ -40,7 +40,8 @@ const ProjectThumbnail = ({ project, portuguese, imageClassName = "" }) => {
     <img
       src={project.image}
       alt={project.title}
-      className={`h-full w-full object-cover ${imageClassName}`}
+      onClick={onImageClick}
+      className={`h-full w-full object-cover ${onImageClick ? "cursor-zoom-in" : ""} ${imageClassName}`}
     />
   );
 };

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { IoArrowForward, IoGlobe, IoLogoGithub, IoDocumentTextOutline } from "react-icons/io5";
+import { IoArrowForward, IoGlobe, IoLogoGithub, IoDocumentTextOutline, IoNewspaperOutline } from "react-icons/io5";
 import ProjectThumbnail from "../common/ProjectThumbnail";
 
 const ProjectRow = ({ project, onClick, portuguese, index }) => {
@@ -66,12 +66,27 @@ const ProjectRow = ({ project, onClick, portuguese, index }) => {
         </div>
 
         <div className="mt-5 flex flex-wrap gap-3">
+          {project.detailSlug && (
+            <button
+              onClick={onClick}
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
+            >
+              <IoNewspaperOutline />
+              {portuguese ? "Ver estudo de caso" : "View case study"}
+            </button>
+          )}
+
           {project.liveDemoUrl && (
             <a
               href={project.liveDemoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
+              onClick={(e) => e.stopPropagation()}
+              className={
+                project.detailSlug
+                  ? "inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs font-semibold text-neutral-700 transition-colors duration-200 hover:border-neutral-300 hover:text-neutral-950"
+                  : "inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
+              }
             >
               <IoGlobe />
               Live Demo

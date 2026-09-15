@@ -1,23 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoRocketOutline } from "react-icons/io5";
 import { PROJECTS } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
-import ProjectModal from "../common/ProjectModal";
 import SectionHeading from "../common/SectionHeading";
 import ProjectRow from "./ProjectRow";
 
 const Projects = () => {
   const { portuguese } = useContext(LanguageContext);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const navigate = useNavigate();
 
   const handleProjectClick = (project) => {
-    setSelectedProject(project);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    document.body.style.overflow = "auto";
+    if (project.detailSlug) {
+      navigate(`/projetos/${project.detailSlug}`);
+    } else if (project.link?.startsWith("/")) {
+      navigate(project.link);
+    }
   };
 
   return (
@@ -44,14 +42,6 @@ const Projects = () => {
           />
         ))}
       </div>
-
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={closeModal}
-          isOpen={!!selectedProject}
-        />
-      )}
     </section>
   );
 };

@@ -9,8 +9,10 @@ import Contact from "./components/Contact.jsx"
 import Interests from "./components/Interests.jsx"
 import Blog from "./components/Blog.jsx"
 import BlogPost from "./components/BlogPost.jsx"
+import ProjectDetail from "./components/ProjectDetail.jsx"
 
 import { LanguageProvider } from "./contexts/LanguageContext.jsx"
+import { LightboxProvider } from "./contexts/LightboxContext.jsx"
 
 const Home = () => (
   <>
@@ -25,22 +27,25 @@ const Home = () => (
 const App = () => {
   return (
     <LanguageProvider>
-      <BrowserRouter>
-        <div className="overflow-x-clip bg-[#eeecf3] font-sans text-neutral-600 antialiased selection:bg-emerald-300 selection:text-neutral-950">
-          <div className="fixed top-0 -z-10 h-full w-full">
-            <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#eeecf3] bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(16,185,129,0.08),rgba(238,236,243,0))]" />
+      <LightboxProvider>
+        <BrowserRouter>
+          <div className="overflow-x-clip bg-[#eeecf3] font-sans text-neutral-600 antialiased selection:bg-emerald-300 selection:text-neutral-950">
+            <div className="fixed top-0 -z-10 h-full w-full">
+              <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#eeecf3] bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(16,185,129,0.08),rgba(238,236,243,0))]" />
+            </div>
+            <Navbar />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/interesses" element={<Interests />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/projetos/:slug" element={<ProjectDetail />} />
+              </Routes>
+            </main>
           </div>
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/interesses" element={<Interests />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-            </Routes>
-          </main>
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </LightboxProvider>
     </LanguageProvider>
   )
 }
