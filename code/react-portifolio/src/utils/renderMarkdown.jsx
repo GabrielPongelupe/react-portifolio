@@ -66,14 +66,20 @@ export const extractHeadings = (text) => {
     });
 };
 
-export const renderContent = (text, images = {}, headings = [], onImageClick) => {
+const SINGLE_IMG_CLASS =
+  "max-h-72 w-auto max-w-full cursor-zoom-in rounded-2xl border border-neutral-200 bg-white object-contain shadow-sm transition-opacity hover:opacity-90 sm:max-h-96";
+
+export const renderContent = (text, images = {}, headings = [], onImageClick, options = {}) => {
+  const { variant = "blog", accentClass = "text-emerald-600" } = options;
   const lines = text.split("\n");
   const nodes = [];
   let paragraphLines = [];
   let listItems = [];
+  let pendingImages = [];
   let codeLines = null;
   let codeLang = "";
   let headingIndex = 0;
+  let figureCounter = 0;
 
   const flushParagraph = () => {
     if (paragraphLines.length > 0) {
@@ -95,11 +101,67 @@ export const renderContent = (text, images = {}, headings = [], onImageClick) =>
     }
   };
 
+  const renderFigcaption = (caption, figureIndex) => {
+    if (!caption) return null;
+    if (variant === "project") {
+      return (
+        <figcaption className="mt-2 text-center text-[11px] leading-snug text-neutral-400">
+          <span className={`mr-1.5 whitespace-nowrap font-mono ${accentClass}`}>
+            Fig. {String(figureIndex).padStart(2, "0")}
+          </span>
+          <span>{caption}</span>
+        </figcaption>
+      );
+    }
+    return <figcaption className="mt-3 text-center text-xs text-neutral-400">{caption}</figcaption>;
+  };
+
+  const flushImages = () => {
+    if (pendingImages.length === 0) return;
+
+    if (variant === "project" && pendingImages.length > 1) {
+      nodes.push(
+        <div key={nodes.length} className="my-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {pendingImages.map((im) => (
+            <figure key={im.figureIndex} className="flex flex-col items-center">
+              <img
+                src={im.src}
+                alt={im.caption || im.filename}
+                onClick={() => onImageClick?.(im.src, im.caption || im.filename)}
+                className="h-40 w-full cursor-zoom-in rounded-xl border border-neutral-200 bg-white object-cover shadow-sm transition-opacity hover:opacity-90 sm:h-48"
+                loading="lazy"
+              />
+              {renderFigcaption(im.caption, im.figureIndex)}
+            </figure>
+          ))}
+        </div>
+      );
+    } else {
+      pendingImages.forEach((im) => {
+        nodes.push(
+          <figure key={nodes.length} className="my-2 flex flex-col items-center">
+            <img
+              src={im.src}
+              alt={im.caption || im.filename}
+              onClick={() => onImageClick?.(im.src, im.caption || im.filename)}
+              className={SINGLE_IMG_CLASS}
+              loading="lazy"
+            />
+            {renderFigcaption(im.caption, im.figureIndex)}
+          </figure>
+        );
+      });
+    }
+
+    pendingImages = [];
+  };
+
   for (const line of lines) {
     if (line.startsWith("~~~")) {
       if (codeLines === null) {
         flushParagraph();
         flushList();
+        flushImages();
         codeLines = [];
         codeLang = line.slice(3).trim();
       } else {
@@ -122,20 +184,8 @@ export const renderContent = (text, images = {}, headings = [], onImageClick) =>
       const [, caption, filename] = imageMatch;
       const src = images[filename];
       if (src) {
-        nodes.push(
-          <figure key={nodes.length} className="my-2 flex flex-col items-center">
-            <img
-              src={src}
-              alt={caption || filename}
-              onClick={() => onImageClick?.(src, caption || filename)}
-              className="max-h-72 w-auto max-w-full cursor-zoom-in rounded-2xl border border-neutral-200 bg-white object-contain shadow-sm transition-opacity hover:opacity-90 sm:max-h-96"
-              loading="lazy"
-            />
-            {caption && (
-              <figcaption className="mt-3 text-center text-xs text-neutral-400">{caption}</figcaption>
-            )}
-          </figure>
-        );
+        figureCounter += 1;
+        pendingImages.push({ src, caption, filename, figureIndex: figureCounter });
       }
       continue;
     }
@@ -143,13 +193,21 @@ export const renderContent = (text, images = {}, headings = [], onImageClick) =>
     if (line.startsWith("## ")) {
       flushParagraph();
       flushList();
-      const heading = headings[headingIndex++];
+      flushImages();
+      const heading = headings[headingIndex];
+      const sectionNumber = headingIndex + 1;
+      headingIndex += 1;
       nodes.push(
         <h2
           key={nodes.length}
           id={heading?.id}
-          className="mt-10 mb-2 scroll-mt-24 text-xl font-bold text-neutral-950 first:mt-0"
+          className="mt-12 mb-3 scroll-mt-24 flex items-baseline gap-3 text-xl font-bold text-neutral-950 first:mt-0"
         >
+          {variant === "project" && (
+            <span className={`font-mono text-sm font-normal ${accentClass}`}>
+              {String(sectionNumber).padStart(2, "0")}
+            </span>
+          )}
           {line.slice(3)}
         </h2>
       );
@@ -158,6 +216,7 @@ export const renderContent = (text, images = {}, headings = [], onImageClick) =>
 
     if (line.startsWith("- ")) {
       flushParagraph();
+      flushImages();
       listItems.push(line.slice(2));
       continue;
     }
@@ -169,11 +228,13 @@ export const renderContent = (text, images = {}, headings = [], onImageClick) =>
     }
 
     flushList();
+    flushImages();
     paragraphLines.push(line);
   }
 
   flushParagraph();
   flushList();
+  flushImages();
 
   return nodes;
 };

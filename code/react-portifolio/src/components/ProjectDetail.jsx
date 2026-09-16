@@ -15,6 +15,7 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import { useLightbox } from "../contexts/LightboxContext";
 import { extractHeadings, renderContent } from "../utils/renderMarkdown";
 import { getYouTubeId } from "../utils/video";
+import { getAccent } from "../utils/accent";
 import ProjectThumbnail from "../common/ProjectThumbnail";
 
 const VideoPlayer = ({ videoUrl }) => {
@@ -22,7 +23,7 @@ const VideoPlayer = ({ videoUrl }) => {
   const youtubeId = getYouTubeId(videoUrl);
 
   return (
-    <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-neutral-200 bg-black shadow-sm sm:max-w-md">
+    <div className="group relative mx-auto w-full max-w-sm overflow-hidden rounded-lg border border-neutral-200 bg-black shadow-sm sm:max-w-md">
       <div className="aspect-video w-full">
         {youtubeId ? (
           <iframe
@@ -53,6 +54,7 @@ const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
 
+  const projectsWithDetail = useMemo(() => PROJECTS.filter((p) => p.detailSlug), []);
   const project = PROJECTS.find((item) => item.detailSlug === slug);
   const detail = PROJECT_DETAILS[slug];
   const content = detail ? (portuguese ? detail.content.br : detail.content.eng) : "";
@@ -89,6 +91,9 @@ const ProjectDetail = () => {
   }
 
   const shortDescription = portuguese ? project.short_description : project.short_description_eng;
+  const accent = getAccent(project.color);
+  const pageIndex = projectsWithDetail.findIndex((p) => p.detailSlug === slug) + 1;
+  const pageTotal = projectsWithDetail.length;
 
   return (
     <motion.section
@@ -99,18 +104,25 @@ const ProjectDetail = () => {
     >
       <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-x-10">
         <div className="mx-auto w-full max-w-4xl">
-          <div className="border-x-2 border-dotted border-neutral-300/70">
-            <div className="border-b-2 border-dotted border-neutral-300/70 px-6 py-5">
+          <div className="border border-neutral-200">
+            <div className={`h-1.5 w-full ${project.color}`} />
+
+            <div className="flex items-center justify-between border-b border-neutral-200 px-6 py-4">
               <button
                 onClick={() => navigate(-1)}
-                className="inline-flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-emerald-600"
+                className="inline-flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-neutral-950"
               >
                 <IoArrowBack />
                 {portuguese ? "Voltar para projetos" : "Back to projects"}
               </button>
+              {pageTotal > 0 && (
+                <span className="font-mono text-xs text-neutral-400">
+                  {String(pageIndex).padStart(2, "0")} / {String(pageTotal).padStart(2, "0")}
+                </span>
+              )}
             </div>
 
-            <div className="aspect-video w-full overflow-hidden border-b-2 border-dotted border-neutral-300/70">
+            <div className="aspect-video w-full overflow-hidden border-b border-neutral-200">
               <ProjectThumbnail
                 project={project}
                 portuguese={portuguese}
@@ -118,26 +130,26 @@ const ProjectDetail = () => {
               />
             </div>
 
-            <div className="border-b-2 border-dotted border-neutral-300/70 px-6 py-8">
+            <div className="border-b border-neutral-200 px-6 py-8">
               {shortDescription && (
-                <span className="text-[11px] font-medium uppercase tracking-wide text-emerald-600">
+                <span className={`font-mono text-xs uppercase tracking-wide ${accent.text}`}>
                   {shortDescription}
                 </span>
               )}
 
-              <h1 className="mt-1.5 text-3xl font-extrabold tracking-tight text-neutral-950 sm:text-4xl">
+              <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-neutral-950 sm:text-4xl">
                 {project.title}
               </h1>
 
-              <p className="mt-4 leading-relaxed text-neutral-500">
+              <p className="mt-4 max-w-[62ch] leading-relaxed text-neutral-500">
                 {portuguese ? project.description : project.description_eng}
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-5 flex flex-wrap gap-1.5">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600"
+                    className={`rounded-md border ${accent.borderLight} bg-neutral-50 px-2.5 py-1 font-mono text-[11px] text-neutral-600`}
                   >
                     {tech}
                   </span>
@@ -161,7 +173,7 @@ const ProjectDetail = () => {
                     href={project.liveDemoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-emerald-700"
+                    className={`inline-flex items-center gap-2 rounded-full ${project.color} px-4 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110`}
                   >
                     <IoGlobe size={18} />
                     Live Demo
@@ -171,7 +183,7 @@ const ProjectDetail = () => {
                   <a
                     href="#demo-video"
                     onClick={(e) => handleTocClick(e, "demo-video")}
-                    className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 transition-colors duration-200 hover:border-neutral-300 hover:text-neutral-950"
+                    className={`inline-flex items-center gap-2 rounded-full border ${accent.borderMed} bg-white px-4 py-2.5 text-sm font-medium ${accent.text} transition-colors duration-200 hover:bg-neutral-50`}
                   >
                     <IoPlayCircleOutline size={18} />
                     {portuguese ? "Ver demonstração" : "Watch demo"}
@@ -181,8 +193,9 @@ const ProjectDetail = () => {
             </div>
 
             {detail?.videoUrl && (
-              <div id="demo-video" className="scroll-mt-24 border-b-2 border-dotted border-neutral-300/70 px-6 py-8">
-                <h2 className="mb-4 text-xl font-bold text-neutral-950">
+              <div id="demo-video" className="scroll-mt-24 border-b border-neutral-200 px-6 py-8">
+                <h2 className="mb-4 flex items-baseline gap-3 text-xl font-bold text-neutral-950">
+                  <span className={`font-mono text-sm font-normal ${accent.text}`}>00</span>
                   {portuguese ? "Demonstração" : "Demo"}
                 </h2>
                 <VideoPlayer videoUrl={detail.videoUrl} />
@@ -192,7 +205,10 @@ const ProjectDetail = () => {
             <div className="px-6 py-8">
               {content ? (
                 <div className="space-y-5 leading-relaxed text-neutral-600">
-                  {renderContent(content, detail?.images, headings, openImage)}
+                  {renderContent(content, detail?.images, headings, openImage, {
+                    variant: "project",
+                    accentClass: accent.text,
+                  })}
                 </div>
               ) : (
                 <p className="leading-relaxed text-neutral-500">
@@ -207,18 +223,21 @@ const ProjectDetail = () => {
           <div className="sticky top-24">
             {headings.length > 0 && (
               <nav>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                <p className="mb-3 font-mono text-sm uppercase tracking-wide text-neutral-500">
                   {portuguese ? "Sumário" : "Contents"}
                 </p>
-                <ul className="space-y-1 border-l border-neutral-200 text-[13px] leading-snug">
-                  {headings.map((heading) => (
+                <ul className="space-y-1.5 border-l border-neutral-200 text-[15px] leading-snug">
+                  {headings.map((heading, i) => (
                     <li key={heading.id}>
                       <a
                         href={`#${heading.id}`}
                         onClick={(e) => handleTocClick(e, heading.id)}
-                        className="-ml-px block border-l-2 border-transparent py-0.5 pl-6 text-neutral-500 hover:border-neutral-400 hover:text-neutral-900"
+                        className="-ml-px flex items-baseline gap-2 border-l-2 border-transparent py-0.5 pl-6 text-neutral-600 hover:border-neutral-400 hover:text-neutral-900"
                       >
-                        {heading.title}
+                        <span className="font-mono text-xs text-neutral-500">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span>{heading.title}</span>
                       </a>
                     </li>
                   ))}

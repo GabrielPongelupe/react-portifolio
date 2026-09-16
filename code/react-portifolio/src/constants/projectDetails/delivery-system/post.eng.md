@@ -13,10 +13,10 @@ Complete delivery management and tracking system, built with a team of 3, pairin
 
 Each responsibility in the system is its own independent service, each with its own database:
 
-- **API Gateway** (Spring Cloud Gateway) — single entry point, routing and authenticating every call
-- **Auth Service** (Node.js) — authentication and JWT issuance, backed by MongoDB
-- **Order Service** (Java 21 / Spring Boot) — full order CRUD, backed by MongoDB
-- **Tracking Service** (Node.js) — real-time delivery tracking, backed by PostgreSQL, with Swagger docs
+- **API Gateway** (Spring Cloud Gateway): single entry point, routing and authenticating every call
+- **Auth Service** (Node.js): authentication and JWT issuance, backed by MongoDB
+- **Order Service** (Java 21 / Spring Boot): full order CRUD, backed by MongoDB
+- **Tracking Service** (Node.js): real-time delivery tracking, backed by PostgreSQL, with Swagger docs
 
 Services communicate synchronously over REST and asynchronously over RabbitMQ, isolating failures and letting each service scale independently.
 

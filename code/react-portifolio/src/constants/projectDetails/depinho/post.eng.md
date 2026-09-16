@@ -1,4 +1,4 @@
-DePinho Multimídias is a purpose-built e-commerce platform built with a team for a real client: Gabriel De Pinho, a YouTuber who sells and installs car multimedia head units. The core challenge isn't just selling — it's helping the customer find the right unit for their specific car, so the whole product revolves around a vehicle-fitment search.
+DePinho Multimídias is a purpose-built e-commerce platform built with a team for a real client: Gabriel De Pinho, a YouTuber who sells and installs car multimedia head units. The whole product revolves around helping the customer find the right unit for their specific car, so its core is a vehicle-fitment search.
 
 ## Features
 

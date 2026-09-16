@@ -105,10 +105,10 @@ const BlogPost = () => {
           <div className="sticky top-24">
             {headings.length > 0 && (
               <nav>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-neutral-500">
                   {portuguese ? "Sumário" : "Contents"}
                 </p>
-                <ul className="space-y-1 border-l border-neutral-200 text-[13px] leading-snug">
+                <ul className="space-y-1.5 border-l border-neutral-200 text-[15px] leading-snug">
                   {headings.map((heading) => (
                     <li key={heading.id}>
                       <a
@@ -116,8 +116,8 @@ const BlogPost = () => {
                         onClick={(e) => handleTocClick(e, heading.id)}
                         className={`-ml-px block border-l-2 border-transparent py-0.5 hover:border-neutral-400 hover:text-neutral-900 ${
                           heading.isGroup
-                            ? "pl-3 font-semibold text-neutral-700"
-                            : "pl-6 text-neutral-500"
+                            ? "pl-3 font-semibold text-neutral-800"
+                            : "pl-6 text-neutral-600"
                         }`}
                       >
                         {heading.title}

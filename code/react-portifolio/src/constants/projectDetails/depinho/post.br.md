@@ -1,4 +1,4 @@
-DePinho Multimídias é um e-commerce sob medida construído em equipe para um cliente real: o Gabriel De Pinho, YouTuber que vende e instala centrais multimídia automotivas. O desafio central não é só vender — é ajudar o cliente a encontrar a peça certa para o carro dele, então o produto inteiro gira em torno de uma busca por compatibilidade veicular.
+DePinho Multimídias é um e-commerce sob medida construído em equipe para um cliente real: o Gabriel De Pinho, YouTuber que vende e instala centrais multimídia automotivas. O produto inteiro gira em torno de ajudar o cliente a achar a peça certa para o carro dele, então o centro do sistema é uma busca por compatibilidade veicular.
 
 ## Funcionalidades
 

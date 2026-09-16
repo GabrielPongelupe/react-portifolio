@@ -1,4 +1,4 @@
-Este site é o meu portfólio pessoal — e também o maior "cliente" da minha curiosidade em produto: cada seção nova (blog, estudos de caso de projeto, seletor de idioma) foi uma desculpa para experimentar algo que eu queria aprender.
+Este site é o meu portfólio pessoal. É também o maior "cliente" da minha curiosidade em produto: cada seção nova (blog, estudos de caso de projeto, seletor de idioma) foi uma desculpa para experimentar algo que eu queria aprender.
 
 ## Funcionalidades
 
@@ -12,6 +12,6 @@ Este site é o meu portfólio pessoal — e também o maior "cliente" da minha c
 
 ## Como o conteúdo é organizado
 
-Tanto os posts do blog quanto as páginas de projeto são pastas com um `post.br.md`, um `post.eng.md`, um `meta.json` opcional e uma pasta `images/` — o Vite importa tudo isso automaticamente em build time via `import.meta.glob`, então adicionar um projeto novo é só criar a pasta e escrever o Markdown, sem tocar em nenhum componente.
+Tanto os posts do blog quanto as páginas de projeto são pastas com um `post.br.md`, um `post.eng.md`, um `meta.json` opcional e uma pasta `images/`. O Vite importa tudo isso automaticamente em build time via `import.meta.glob`, então adicionar um projeto novo é só criar a pasta e escrever o Markdown, sem tocar em nenhum componente.
 
 ![Lista de projetos na página inicial, com botões de estudo de caso, live demo e código para cada um](./images/projects-list.jpg)

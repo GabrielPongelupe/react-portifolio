@@ -13,10 +13,10 @@ Sistema completo de gestão e rastreamento de entregas, construído em equipe de
 
 Cada responsabilidade do sistema é um serviço independente, com seu próprio banco de dados:
 
-- **API Gateway** (Spring Cloud Gateway) — ponto único de entrada, roteando e autenticando todas as chamadas
-- **Auth Service** (Node.js) — autenticação e emissão de tokens JWT, com MongoDB
-- **Order Service** (Java 21 / Spring Boot) — CRUD completo de pedidos, com MongoDB
-- **Tracking Service** (Node.js) — rastreamento de entregas em tempo real, com PostgreSQL e documentação Swagger
+- **API Gateway** (Spring Cloud Gateway): ponto único de entrada, que roteia e autentica todas as chamadas
+- **Auth Service** (Node.js): autenticação e emissão de tokens JWT, com MongoDB
+- **Order Service** (Java 21 / Spring Boot): CRUD completo de pedidos, com MongoDB
+- **Tracking Service** (Node.js): rastreamento de entregas em tempo real, com PostgreSQL e documentação Swagger
 
 Os serviços se comunicam de forma síncrona via REST e de forma assíncrona via RabbitMQ, isolando falhas e permitindo escalar cada serviço de forma independente.
 

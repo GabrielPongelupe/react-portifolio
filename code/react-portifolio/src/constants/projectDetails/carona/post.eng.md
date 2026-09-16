@@ -1,4 +1,4 @@
-Carona? started from a concrete problem: getting around outside business hours, when public transit is scarce and apps like Uber get expensive or slow to accept a ride. The idea is simple — connect someone already driving to a destination with someone who needs to go the same way, with no automatic billing and no live tracking, keeping the system lightweight and focused on organizing the match between driver and passenger.
+Carona? started from a concrete problem: getting around outside business hours, when public transit is scarce and apps like Uber get expensive or slow to accept a ride. The idea is simple: connect someone already driving to a destination with someone who needs to go the same way. With no automatic billing and no live tracking, the system stays lightweight, focused only on organizing the match between driver and passenger.
 
 I was part of a 6-person team responsible for the full product cycle: requirements gathering, modeling, and building the mobile app, backend, and the web admin panel.
 
@@ -16,11 +16,11 @@ I was part of a 6-person team responsible for the full product cycle: requiremen
 
 ## Architecture
 
-The system follows a straightforward client-server architecture: two clients (a React Native mobile app and a React web panel) talk over HTTP to a single Java Spring Boot API, which persists data in MySQL and uses RabbitMQ to process notifications asynchronously — so dispatching an alert never blocks the API's response. Profile and vehicle images live in Supabase.
+The system follows a straightforward client-server architecture: two clients (a React Native mobile app and a React web panel) talk over HTTP to a single Java Spring Boot API, which persists data in MySQL and uses RabbitMQ to process notifications asynchronously, so dispatching an alert never blocks the API's response. Profile and vehicle images live in Supabase.
 
 ![Architecture diagram: mobile and web apps communicate over HTTP with the Spring Boot API, which integrates RabbitMQ and MySQL](./images/architecture-diagram.png)
 
-On the backend, the API follows a classic layered split — Controller, Service, and Repository — with RabbitMQ and MySQL as the service's external dependencies.
+On the backend, the API follows a classic layered split (Controller, Service, and Repository), with RabbitMQ and MySQL as the service's external dependencies.
 
 ![Component diagram: mobile and web clients hit the REST API, which splits into Controller, Service, and Repository, integrating RabbitMQ and MySQL](./images/component-diagram.png)
 

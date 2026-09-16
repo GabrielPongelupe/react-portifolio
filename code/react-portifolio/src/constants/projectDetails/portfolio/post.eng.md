@@ -1,4 +1,4 @@
-This site is my personal portfolio — and also the biggest "client" of my product curiosity: every new section (blog, project case studies, language switcher) was an excuse to try something I wanted to learn.
+This site is my personal portfolio. It's also the biggest "client" of my product curiosity: every new section (blog, project case studies, language switcher) was an excuse to try something I wanted to learn.
 
 ## Features
 
@@ -12,6 +12,6 @@ This site is my personal portfolio — and also the biggest "client" of my produ
 
 ## How content is organized
 
-Both blog posts and project pages are folders with a `post.br.md`, a `post.eng.md`, an optional `meta.json`, and an `images/` folder — Vite imports all of it automatically at build time via `import.meta.glob`, so adding a new project is just creating the folder and writing the Markdown, without touching any component.
+Both blog posts and project pages are folders with a `post.br.md`, a `post.eng.md`, an optional `meta.json`, and an `images/` folder. Vite imports all of it automatically at build time via `import.meta.glob`, so adding a new project is just creating the folder and writing the Markdown, without touching any component.
 
 ![Project list on the homepage, with case study, live demo and code buttons for each one](./images/projects-list.jpg)

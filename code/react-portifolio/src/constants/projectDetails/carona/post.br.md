@@ -1,4 +1,4 @@
-O Carona? nasceu de um problema bem concreto: a dificuldade de mobilidade fora do horário comercial, quando o transporte público é escasso e apps como Uber ficam caros ou demoram para aceitar corrida. A proposta é simples — conectar quem já vai dirigir até um destino com quem precisa ir para o mesmo lugar, sem cobrança automática e sem rastreamento ao vivo, mantendo o sistema leve e focado em organizar a combinação entre motorista e passageiro.
+O Carona? nasceu de um problema bem concreto: a dificuldade de mobilidade fora do horário comercial, quando o transporte público é escasso e apps como Uber ficam caros ou demoram para aceitar corrida. A proposta é simples: conectar quem já vai dirigir até um destino com quem precisa ir para o mesmo lugar. Sem cobrança automática e sem rastreamento ao vivo, o sistema fica leve, focado só em organizar a combinação entre motorista e passageiro.
 
 Fiz parte de uma equipe de 6 pessoas responsável por todo o ciclo do produto: levantamento de requisitos, modelagem, e a construção do app mobile, do backend e do painel administrativo web.
 
@@ -16,11 +16,11 @@ Fiz parte de uma equipe de 6 pessoas responsável por todo o ciclo do produto: l
 
 ## Arquitetura
 
-O sistema segue uma arquitetura cliente-servidor simples e direta: dois clientes (app mobile em React Native e painel web em React) conversam por HTTP com uma API única em Java Spring Boot, que persiste os dados em MySQL e usa RabbitMQ para processar notificações de forma assíncrona — assim, o envio de um alerta não trava a resposta da API. Imagens de perfil e de veículos ficam no Supabase.
+O sistema segue uma arquitetura cliente-servidor simples e direta: dois clientes (app mobile em React Native e painel web em React) conversam por HTTP com uma API única em Java Spring Boot, que persiste os dados em MySQL e usa RabbitMQ para processar notificações de forma assíncrona. Assim, o envio de um alerta nunca trava a resposta da API. Imagens de perfil e de veículos ficam no Supabase.
 
 ![Diagrama de arquitetura: apps mobile e web se comunicam via HTTP com a API Spring Boot, que integra RabbitMQ e MySQL](./images/architecture-diagram.png)
 
-Do lado do backend, a API segue uma separação clássica em camadas — Controller, Service e Repository —, com RabbitMQ e MySQL como dependências externas do serviço.
+Do lado do backend, a API segue uma separação clássica em camadas (Controller, Service e Repository), com RabbitMQ e MySQL como dependências externas do serviço.
 
 ![Diagrama de componentes: cliente mobile e web acessam a API REST, que se divide em Controller, Service e Repository, integrando RabbitMQ e MySQL](./images/component-diagram.png)
 
