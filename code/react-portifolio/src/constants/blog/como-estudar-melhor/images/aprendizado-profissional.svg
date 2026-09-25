@@ -1,0 +1,30 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#DDEEFB" opacity="1"/></g>
+<g><path d="M 218.52 320 L 236 320 L 233.09968734998904 336.0753522615585 L 215.90024331749132 331.94017571456743 L 210.16668539944033 340.1666853994403 L 210.16668539944033 340.1666853994403 L 222.5269119345812 352.52691193458116 L 209.10909059808677 361.84307178630786 L 199.8712584678501 346.75721690050926 L 190 348.52 L 190 348.52 L 190 366 L 173.92464773844148 363.09968734998904 L 178.05982428543254 345.90024331749134 L 169.83331460055967 340.1666853994403 L 169.83331460055967 340.1666853994403 L 157.4730880654188 352.52691193458116 L 148.15692821369217 339.10909059808677 L 163.24278309949074 329.8712584678501 L 161.48 320 L 161.48 320 L 144 320 L 146.90031265001096 303.9246477384415 L 164.09975668250868 308.05982428543257 L 169.83331460055967 299.8333146005597 L 169.83331460055967 299.8333146005597 L 157.4730880654188 287.47308806541884 L 170.89090940191323 278.15692821369214 L 180.1287415321499 293.24278309949074 L 190 291.48 L 190 291.48 L 190 274 L 206.07535226155852 276.90031265001096 L 201.94017571456743 294.09975668250866 L 210.16668539944033 299.8333146005597 L 210.16668539944033 299.8333146005597 L 222.52691193458116 287.4730880654188 L 231.84307178630786 300.89090940191323 L 216.75721690050923 310.1287415321499 L 218.52 320 Z" fill="#3D96DE" opacity="1"/>
+<circle cx="190" cy="320" r="15.686000000000002" fill="#FFFFFF" opacity="1"/></g>
+<g><line x1="243.55634918610406" y1="303.55634918610406" x2="263.638181771802" y2="323.638181771802" stroke="#1E2938" stroke-width="8" stroke-linecap="round" opacity="1"/>
+<circle cx="228" cy="288" r="24" fill="none" opacity="1" stroke="#1E2938" stroke-width="8"/></g>
+<text x="190" y="400" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" fill="#1E2938">Curiosidade ativa</text>
+<rect x="90" y="425" width="96" height="30" rx="15" fill="#FFFFFF" opacity="1"/>
+<text x="138" y="445" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#2570AD">por quê?</text>
+<rect x="195" y="425" width="96" height="30" rx="15" fill="#FFFFFF" opacity="1"/>
+<text x="243" y="445" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#2570AD">compara</text>
+<rect x="300" y="425" width="96" height="30" rx="15" fill="#FFFFFF" opacity="1"/>
+<text x="348" y="445" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#2570AD">testa</text>
+<line x1="640" y1="397.5" x2="515" y2="152" stroke="#8993A3" stroke-width="2.5" stroke-linecap="round" opacity="1" stroke-dasharray="2 7"/>
+<line x1="640" y1="397.5" x2="665" y2="108" stroke="#8993A3" stroke-width="2.5" stroke-linecap="round" opacity="1" stroke-dasharray="2 7"/>
+<line x1="640" y1="397.5" x2="825" y2="108" stroke="#8993A3" stroke-width="2.5" stroke-linecap="round" opacity="1" stroke-dasharray="2 7"/>
+<line x1="640" y1="397.5" x2="860" y2="192" stroke="#8993A3" stroke-width="2.5" stroke-linecap="round" opacity="1" stroke-dasharray="2 7"/>
+<g><rect x="611.5" y="382.6" width="57" height="87.39999999999999" rx="28.5" fill="#6647C9" opacity="1"/>
+<circle cx="640" cy="361.70000000000005" r="28.5" fill="#6647C9" opacity="1"/></g>
+<g><rect x="450" y="110" width="130" height="42" rx="21" fill="#8C6FEF" opacity="1"/>
+<text x="515" y="136.25" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Dev</text></g>
+<g><rect x="590" y="66" width="150" height="42" rx="21" fill="#3D96DE" opacity="1"/>
+<text x="665" y="92.25" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Produto</text></g>
+<g><rect x="750" y="66" width="150" height="42" rx="21" fill="#8C6FEF" opacity="1"/>
+<text x="825" y="92.25" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Gestor</text></g>
+<g><rect x="795" y="150" width="130" height="42" rx="21" fill="#3D96DE" opacity="1"/>
+<text x="860" y="176.25" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Cliente</text></g></g>
+</svg>

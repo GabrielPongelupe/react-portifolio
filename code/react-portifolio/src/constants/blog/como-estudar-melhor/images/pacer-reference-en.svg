@@ -1,0 +1,17 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#FBEBD1" opacity="1"/></g>
+<g><rect x="150" y="256" width="128" height="84" rx="8" fill="#1E2938" opacity="0.16"/>
+<rect x="145" y="250" width="128" height="84" rx="8" fill="#8993A3" opacity="1"/></g>
+<text x="209" y="300" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">404</text>
+<text x="209" y="370" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#4B5768">Just the code</text>
+<text x="209" y="390" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="500" font-style="italic" fill="#8993A3">(recognition)</text>
+<g><rect x="560" y="231" width="150" height="100" rx="8" fill="#1E2938" opacity="0.16"/>
+<rect x="555" y="225" width="150" height="100" rx="8" fill="#F0A324" opacity="1"/></g>
+<text x="630" y="290" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="46" font-weight="800" fill="#1E2938">?</text>
+<text x="630" y="360" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#C67D0E">Question with</text>
+<text x="630" y="380" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#C67D0E">context</text>
+<g><circle cx="722" cy="238" r="17" fill="#48AD6C" opacity="1"/>
+<path d="M 713.5 238 L 719.96 244.46 L 731.35 232.05" fill="none" stroke="#FFFFFF" stroke-width="3.74" stroke-linecap="round" stroke-linejoin="round" opacity="1"/></g></g>
+</svg>

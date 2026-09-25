@@ -1,0 +1,35 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#F4F3EF" opacity="1"/></g>
+<text x="150" y="97" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16.5" font-weight="600" fill="#1E2938">Reler várias vezes</text>
+<line x1="150" y1="108" x2="300" y2="108" stroke="#E4E1DA" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<rect x="330" y="78" width="430" height="28" rx="14" fill="#E4E1DA" opacity="0.6"/>
+<rect x="330" y="78" width="111.8" height="28" rx="14" fill="#8993A3" opacity="1"/>
+<rect x="455.8" y="79" width="113.8" height="26" rx="13" fill="#FFFFFF" opacity="1" stroke="#E4E1DA" stroke-width="1.5"/>
+<text x="512.7" y="97" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#4B5768">suporte baixo</text>
+<text x="150" y="173" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16.5" font-weight="600" fill="#1E2938">Grifar o texto</text>
+<line x1="150" y1="184" x2="300" y2="184" stroke="#E4E1DA" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<rect x="330" y="154" width="430" height="28" rx="14" fill="#E4E1DA" opacity="0.6"/>
+<rect x="330" y="154" width="137.6" height="28" rx="14" fill="#8993A3" opacity="1"/>
+<rect x="481.6" y="155" width="113.8" height="26" rx="13" fill="#FFFFFF" opacity="1" stroke="#E4E1DA" stroke-width="1.5"/>
+<text x="538.5" y="173" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#4B5768">suporte baixo</text>
+<text x="150" y="249" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16.5" font-weight="600" fill="#1E2938">Fazer resumos</text>
+<line x1="150" y1="260" x2="300" y2="260" stroke="#E4E1DA" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<rect x="330" y="230" width="430" height="28" rx="14" fill="#E4E1DA" opacity="0.6"/>
+<rect x="330" y="230" width="240.8" height="28" rx="14" fill="#F0A324" opacity="1"/>
+<rect x="584.8" y="231" width="113.8" height="26" rx="13" fill="#FFFFFF" opacity="1" stroke="#E4E1DA" stroke-width="1.5"/>
+<text x="641.6999999999999" y="249" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#4B5768">suporte médio</text>
+<text x="150" y="325" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16.5" font-weight="600" fill="#1E2938">Recuperação ativa</text>
+<line x1="150" y1="336" x2="300" y2="336" stroke="#E4E1DA" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<rect x="330" y="306" width="430" height="28" rx="14" fill="#E4E1DA" opacity="0.6"/>
+<rect x="330" y="306" width="404.2" height="28" rx="14" fill="#0EA39D" opacity="1"/>
+<rect x="748.2" y="307" width="107.19999999999999" height="26" rx="13" fill="#FFFFFF" opacity="1" stroke="#E4E1DA" stroke-width="1.5"/>
+<text x="801.8000000000001" y="325" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#4B5768">suporte alto</text>
+<text x="150" y="401" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16.5" font-weight="600" fill="#1E2938">Repetição espaçada</text>
+<line x1="150" y1="412" x2="300" y2="412" stroke="#E4E1DA" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<rect x="330" y="382" width="430" height="28" rx="14" fill="#E4E1DA" opacity="0.6"/>
+<rect x="330" y="382" width="387" height="28" rx="14" fill="#0EA39D" opacity="1"/>
+<rect x="731" y="383" width="107.19999999999999" height="26" rx="13" fill="#FFFFFF" opacity="1" stroke="#E4E1DA" stroke-width="1.5"/>
+<text x="784.6" y="401" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#4B5768">suporte alto</text></g>
+</svg>

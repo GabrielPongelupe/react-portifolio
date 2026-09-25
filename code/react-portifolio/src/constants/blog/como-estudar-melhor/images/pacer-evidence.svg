@@ -1,0 +1,19 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#DFF3E5" opacity="1"/></g>
+<rect x="340" y="120" width="280" height="190" rx="20" fill="#FFFFFF" opacity="1" filter="url(#ds)"/>
+<g><rect x="400" y="226" width="40" height="44" rx="6" fill="#2F8A52" opacity="1"/>
+<rect x="466" y="182" width="40" height="88" rx="6" fill="#48AD6C" opacity="1"/>
+<rect x="532" y="206.2" width="40" height="63.8" rx="6" fill="#2F8A52" opacity="1"/></g>
+<g><line x1="594.7989898732234" y1="169.79898987322332" x2="619.5477272147525" y2="194.54772721475248" stroke="#2F8A52" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<circle cx="575" cy="150" r="30" fill="none" opacity="1" stroke="#2F8A52" stroke-width="9"/></g>
+<path d="M 309 350 L 335 350 L 335 380 L 322 371 L 309 380 Z" fill="#48AD6C" opacity="1"/>
+<text x="359" y="375" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#2F8A52">dado</text>
+<path d="M 434 350 L 460 350 L 460 380 L 447 371 L 434 380 Z" fill="#48AD6C" opacity="1"/>
+<text x="484" y="375" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#2F8A52">fonte</text>
+<path d="M 559 350 L 585 350 L 585 380 L 572 371 L 559 380 Z" fill="#48AD6C" opacity="1"/>
+<text x="609" y="375" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#2F8A52">contexto</text>
+<rect x="330" y="420" width="300" height="36" rx="18" fill="#F4F3EF" opacity="1"/>
+<text x="480" y="443" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13.5" font-weight="600" fill="#4B5768">o que não prova</text></g>
+</svg>

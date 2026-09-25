@@ -1,0 +1,56 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><rect x="0" y="0" width="960" height="540" rx="0" fill="#FFFFFF" opacity="1"/>
+<rect x="60" y="78" width="156" height="372" rx="26" fill="#FCE4DE" opacity="1" filter="url(#ds)"/>
+<circle cx="138" cy="144" r="42" fill="#F2634A" opacity="1"/>
+<text x="138" y="160" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">P</text>
+<text x="138" y="216" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" fill="#CC4A32">Procedural</text>
+<g><path d="M 152.88 268 L 162 268 L 160.48679339999427 276.38714031037836 L 151.5131704265172 274.2296568945569 L 148.5217489040558 278.5217489040558 L 148.5217489040558 278.5217489040558 L 154.97056274847714 284.97056274847716 L 147.96996031204526 289.83116788850845 L 143.1502218093131 281.96028707852656 L 138 282.88 L 138 282.88 L 138 292 L 129.61285968962164 290.48679339999427 L 131.77034310544306 281.5131704265172 L 127.47825109594417 278.5217489040558 L 127.47825109594417 278.5217489040558 L 121.02943725152286 284.97056274847716 L 116.16883211149155 277.96996031204526 L 124.03971292147344 273.1502218093131 L 123.12 268 L 123.12 268 L 114 268 L 115.51320660000572 259.61285968962164 L 124.4868295734828 261.7703431054431 L 127.47825109594417 257.4782510959442 L 127.47825109594417 257.4782510959442 L 121.02943725152286 251.02943725152286 L 128.03003968795474 246.16883211149155 L 132.8497781906869 254.03971292147344 L 138 253.12 L 138 253.12 L 138 244 L 146.38714031037836 245.51320660000573 L 144.2296568945569 254.4868295734828 L 148.5217489040558 257.4782510959442 L 148.5217489040558 257.4782510959442 L 154.97056274847714 251.02943725152286 L 159.83116788850845 258.03003968795474 L 151.96028707852656 262.8497781906869 L 152.88 268 Z" fill="#F2634A" opacity="1"/>
+<circle cx="138" cy="268" r="8.184" fill="#FFFFFF" opacity="1"/></g>
+<text x="138" y="328" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">immediate</text>
+<text x="138" y="347.575" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">practice</text>
+<path d="M 219 256 L 229 264 L 219 272" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="232" y="78" width="156" height="372" rx="26" fill="#EAE3FD" opacity="1" filter="url(#ds)"/>
+<circle cx="310" cy="144" r="42" fill="#8C6FEF" opacity="1"/>
+<text x="310" y="160" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">A</text>
+<text x="310" y="216" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" fill="#6647C9">Analogous</text>
+<g><circle cx="294" cy="268" r="11" fill="#8C6FEF" opacity="1"/>
+<circle cx="326" cy="268" r="11" fill="#8C6FEF" opacity="1"/>
+<line x1="303" y1="268" x2="317" y2="268" stroke="#8C6FEF" stroke-width="5" stroke-linecap="round" opacity="1"/></g>
+<text x="310" y="328" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">critique</text>
+<text x="310" y="347.575" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">the analogy</text>
+<path d="M 391 256 L 401 264 L 391 272" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="404" y="78" width="156" height="372" rx="26" fill="#DDEEFB" opacity="1" filter="url(#ds)"/>
+<circle cx="482" cy="144" r="42" fill="#3D96DE" opacity="1"/>
+<text x="482" y="160" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">C</text>
+<text x="482" y="216" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" fill="#2570AD">Conceptual</text>
+<g><g><circle cx="482" cy="254" r="9" fill="#3D96DE" opacity="1"/>
+<text x="482" y="258.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="466" cy="280" r="8" fill="#3D96DE" opacity="1"/>
+<text x="466" y="284.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="498" cy="280" r="8" fill="#3D96DE" opacity="1"/>
+<text x="498" y="284.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<line x1="482" y1="254" x2="466" y2="280" stroke="#3D96DE" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="482" y1="254" x2="498" y2="280" stroke="#3D96DE" stroke-width="2.5" stroke-linecap="round" opacity="1"/></g>
+<text x="482" y="328" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">concept</text>
+<text x="482" y="347.575" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">mapping</text>
+<path d="M 563 256 L 573 264 L 563 272" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="576" y="78" width="156" height="372" rx="26" fill="#DFF3E5" opacity="1" filter="url(#ds)"/>
+<circle cx="654" cy="144" r="42" fill="#48AD6C" opacity="1"/>
+<text x="654" y="160" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">E</text>
+<text x="654" y="216" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" fill="#2F8A52">Evidence</text>
+<g><rect x="630" y="266" width="12" height="18" rx="6" fill="#48AD6C" opacity="1"/>
+<rect x="650" y="251.6" width="12" height="32.4" rx="6" fill="#48AD6C" opacity="1"/>
+<rect x="670" y="260.6" width="12" height="23.400000000000002" rx="6" fill="#48AD6C" opacity="1"/></g>
+<text x="654" y="328" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">store &amp;</text>
+<text x="654" y="347.575" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">rehearse</text>
+<path d="M 735 256 L 745 264 L 735 272" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="748" y="78" width="156" height="372" rx="26" fill="#FBEBD1" opacity="1" filter="url(#ds)"/>
+<circle cx="826" cy="144" r="42" fill="#F0A324" opacity="1"/>
+<text x="826" y="160" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">R</text>
+<text x="826" y="216" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" fill="#C67D0E">Reference</text>
+<path d="M 810 252 L 842 252 L 842 286 L 826 275.8 L 810 286 Z" fill="#F0A324" opacity="1"/>
+<text x="826" y="328" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">recall +</text>
+<text x="826" y="347.575" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#4B5768">spacing</text></g>
+</svg>

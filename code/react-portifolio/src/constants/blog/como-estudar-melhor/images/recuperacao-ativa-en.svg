@@ -1,0 +1,36 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#EAE3FD" opacity="1"/></g>
+<line x1="480" y1="110" x2="480" y2="440" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="1" stroke-dasharray="1 10"/>
+<circle cx="480" cy="275" r="22" fill="#FFFFFF" opacity="1"/>
+<text x="480" y="281" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" fill="#8993A3">vs</text>
+<g><rect x="200" y="165" width="69" height="51" rx="6" fill="#8993A3" opacity="1"/>
+<rect x="207.5" y="171" width="54" height="33" rx="3" fill="#FFFFFF" opacity="0.92"/>
+<line x1="234.5" y1="171" x2="234.5" y2="204" stroke="#8993A3" stroke-width="3" stroke-linecap="round" opacity="0.5"/></g>
+<path d="M 205 250 Q 150 290 205 320 Q 260 290 245 255" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" stroke-dasharray="2 8"/>
+<text x="250" y="410" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#4B5768">Rereading</text>
+<rect x="150" y="430" width="200" height="14" rx="7" fill="#F4F3EF" opacity="1"/>
+<rect x="150" y="430" width="45" height="14" rx="7" fill="#8993A3" opacity="1"/>
+<text x="250" y="465" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#8993A3">weak retrieval</text>
+<g><path d="M 710 208
+    Q 674.3 203.8 668 235.3
+    Q 653.3 243.7 665.9 268.9
+    Q 661.7 294.1 693.2 298.3
+    Q 710 308.8 726.8 298.3
+    Q 758.3 294.1 754.1 268.9
+    Q 766.7 243.7 752 235.3
+    Q 745.7 203.8 710 208 Z" fill="#8C6FEF" opacity="1"/>
+<path d="M 684.8 218.5 Q 695.3 241.6 684.8 264.7" fill="none" stroke="#FFFFFF" stroke-width="3.1500000000000004" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M 701.6 218.5 Q 712.1 241.6 701.6 264.7" fill="none" stroke="#FFFFFF" stroke-width="3.1500000000000004" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M 718.4 218.5 Q 728.9 241.6 718.4 264.7" fill="none" stroke="#FFFFFF" stroke-width="3.1500000000000004" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<path d="M 735.2 218.5 Q 745.7 241.6 735.2 264.7" fill="none" stroke="#FFFFFF" stroke-width="3.1500000000000004" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/></g>
+<path d="M 710 195 Q 710 177.5 710 120" fill="none" stroke="#6647C9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 710 120 L 713.904953652058 128.10871981112177 M 710 120 L 706.095046347942 128.10871981112177" fill="none" stroke="#6647C9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<circle cx="710" cy="95" r="26" fill="#8C6FEF" opacity="1"/>
+<text x="710" y="103" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">?</text>
+<text x="710" y="410" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="#6647C9">Active recall</text>
+<rect x="610" y="430" width="200" height="14" rx="7" fill="#EAE3FD" opacity="1"/>
+<rect x="610" y="430" width="175" height="14" rx="7" fill="#8C6FEF" opacity="1"/>
+<text x="710" y="465" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#6647C9">strong retrieval</text></g>
+</svg>

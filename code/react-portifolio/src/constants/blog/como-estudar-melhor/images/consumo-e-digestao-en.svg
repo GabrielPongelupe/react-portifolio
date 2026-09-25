@@ -1,0 +1,41 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#F4F3EF" opacity="1"/></g>
+<circle cx="130" cy="170" r="14" fill="#F0A324" opacity="0.85"/>
+<circle cx="175" cy="230" r="10" fill="#F2634A" opacity="0.85"/>
+<circle cx="110" cy="260" r="9" fill="#C67D0E" opacity="0.85"/>
+<circle cx="200" cy="150" r="8" fill="#F2634A" opacity="0.85"/>
+<circle cx="95" cy="210" r="11" fill="#F0A324" opacity="0.85"/>
+<circle cx="220" cy="300" r="12" fill="#F2634A" opacity="0.85"/>
+<circle cx="150" cy="320" r="9" fill="#C67D0E" opacity="0.85"/>
+<g><circle cx="255" cy="190" r="20" fill="#F2634A" opacity="1"/>
+<path d="M 250.8 181.6 L 250.8 198.4 L 263.4 190 Z" fill="#FFFFFF" opacity="1"/></g>
+<g><rect x="80" y="300" width="36.800000000000004" height="27.200000000000003" rx="3.2" fill="#C67D0E" opacity="1"/>
+<rect x="84" y="303.2" width="28.800000000000004" height="17.6" rx="1.6" fill="#FFFFFF" opacity="0.92"/>
+<line x1="98.4" y1="303.2" x2="98.4" y2="320.8" stroke="#C67D0E" stroke-width="1.6" stroke-linecap="round" opacity="0.5"/></g>
+<g><rect x="190" y="350" width="60" height="34" rx="14" fill="#F2634A" opacity="1"/>
+<path d="M 212 384 L 200 400 L 224 384 Z" fill="#F2634A" opacity="1"/></g>
+<text x="180" y="440" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="21" font-weight="700" fill="#CC4A32">Consumption</text>
+<path d="M 255 265 Q 327.5 257.5 400 270" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 400 270 L 391.345701402267 272.47044849800125 M 400 270 L 392.6726586705199 264.77409634213444" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<g><path d="M 518.44 270 L 542 270 L 538.0908829499853 291.6667791351441 L 514.9090236018361 286.0932803109387 L 507.1811846688109 297.1811846688109 L 507.1811846688109 297.1811846688109 L 523.840620433566 313.84062043356596 L 505.75573080611696 326.3971837119801 L 493.30473967405885 306.06407495286027 L 480 308.44 L 480 308.44 L 480 332 L 458.3332208648559 328.09088294998526 L 463.9067196890613 304.9090236018361 L 452.8188153311891 297.1811846688109 L 452.8188153311891 297.1811846688109 L 436.15937956643404 313.84062043356596 L 423.6028162880199 295.75573080611696 L 443.93592504713973 283.30473967405885 L 441.56 270 L 441.56 270 L 418 270 L 421.90911705001474 248.33322086485592 L 445.0909763981639 253.90671968906128 L 452.8188153311891 242.8188153311891 L 452.8188153311891 242.8188153311891 L 436.15937956643404 226.15937956643404 L 454.24426919388304 213.60281628801985 L 466.69526032594115 233.9359250471397 L 480 231.56 L 480 231.56 L 480 208 L 501.6667791351441 211.90911705001477 L 496.0932803109387 235.09097639816386 L 507.1811846688109 242.8188153311891 L 507.1811846688109 242.8188153311891 L 523.840620433566 226.15937956643404 L 536.3971837119801 244.24426919388304 L 516.0640749528603 256.69526032594115 L 518.44 270 Z" fill="#1E2938" opacity="1"/>
+<circle cx="480" cy="270" r="21.142" fill="#FFFFFF" opacity="1"/></g>
+<path d="M 560 270 Q 625 257.5 690 265" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 690 265 L 681.4971234520659 267.94976107686585 M 690 265 L 682.3923271102468 260.19132937263174" fill="none" stroke="#8993A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<line x1="760" y1="250" x2="830" y2="200" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="760" y1="250" x2="850" y2="270" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="760" y1="250" x2="800" y2="330" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="800" y1="330" x2="730" y2="350" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<g><circle cx="760" cy="250" r="22" fill="#0EA39D" opacity="1"/>
+<text x="760" y="254.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="830" cy="200" r="15" fill="#0A7B76" opacity="1"/>
+<text x="830" y="204.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="850" cy="270" r="15" fill="#0A7B76" opacity="1"/>
+<text x="850" y="274.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="800" cy="330" r="15" fill="#0A7B76" opacity="1"/>
+<text x="800" y="334.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="730" cy="350" r="13" fill="#0A7B76" opacity="1"/>
+<text x="730" y="354.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<text x="790" y="440" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="21" font-weight="700" fill="#0A7B76">Digestion</text></g>
+</svg>

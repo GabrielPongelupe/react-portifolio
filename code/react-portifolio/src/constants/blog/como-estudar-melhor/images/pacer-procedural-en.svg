@@ -1,0 +1,37 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#FCE4DE" opacity="1"/></g>
+<g><rect x="430" y="270" width="100" height="60" rx="8" fill="#CC4A32" opacity="1"/>
+<text x="442" y="306" text-anchor="start" font-family="'JetBrains Mono','Fira Code',ui-monospace,monospace" font-size="18" font-weight="700" fill="#ffffff">&gt;_</text></g>
+<path d="M 480 150 Q 551.3292387221366 183.82372542187895 622.658477444273 253.6474508437579" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 622.658477444273 253.6474508437579 L 614.1323081274471 250.76570887390417 M 622.658477444273 253.6474508437579 L 619.5955344226923 245.18468651721838" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 622.658477444273 253.6474508437579 Q 595.413132644072 319.5 568.167787843871 421.3525491562421" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 568.167787843871 421.3525491562421 L 566.4908597642328 412.51015625523837 M 568.167787843871 421.3525491562421 L 574.0355014381225 414.5283321919424" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 568.167787843871 421.3525491562421 Q 480 403.3525491562421 391.83221215612906 421.3525491562421" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 391.83221215612906 421.3525491562421 L 398.9959442136197 415.904527220853 M 391.83221215612906 421.3525491562421 L 400.55816110348655 423.556594293736" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 391.83221215612906 421.3525491562421 Q 364.586867355928 319.5 337.34152255572695 253.6474508437579" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 337.34152255572695 253.6474508437579 L 344.0498389529131 259.64732510204396 M 337.34152255572695 253.6474508437579 L 336.83319883103667 262.63308420991063" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 337.34152255572695 253.6474508437579 Q 408.67076127786345 183.82372542187895 480 150" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 480 150 L 474.3464012627964 157.002629600278 M 480 150 L 471.0001625619923 149.94590665998015" fill="none" stroke="#F2634A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<circle cx="480" cy="150" r="30" fill="#F2634A" opacity="1"/>
+<text x="480" y="157" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="800" fill="#ffffff">1</text>
+<text x="480" y="82" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">Watch</text>
+<text x="480" y="99.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">the example</text>
+<circle cx="622.658477444273" cy="253.6474508437579" r="30" fill="#F2634A" opacity="1"/>
+<text x="622.658477444273" y="260.6474508437579" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="800" fill="#ffffff">2</text>
+<text x="681.6239814545726" y="228.48839719251117" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">Repeat</text>
+<text x="681.6239814545726" y="246.03839719251118" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">with guidance</text>
+<circle cx="568.167787843871" cy="421.3525491562421" r="30" fill="#F2634A" opacity="1"/>
+<text x="568.167787843871" y="428.3525491562421" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="800" fill="#ffffff">3</text>
+<text x="604.6104734860044" y="465.5116028074889" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">Try</text>
+<text x="604.6104734860044" y="483.0616028074889" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">without copying</text>
+<circle cx="391.83221215612906" cy="421.3525491562421" r="30" fill="#F2634A" opacity="1"/>
+<text x="391.83221215612906" y="428.3525491562421" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="800" fill="#ffffff">4</text>
+<text x="355.38952651399575" y="465.5116028074889" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">Fix</text>
+<text x="355.38952651399575" y="483.0616028074889" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">the mistakes</text>
+<circle cx="337.34152255572695" cy="253.6474508437579" r="30" fill="#F2634A" opacity="1"/>
+<text x="337.34152255572695" y="260.6474508437579" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="800" fill="#ffffff">5</text>
+<text x="278.3760185454274" y="228.48839719251117" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">Apply</text>
+<text x="278.3760185454274" y="246.03839719251118" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">in a project</text></g>
+</svg>

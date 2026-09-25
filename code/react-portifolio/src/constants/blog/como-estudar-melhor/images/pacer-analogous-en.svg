@@ -1,0 +1,27 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#EAE3FD" opacity="1"/></g>
+<line x1="150" y1="260" x2="270" y2="260" stroke="#2570AD" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<circle cx="170" cy="260" r="17" fill="#3D96DE" opacity="1"/>
+<circle cx="210" cy="260" r="17" fill="#3D96DE" opacity="1"/>
+<circle cx="250" cy="260" r="17" fill="#3D96DE" opacity="1"/>
+<text x="210" y="330" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#2570AD">People queue</text>
+<line x1="645" y1="262" x2="765" y2="262" stroke="#6647C9" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<g><rect x="622" y="245" width="46" height="34" rx="5" fill="#8C6FEF" opacity="1"/>
+<path d="M 622 248 L 645 264.72 L 668 248" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></g>
+<g><rect x="682" y="245" width="46" height="34" rx="5" fill="#8C6FEF" opacity="1"/>
+<path d="M 682 248 L 705 264.72 L 728 248" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></g>
+<g><rect x="742" y="245" width="46" height="34" rx="5" fill="#8C6FEF" opacity="1"/>
+<path d="M 742 248 L 765 264.72 L 788 248" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/></g>
+<text x="705" y="330" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#6647C9">Message queue</text>
+<path d="M 285 260 L 630 262" fill="none" stroke="#6647C9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" stroke-dasharray="1 10"/>
+<text x="458" y="250" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="30" font-weight="700" fill="#6647C9">≈</text>
+<path d="M 520 245 L 532 262 L 512 268 L 528 285" fill="none" stroke="#CC4A32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<g><line x1="474.97056274847716" y1="181.97056274847714" x2="496.6080302527855" y2="203.60803025278548" stroke="#6647C9" stroke-width="9" stroke-linecap="round" opacity="1"/>
+<circle cx="458" cy="165" r="26" fill="none" opacity="1" stroke="#6647C9" stroke-width="9"/></g>
+<rect x="320" y="108" width="160" height="34" rx="17" fill="#FFFFFF" opacity="1"/>
+<text x="400" y="130" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#6647C9">what's alike?</text>
+<rect x="500" y="108" width="170" height="34" rx="17" fill="#FFFFFF" opacity="1"/>
+<text x="585" y="130" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" fill="#CC4A32">where it breaks?</text></g>
+</svg>

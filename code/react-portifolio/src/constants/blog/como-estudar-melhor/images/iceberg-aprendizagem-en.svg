@@ -1,0 +1,44 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter><linearGradient id="icebergGrad" x1="0.4" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#0EA39D"/><stop offset="1" stop-color="#0A7B76"/>
+  </linearGradient></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><rect x="0" y="0" width="960" height="236" rx="0" fill="#DDEEFB" opacity="1"/>
+<rect x="0" y="236" width="960" height="304" rx="0" fill="#DEF4F2" opacity="1"/>
+<path d="M 480 96 L 552 236 L 408 236 Z" fill="#F4F3EF" stroke="#1E2938" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="80" y1="236" x2="880" y2="236" stroke="#0A7B76" stroke-width="4" stroke-linecap="round" opacity="1"/>
+<path d="M 408 236 L 552 236
+    Q 640 292 610 386
+    Q 590 462 498 486
+    Q 420 506 350 452
+    Q 278 404 300 326
+    Q 310 256 408 236 Z" fill="url(#icebergGrad)" opacity="1"/>
+<g><rect x="124.25" y="123.1" width="78.2" height="51" rx="6.8" fill="#1E2938" opacity="0.16"/>
+<rect x="120" y="118" width="78.2" height="51" rx="6.8" fill="#F0A324" opacity="1"/></g>
+<text x="150" y="190" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#1E2938">flashcards</text>
+<g><circle cx="770" cy="130" r="15" fill="#8C6FEF" opacity="1"/>
+<text x="770" y="134.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="810" cy="100" r="11" fill="#8C6FEF" opacity="1"/>
+<text x="810" y="104.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<g><circle cx="810" cy="160" r="11" fill="#8C6FEF" opacity="1"/>
+<text x="810" y="164.55" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF"></text></g>
+<line x1="770" y1="130" x2="810" y2="100" stroke="#8C6FEF" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<line x1="770" y1="130" x2="810" y2="160" stroke="#8C6FEF" stroke-width="2.5" stroke-linecap="round" opacity="1"/>
+<text x="790" y="190" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#1E2938">mind maps</text>
+<text x="480" y="56" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="16" font-weight="700" fill="#4B5768" letter-spacing="0.5">visible techniques</text>
+<g><circle cx="150" cy="320" r="22" fill="#3D96DE" opacity="1"/>
+<circle cx="162.1" cy="313.4" r="18.7" fill="#FFFFFF" opacity="1"/></g>
+<text x="150" y="372" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#0A7B76">sleep</text>
+<g><path d="M 810 296 Q 831.6 315.2 818.4 332
+    Q 823.2 322.4 810 344
+    Q 796.8 322.4 801.6 332
+    Q 788.4 315.2 810 296 Z" fill="#F2634A" opacity="1"/>
+<path d="M 810 311.6 Q 819.6 321.2 810 333.2 Q 800.4 321.2 810 311.6 Z" fill="#F0A324" opacity="1"/></g>
+<text x="810" y="372" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#0A7B76">motivation</text>
+<g><path d="M 164.88 445 L 174 445 L 172.48679339999427 453.38714031037836 L 163.5131704265172 451.2296568945569 L 160.5217489040558 455.5217489040558 L 160.5217489040558 455.5217489040558 L 166.97056274847714 461.97056274847716 L 159.96996031204526 466.83116788850845 L 155.1502218093131 458.96028707852656 L 150 459.88 L 150 459.88 L 150 469 L 141.61285968962164 467.48679339999427 L 143.77034310544306 458.5131704265172 L 139.4782510959442 455.5217489040558 L 139.4782510959442 455.5217489040558 L 133.02943725152286 461.97056274847716 L 128.16883211149155 454.96996031204526 L 136.03971292147344 450.1502218093131 L 135.12 445 L 135.12 445 L 126 445 L 127.51320660000572 436.61285968962164 L 136.4868295734828 438.7703431054431 L 139.47825109594416 434.4782510959442 L 139.47825109594416 434.4782510959442 L 133.02943725152286 428.02943725152284 L 140.03003968795474 423.16883211149155 L 144.8497781906869 431.03971292147344 L 150 430.12 L 150 430.12 L 150 421 L 158.38714031037836 422.51320660000573 L 156.2296568945569 431.4868295734828 L 160.5217489040558 434.4782510959442 L 160.5217489040558 434.4782510959442 L 166.97056274847714 428.02943725152284 L 171.83116788850845 435.03003968795474 L 163.96028707852656 439.8497781906869 L 164.88 445 Z" fill="#1E2938" opacity="1"/>
+<circle cx="150" cy="445" r="8.184" fill="#FFFFFF" opacity="1"/></g>
+<text x="150" y="495" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#0A7B76">habits</text>
+<g transform="rotate(-25 805 440)"><path d="M 805 422 Q 823 440 805 458 Q 787 440 805 422 Z" fill="#48AD6C" opacity="1"/>
+<line x1="805" y1="427.4" x2="805" y2="452.6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/></g>
+<text x="810" y="495" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#0A7B76">prior knowledge</text></g>
+</svg>

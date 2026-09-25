@@ -1,0 +1,20 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#DDEEFB" opacity="1"/></g>
+<line x1="480" y1="130" x2="480" y2="220" stroke="#2570AD" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<line x1="480" y1="260" x2="260" y2="383" stroke="#2570AD" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<line x1="480" y1="260" x2="480" y2="383" stroke="#2570AD" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<line x1="480" y1="260" x2="700" y2="383" stroke="#2570AD" stroke-width="3" stroke-linecap="round" opacity="1"/>
+<circle cx="480" cy="108" r="22" fill="#2570AD" opacity="1"/>
+<text x="480" y="70" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" fill="#2570AD">Banco de dados</text>
+<circle cx="480" cy="240" r="20" fill="#3D96DE" opacity="1"/>
+<text x="480" y="206" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" fill="#2570AD">Transações</text>
+<circle cx="260" cy="400" r="17" fill="#3D96DE" opacity="0.9"/>
+<text x="260" y="443" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="600" fill="#2570AD">Concorrência</text>
+<circle cx="480" cy="400" r="17" fill="#3D96DE" opacity="0.9"/>
+<text x="480" y="443" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="600" fill="#2570AD">Isolamento</text>
+<circle cx="700" cy="400" r="17" fill="#3D96DE" opacity="0.9"/>
+<text x="700" y="443" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="600" fill="#2570AD">Consistência</text>
+<text x="600" y="175" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="600" font-style="italic" fill="#2570AD">faz parte de</text></g>
+</svg>

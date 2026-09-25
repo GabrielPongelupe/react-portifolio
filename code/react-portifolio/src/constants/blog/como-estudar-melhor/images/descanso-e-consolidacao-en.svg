@@ -1,0 +1,31 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#DFF3E5" opacity="1"/></g>
+<circle cx="140" cy="110" r="42" fill="#F0A324" opacity="0.92"/>
+<g transform="rotate(-20 150 470)"><path d="M 150 454 Q 166 470 150 486 Q 134 470 150 454 Z" fill="#48AD6C" opacity="1"/>
+<line x1="150" y1="458.8" x2="150" y2="481.2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/></g>
+<g transform="rotate(20 300 485)"><path d="M 300 472 Q 313 485 300 498 Q 287 485 300 472 Z" fill="#2F8A52" opacity="1"/>
+<line x1="300" y1="475.9" x2="300" y2="494.1" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.6"/></g>
+<ellipse cx="210" cy="486" rx="90" ry="14" fill="#1E2938" opacity="0.1"/>
+<g><rect x="170" y="440" width="28" height="60" rx="14" fill="#2F8A52" opacity="0.9"/>
+<rect x="222" y="448" width="28" height="52" rx="14" fill="#2F8A52" opacity="0.9"/>
+<rect x="184" y="368" width="60" height="66.24" rx="30" fill="#2F8A52" opacity="1"/>
+<circle cx="210" cy="346" r="30" fill="#2F8A52" opacity="1"/></g>
+<g><rect x="300" y="130" width="190" height="110" rx="14" fill="#FFFFFF" opacity="1"/>
+<path d="M 322 240 L 310 256 L 334 240 Z" fill="#FFFFFF" opacity="1"/></g>
+<rect x="335" y="165" width="44" height="44" rx="10" fill="#DFF3E5" opacity="1" stroke="#48AD6C" stroke-width="2.5"/>
+<rect x="365" y="190" width="44" height="44" rx="10" fill="#DEF4F2" opacity="1" stroke="#0EA39D" stroke-width="2.5"/>
+<rect x="400" y="155" width="40" height="40" rx="10" fill="#FBEBD1" opacity="1" stroke="#F0A324" stroke-width="2.5"/>
+<rect x="600" y="130" width="300" height="120" rx="20" fill="#FFFFFF" opacity="1" filter="url(#ds)"/>
+<g><rect x="624" y="150" width="39.1" height="28.9" rx="3.4" fill="#2F8A52" opacity="1"/>
+<rect x="628.25" y="153.4" width="30.6" height="18.7" rx="1.7" fill="#FFFFFF" opacity="0.92"/>
+<line x1="643.55" y1="153.4" x2="643.55" y2="172.1" stroke="#2F8A52" stroke-width="1.7" stroke-linecap="round" opacity="0.5"/></g>
+<text x="700" y="185" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" fill="#1E2938">Declarative memory</text>
+<text x="700" y="212" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13.5" font-weight="500" font-style="italic" fill="#4B5768">facts, concepts, names</text>
+<rect x="600" y="280" width="300" height="120" rx="20" fill="#FFFFFF" opacity="1" filter="url(#ds)"/>
+<g><path d="M 659.88 322 L 669 322 L 667.4867933999943 330.38714031037836 L 658.5131704265173 328.2296568945569 L 655.5217489040558 332.5217489040558 L 655.5217489040558 332.5217489040558 L 661.9705627484772 338.97056274847716 L 654.9699603120453 343.83116788850845 L 650.150221809313 335.96028707852656 L 645 336.88 L 645 336.88 L 645 346 L 636.6128596896216 344.48679339999427 L 638.7703431054431 335.5131704265172 L 634.4782510959442 332.5217489040558 L 634.4782510959442 332.5217489040558 L 628.0294372515228 338.97056274847716 L 623.1688321114916 331.96996031204526 L 631.0397129214734 327.1502218093131 L 630.12 322 L 630.12 322 L 621 322 L 622.5132066000057 313.61285968962164 L 631.4868295734827 315.7703431054431 L 634.4782510959442 311.4782510959442 L 634.4782510959442 311.4782510959442 L 628.0294372515228 305.02943725152284 L 635.0300396879547 300.16883211149155 L 639.849778190687 308.03971292147344 L 645 307.12 L 645 307.12 L 645 298 L 653.3871403103784 299.51320660000573 L 651.2296568945569 308.4868295734828 L 655.5217489040558 311.4782510959442 L 655.5217489040558 311.4782510959442 L 661.9705627484772 305.02943725152284 L 666.8311678885084 312.03003968795474 L 658.9602870785266 316.8497781906869 L 659.88 322 Z" fill="#2F8A52" opacity="1"/>
+<circle cx="645" cy="322" r="8.184" fill="#FFFFFF" opacity="1"/></g>
+<text x="700" y="335" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="700" fill="#1E2938">Procedural memory</text>
+<text x="700" y="362" text-anchor="start" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13.5" font-weight="500" font-style="italic" fill="#4B5768">skills, sequences</text></g>
+</svg>

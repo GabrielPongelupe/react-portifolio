@@ -1,0 +1,50 @@
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs><filter id="ds" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1E2938" flood-opacity="0.14"/></filter></defs>
+<rect x="0" y="0" width="960" height="540" fill="#FFFFFF"/>
+<g><g transform="rotate(0 480 270)"><rect x="30" y="30" width="900" height="480" rx="64" fill="#DEF4F2" opacity="1"/></g>
+<path d="M 480 150 Q 538.6373611851022 164.238264860595 597.2747223702045 206.47652972119" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 597.2747223702045 206.47652972119 L 588.4128763046676 204.90564324829336 M 597.2747223702045 206.47652972119 L 592.977620222594 198.56862777863898" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 597.2747223702045 206.47652972119 Q 611.756954598739 255.9273349073186 626.2391868272736 333.37814009344714" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 626.2391868272736 333.37814009344714 L 620.9103719809752 326.12529704165905 M 626.2391868272736 333.37814009344714 L 628.5872261499005 324.68983120509625" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 626.2391868272736 333.37814009344714 Q 585.6608738474536 370.261735139405 545.0825608676337 435.14533018536287" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 545.0825608676337 435.14533018536287 L 546.0713635324527 426.19981347082665 M 545.0825608676337 435.14533018536287 L 552.6929558395675 430.3409687947965" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 545.0825608676337 435.14533018536287 Q 480 421.14533018536287 414.9174391323663 435.14533018536287" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 414.9174391323663 435.14533018536287 L 422.02360660063886 429.6224338516567 M 414.9174391323663 435.14533018536287 L 423.6660363072333 437.2576860909597" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 414.9174391323663 435.14533018536287 Q 374.3391261525464 370.261735139405 333.76081317272644 333.3781400934472" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 333.76081317272644 333.3781400934472 L 342.3877360352695 335.9425507321189 M 333.76081317272644 333.3781400934472 L 337.1346746276545 341.72182386519637" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 333.76081317272644 333.3781400934472 Q 348.243045401261 255.9273349073186 362.7252776297955 206.47652972119" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 362.7252776297955 206.47652972119 L 364.19381880602964 215.35590958769558 M 362.7252776297955 206.47652972119 L 356.6987193523603 213.16088423966647" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<path d="M 362.7252776297955 206.47652972119 Q 421.36263881489776 164.238264860595 480 150" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+<path d="M 480 150 L 473.0416744661297 155.7080386968457 M 480 150 L 471.19883063527885 148.1186659484573" fill="none" stroke="#0A7B76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+<circle cx="480" cy="300" r="68" fill="#0EA39D" opacity="1" filter="url(#ds)"/>
+<text x="480" y="296" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Sistema de</text>
+<text x="480" y="315" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">estudo</text>
+<circle cx="480" cy="150" r="27" fill="#0A7B76" opacity="1"/>
+<text x="480" y="156" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">1</text>
+<text x="480" y="86" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Definir</text>
+<text x="480" y="101" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">objetivo</text>
+<circle cx="597.2747223702045" cy="206.47652972119" r="27" fill="#0A7B76" opacity="1"/>
+<text x="597.2747223702045" y="212.47652972119" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">2</text>
+<text x="642.6209483533502" y="164.31412121338343" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Consumir</text>
+<text x="642.6209483533502" y="179.31412121338343" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">com foco</text>
+<circle cx="626.2391868272736" cy="333.37814009344714" r="27" fill="#0A7B76" opacity="1"/>
+<text x="626.2391868272736" y="339.37814009344714" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">3</text>
+<text x="682.7850057338193" y="340.2843542629134" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Classificar</text>
+<text x="682.7850057338193" y="355.2843542629134" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">(PACER)</text>
+<circle cx="545.0825608676337" cy="435.14533018536287" r="27" fill="#0A7B76" opacity="1"/>
+<text x="545.0825608676337" y="441.14533018536287" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">4</text>
+<text x="570.2478177364521" y="481.4015245237032" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Digerir</text>
+<text x="570.2478177364521" y="496.4015245237032" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">conteúdo</text>
+<circle cx="414.9174391323663" cy="435.14533018536287" r="27" fill="#0A7B76" opacity="1"/>
+<text x="414.9174391323663" y="441.14533018536287" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">5</text>
+<text x="389.7521822635479" y="481.4015245237032" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Recuperar</text>
+<text x="389.7521822635479" y="496.4015245237032" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">sem olhar</text>
+<circle cx="333.76081317272644" cy="333.3781400934472" r="27" fill="#0A7B76" opacity="1"/>
+<text x="333.76081317272644" y="339.3781400934472" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">6</text>
+<text x="277.2149942661807" y="340.28435426291344" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Revisar</text>
+<text x="277.2149942661807" y="355.28435426291344" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">no tempo</text>
+<circle cx="362.7252776297955" cy="206.47652972119" r="27" fill="#0A7B76" opacity="1"/>
+<text x="362.7252776297955" y="212.47652972119" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="800" fill="#ffffff">7</text>
+<text x="317.37905164664977" y="164.31412121338346" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">Aplicar</text>
+<text x="317.37905164664977" y="179.31412121338346" text-anchor="middle" font-family="'Poppins','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#0A7B76">na prática</text></g>
+</svg>
