@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoArrowBack, IoTimeOutline, IoDocumentTextOutline, IoOpenOutline } from "react-icons/io5";
 import "prismjs/themes/prism-tomorrow.css";
-import { BLOG_POSTS } from "../constants";
+import { BLOG_POSTS, getTagLabel } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
 import { useLightbox } from "../contexts/LightboxContext";
 import { formatDate } from "../utils/formatDate";
@@ -87,7 +87,7 @@ const BlogPost = () => {
                     key={tag}
                     className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600"
                   >
-                    {tag}
+                    {getTagLabel(tag, portuguese)}
                   </span>
                 ))}
               </div>

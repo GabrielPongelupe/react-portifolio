@@ -1,4 +1,5 @@
 export { BLOG_POSTS } from "./blog";
+export { getTagLabel } from "./blog/tags";
 export { HERO_CONTENT, ABOUT_TEXT } from "./hero";
 export { CONTACT } from "./contact";
 export { PROJECTS } from "./projects";

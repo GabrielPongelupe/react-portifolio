@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoArrowForward, IoNewspaperOutline, IoSearchOutline, IoTimeOutline } from "react-icons/io5";
-import { BLOG_POSTS } from "../constants";
+import { BLOG_POSTS, getTagLabel } from "../constants";
 import { LanguageContext } from "../contexts/LanguageContext";
 import SectionHeading from "../common/SectionHeading";
 import { formatDate } from "../utils/formatDate";
@@ -37,7 +37,7 @@ const BlogCard = ({ post, portuguese, index, onClick }) => (
           key={tag}
           className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600"
         >
-          {tag}
+          {getTagLabel(tag, portuguese)}
         </span>
       ))}
     </div>
@@ -50,7 +50,9 @@ const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState("all");
 
-  const availableTags = [...new Set(BLOG_POSTS.flatMap((post) => post.tags))].sort();
+  const availableTags = [...new Set(BLOG_POSTS.flatMap((post) => post.tags))].sort((a, b) =>
+    getTagLabel(a, portuguese).localeCompare(getTagLabel(b, portuguese), portuguese ? "pt-BR" : "en-US")
+  );
 
   const sortedPosts = [...BLOG_POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
 
@@ -106,7 +108,7 @@ const Blog = () => {
           <option value="all">{portuguese ? "Todas as tags" : "All tags"}</option>
           {availableTags.map((tag) => (
             <option key={tag} value={tag}>
-              {tag}
+              {getTagLabel(tag, portuguese)}
             </option>
           ))}
         </select>
